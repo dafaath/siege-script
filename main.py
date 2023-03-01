@@ -131,7 +131,6 @@ for server in CONFIGS["server_to_test"]:
                 Iteration: {CONFIGS['iteration']} 
                 Concurrence: {CONFIGS['concurrence']}"""
                 )
-                
 
                 df_group_by_concurrent = df.groupby(
                     ["endpoint", "concurrent"], dropna=False
@@ -156,5 +155,6 @@ for server in CONFIGS["server_to_test"]:
 
                 logger.info(f"💤 Sleeping for {CONFIGS['sleep_time']} seconds")
                 time.sleep(CONFIGS["sleep_time"])
+    time.sleep(1800)
 
 logger.info("🎬 Finish Session")
