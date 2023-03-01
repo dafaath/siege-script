@@ -1,4 +1,4 @@
-#!/home/dafaath/Project/Siege-Script/env/bin/python
+#!/home/dafaath/Project/Skripsi/Siege-Script/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

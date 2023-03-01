@@ -131,6 +131,7 @@ for server in CONFIGS["server_to_test"]:
                 Iteration: {CONFIGS['iteration']} 
                 Concurrence: {CONFIGS['concurrence']}"""
                 )
+                
 
                 df_group_by_concurrent = df.groupby(
                     ["endpoint", "concurrent"], dropna=False

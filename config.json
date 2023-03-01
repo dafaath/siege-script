@@ -1,6 +1,6 @@
 {
   "test_time": "60s",
-  "sleep_time": 30,
+  "sleep_time": 60,
   "iteration": 10,
   "concurrence": [200, 400, 600, 800, 1000],
   "verbose": false,
