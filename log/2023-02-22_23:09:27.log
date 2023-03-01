@@ -1,0 +1,11 @@
+23:09:27,67 server IoT Logger Session 2023-02-22_23:09:27 INFO 🎬 Starting Session
+23:09:27,67 server IoT Logger Session 2023-02-22_23:09:27 INFO Sleep time: 0
+23:09:27,67 server IoT Logger Session 2023-02-22_23:09:27 INFO Test time: 1s
+23:09:27,67 server IoT Logger Session 2023-02-22_23:09:27 INFO Iteration: 5
+23:09:27,67 server IoT Logger Session 2023-02-22_23:09:27 INFO Concurrence: [200, 400, 600, 800, 1000]
+23:09:27,69 urllib3.connectionpool DEBUG Starting new HTTP connection (1): 127.0.0.1:3000
+23:09:27,944 urllib3.connectionpool DEBUG http://127.0.0.1:3000 "POST /user/login HTTP/1.1" 200 221
+23:09:27,945 server IoT Logger Session 2023-02-22_23:09:27 INFO 🦾 Running commands siege -t1s -c "200" "http://127.0.0.1:3000/node" --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNjc3MDgyMTY3LCJpZFVzZXIiOjEsImlzQWRtaW4iOnRydWUsInN0YXR1cyI6dHJ1ZSwidXNlcm5hbWUiOiJhZG1pbiJ9.kjJNbQE6MnK8zM23Tev-cF6etD0hv94bUdieV3elQR8"
+23:09:29,99 server IoT Logger Session 2023-02-22_23:09:27 INFO 🏁 Finished running commands for server-iot-dafa /node GET 200 1
+23:09:29,99 server IoT Logger Session 2023-02-22_23:09:27 INFO 📊 Output: {'transactions': 19, 'availability': 100.0, 'elapsed_time': 1.07, 'data_transferred': 78.71, 'response_time': 0.67, 'transaction_rate': 17.76, 'throughput': 73.56, 'concurrency': 11.86, 'successful_transactions': 19, 'failed_transactions': 0, 'longest_transaction': 0.91, 'shortest_transaction': 0.0}
+23:09:29,99 server IoT Logger Session 2023-02-22_23:09:27 INFO 💾 Saving output to file /home/dafaath/Project/Skripsi/Siege-Script/output/2023-02-22_23:09:27.xlsx

@@ -1,0 +1,6 @@
+23:18:37,390 server IoT Logger Session 2023-02-22_23:18:37 INFO 🎬 Starting Session
+23:18:37,392 server IoT Logger Session 2023-02-22_23:18:37 INFO Sleep time: 0
+23:18:37,392 server IoT Logger Session 2023-02-22_23:18:37 INFO Test time: 1s
+23:18:37,396 server IoT Logger Session 2023-02-22_23:18:37 INFO Iteration: 5
+23:18:37,396 server IoT Logger Session 2023-02-22_23:18:37 INFO Concurrence: [200, 400, 600, 800, 1000]
+23:18:37,399 urllib3.connectionpool DEBUG Starting new HTTP connection (1): 127.0.0.1:3000
