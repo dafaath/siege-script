@@ -46,7 +46,8 @@ perftest() {
 
 auth() {
     if [ $AUTH_METHOD == "jwt" ]; then
-        HEADER="Authorization: Bearer $(http $HOST:$PORT/auth/login username=perftest password=perftest | jq -r '.token')"
+        # HEADER="Authorization: Bearer $(http $HOST:$PORT/auth/login username=admin password=admin | jq -r '.token')"
+        HEADER="Authorization: Bearer $(http $HOST:$PORT/user/login username=$USERNAME password=$PASSWORD -p b)"
     elif [ $AUTH_METHOD == "basic" ]; then
         HEADER="Authorization: Basic $(echo -n $USERNAME:$PASSWORD | base64)"
     fi
