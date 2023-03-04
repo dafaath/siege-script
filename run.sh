@@ -38,13 +38,12 @@ perftest() {
             elif [ $method == "PUT" ] || [ $method == "POST" ]; then
                 siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
             fi
+            echo "Sleeping $SLEEP_TIME seconds..."
             sleep $SLEEP_TIME
             if $do_rollback; then
                 rollback_db >/dev/null
             fi
-            echo "$(TZ=UTC-7 date -R) ($(date +%s))"
         done
-        echo "$(TZ=UTC-7 date -R) ($(date +%s))"
     done
 }
 
