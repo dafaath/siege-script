@@ -1,14 +1,14 @@
 #!/bin/bash
 
-HOST=10.104.0.2
-PORT=3000
+HOST=10.104.0.4
+PORT=5000
 TEST_TIME=60s
 SLEEP_TIME=60
 ITERATION=5
 CONCURENCY=(200 400 600 800 1000)
-AUTH_METHOD=jwt
-USERNAME="admin"
-PASSWORD="admin"
+AUTH_METHOD=basic
+USERNAME="perftest"
+PASSWORD="perftest"
 
 init_db() {
     PGPASSWORD=postgres psql -h $HOST -U postgres postgres <dump.sql
@@ -55,6 +55,7 @@ auth() {
     elif [ $AUTH_METHOD == "basic" ]; then
         HEADER="Authorization: Basic $(echo -n $USERNAME:$PASSWORD | base64)"
     fi
+    echo "Success auth $HEADER"
 }
 
 rollback_db
