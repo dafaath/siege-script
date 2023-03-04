@@ -29,7 +29,9 @@ perftest() {
     local data=$3
     local do_rollback=$4
     for concurrent in "${CONCURENCY[@]}"; do
+        echo "$(TZ=UTC-7 date -R) ($(date +%s))"
         for i in $(seq 1 $ITERATION); do
+            echo "$(TZ=UTC-7 date -R) ($(date +%s))"
             echo "[ $method $endpoint $concurrent][$i]"
             if [ $method == "GET" ] || [ $method == "DELETE" ]; then
                 siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
@@ -40,7 +42,9 @@ perftest() {
             if $do_rollback; then
                 rollback_db >/dev/null
             fi
+            echo "$(TZ=UTC-7 date -R) ($(date +%s))"
         done
+        echo "$(TZ=UTC-7 date -R) ($(date +%s))"
     done
 }
 
