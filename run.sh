@@ -38,12 +38,12 @@ perftest() {
             # Run command with timeout, if timeout hit, restart
             while true; do
                 if [ $method == "GET" ] || [ $method == "DELETE" ]; then
-                    timeout $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+                    timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
                 elif [ $method == "PUT" ] || [ $method == "POST" ]; then
-                    timeout $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+                    timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
                 fi
 
-                if [[ $? -eq 124 ]]; then # If Timeout restart the loop
+                if [[ $? -eq 137 ]]; then # If Timeout restart the loop
                     continue
                 else
                     break
@@ -72,11 +72,9 @@ rollback_db
 auth
 
 ## perftest METHOD ENDPOINT DATA DO_ROLLBACK
-# perftest "POST" "/channel" "{\"value\": 1.33, \"id_sensor\": 1}" true
 perftest "GET" "/node" "" false
 perftest "GET" "/node/1" "" false
 perftest "POST" "/channel" "{\"value\": 1.33, \"id_sensor\": 1}" true
-#salah perftest "PUT" "/node/1" "{\"name\": \"testedit\", \"location\": \"testlocedittt\", \"id_hardware\": 1}" false
 perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
-# perftest "PUT" "/node/1" true
+perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
 # perftest "DELETE" "/node/2" "" true
