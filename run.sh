@@ -75,7 +75,8 @@ auth
 ## perftest METHOD ENDPOINT DATA DO_ROLLBACK
 perftest "GET" "/node" "" false
 perftest "GET" "/node/1" "" false
+perftest "GET" "/sensor" "" false
+perftest "GET" "/sensor/1" "" false
 perftest "POST" "/channel" "{\"value\": 1.33, \"id_sensor\": 1}" true
 perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
 perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
-# perftest "DELETE" "/node/2" "" true
