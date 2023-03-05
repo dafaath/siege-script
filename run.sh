@@ -11,6 +11,16 @@ AUTH_METHOD=jwt
 USERNAME="perftest"
 PASSWORD="perftest"
 
+echo "Host: $HOST:$PORT"
+echo "Test time: $TEST_TIME"
+echo "Sleep time: $SLEEP_TIME"
+echo "Timeout: $TIMEOUT"
+echo "Iteration: $ITERATION"
+echo "Concurency:" "${CONCURENCY[@]}"
+echo "Auth method: $AUTH_METHOD"
+echo "Username: $USERNAME"
+echo "Password: $PASSWORD"
+
 init_db() {
     PGPASSWORD=postgres psql -h $HOST -U postgres postgres <dump.sql
 }
