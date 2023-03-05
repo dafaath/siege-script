@@ -44,6 +44,7 @@ perftest() {
                 fi
 
                 if [[ $? -eq 137 ]]; then # If Timeout restart the loop
+                    echo "Timeout hit, restarting... $(TZ=UTC-7 date -R) ($(date +%s))"
                     continue
                 else
                     break
