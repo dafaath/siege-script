@@ -4,6 +4,7 @@ HOST=10.104.0.2
 PORT=3000
 TEST_TIME=60s
 SLEEP_TIME=120
+TIMEOUT=600 # 10 minutes
 ITERATION=5
 CONCURENCY=(200 400 600 800 1000)
 AUTH_METHOD=jwt
@@ -33,11 +34,21 @@ perftest() {
         for i in $(seq 1 $ITERATION); do
             echo "$(TZ=UTC-7 date -R) ($(date +%s))"
             echo "[ $method $endpoint $concurrent][$i]"
-            if [ $method == "GET" ] || [ $method == "DELETE" ]; then
-                siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
-            elif [ $method == "PUT" ] || [ $method == "POST" ]; then
-                siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
-            fi
+
+            # Run command with timeout, if timeout hit, restart
+            while true; do
+                if [ $method == "GET" ] || [ $method == "DELETE" ]; then
+                    timeout $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+                elif [ $method == "PUT" ] || [ $method == "POST" ]; then
+                    timeout $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+                fi
+
+                if [[ $? -eq 124 ]]; then # If Timeout restart the loop
+                    continue
+                else
+                    break
+                fi
+            done
             echo "Sleeping $SLEEP_TIME seconds..."
             sleep $SLEEP_TIME
             if $do_rollback; then
