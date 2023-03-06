@@ -60,11 +60,16 @@ perftest() {
                     break
                 fi
             done
+            # Restart the postgresql server for the IoT Server
+            # iot_test_server is the private key for the IoT Server VM
+            ssh -i ~/iot_test_server root@$HOST sudo systemctl restart postgresql
+
             echo "Sleeping $SLEEP_TIME seconds..."
             sleep $SLEEP_TIME
             if $do_rollback; then
                 rollback_db >/dev/null
             fi
+
         done
     done
 }
