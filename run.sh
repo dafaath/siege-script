@@ -47,14 +47,19 @@ echo "Username: $USERNAME"
 echo "Password: $PASSWORD"
 
 init_db() {
-    PGPASSWORD=postgres psql -h $HOST -U postgres postgres <dump.sql
+    if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+        PGPASSWORD=postgres psql -h $HOST -U postgres postgres <version2.sql
+    else
+        PGPASSWORD=postgres psql -h $HOST -U postgres postgres <dump.sql
+    fi
 }
 
 drop_table_db() {
-    PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE user_person, hardware, node, sensor, channel;"
+    PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE IF EXISTS user_person, hardware, node, sensor, channel;"
 }
 
 rollback_db() {
+
     drop_table_db
     init_db
 }
