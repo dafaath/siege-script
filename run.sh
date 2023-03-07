@@ -3,7 +3,7 @@
 TYPE=$1
 
 if [ "$TYPE" == "dafav1" ] || [ "$TYPE" == "dafav2" ]; then
-    HOST=localhost
+    HOST=10.104.0.2
     PORT=3000
     AUTH_METHOD=jwt
 elif [ "$TYPE" == "alvinv1" ] || [ "$TYPE" == "alvinv2" ]; then
@@ -27,8 +27,14 @@ SLEEP_TIME=120
 TIMEOUT=600 # 10 minutes
 ITERATION=5
 CONCURENCY=(200 400 600 800 1000)
-USERNAME="perftest"
-PASSWORD="perftest"
+
+if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+    USERNAME="admin"
+    PASSWORD="admin"
+else
+    USERNAME="perftest"
+    PASSWORD="perftest"
+fi
 
 echo "Host: $HOST:$PORT"
 echo "Test time: $TEST_TIME"
@@ -62,11 +68,11 @@ test_connection() {
         local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint" --header "$HEADER" | xargs)"
         local EXIT_CODE=$?
     else
-        local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint $method $data" | xargs)"
+        local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint" -X $method --header "$HEADER" --header "Content-type: application/json" -d "$data" | xargs)"
         local EXIT_CODE=$?
     fi
 
-    if [ "$STATUS" -ge "400" ] || [[ $EXIT_CODE -ne 0 ]]; then
+    if [ "$STATUS" -ge 400 ] || [[ "$EXIT_CODE" != 0 ]]; then
         echo "Connection test failed, status code $STATUS for $HOST:$PORT$endpoint $method $data"
         exit 1
     fi
@@ -127,11 +133,10 @@ auth
 echo "Testing connection..."
 test_connection "GET" "/node" "" false
 test_connection "GET" "/node/1" "" false
-if [ "$TYPE" == "alvinv2" ] && [ "$TYPE" == "dafav2" ]; then
-    # ! TODO CHANGE PAYLOAD
-    test_connection "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
-    test_connection "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
-    test_connection "POST" "/channel" "{\"value\": 1.33, \"id_sensor\": 1}" true
+if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+    test_connection "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+    test_connection "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+    test_connection "POST" "/channel" "{\"value\": [3.21, 3.14, 8.39, 9.12, 3.94, 13.23, 183.2, 192.3, 72.3, 93.2], \"id_node\": 1}" true
 else
     test_connection "GET" "/sensor" "" false
     test_connection "GET" "/sensor/1" "" false
@@ -144,8 +149,14 @@ echo "Connection test success"
 ## perftest METHOD ENDPOINT DATA DO_ROLLBACK
 perftest "GET" "/node" "" false
 perftest "GET" "/node/1" "" false
-perftest "GET" "/sensor" "" false
-perftest "GET" "/sensor/1" "" false
-perftest "POST" "/channel" "{\"value\": 1.33, \"id_sensor\": 1}" true
-perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
-perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
+if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+    perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+    perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+    perftest "POST" "/channel" "{\"value\": [3.21, 3.14, 8.39, 9.12, 3.94, 13.23, 183.2, 192.3, 72.3, 93.2], \"id_node\": 1}" true
+else
+    perftest "GET" "/sensor" "" false
+    perftest "GET" "/sensor/1" "" false
+    perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
+    perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware\":1 }" true
+    perftest "POST" "/channel" "{\"value\": 1.33, \"id_sensor\": 1}" true
+fi
