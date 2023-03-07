@@ -7,8 +7,8 @@ if [ "$TYPE" == "dafav1" ] || [ "$TYPE" == "dafav2" ]; then
     PORT=3000
     AUTH_METHOD=jwt
 elif [ "$TYPE" == "alvinv1" ] || [ "$TYPE" == "alvinv2" ]; then
-    HOST=10.104.0.5
-    PORT=5000
+    HOST=10.104.0.4
+    PORT=8000
     AUTH_METHOD=jwt
 elif [ "$TYPE" == "hanin" ]; then
     HOST=10.104.0.4
