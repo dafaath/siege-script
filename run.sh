@@ -126,7 +126,7 @@ perftest() {
 auth() {
     if [ $AUTH_METHOD == "jwt" ]; then
         if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "alvinv1" ]; then
-            HEADER="Authorization: Bearer $(http --ignore-stdin $HOST:$PORT/auth/login username=admin password=admin | jq -r '.token')"
+            HEADER="Authorization: Bearer $(http --ignore-stdin $HOST:$PORT/auth/login username=$USERNAME password=$PASSWORD | jq -r '.token')"
         else
             HEADER="Authorization: Bearer $(http --ignore-stdin $HOST:$PORT/user/login username=$USERNAME password=$PASSWORD -p b)"
         fi
