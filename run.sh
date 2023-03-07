@@ -50,7 +50,7 @@ init_db() {
     if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
         PGPASSWORD=postgres psql -h $HOST -U postgres postgres <version2.sql
     else
-        PGPASSWORD=postgres psql -h $HOST -U postgres postgres <dump.sql
+        PGPASSWORD=postgres psql -h $HOST -U postgres postgres <version1.sql
     fi
 }
 
@@ -84,7 +84,8 @@ test_connection() {
 }
 
 perftest() {
-    local method=$1 local endpoint=$2
+    local method=$1
+    local endpoint=$2
     local data=$3
     local do_rollback=$4
     for concurrent in "${CONCURENCY[@]}"; do
