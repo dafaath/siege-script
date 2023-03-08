@@ -56,7 +56,11 @@ init_db() {
 }
 
 drop_table_db() {
-    PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE IF EXISTS user_person, hardware, node, sensor, channel;"
+    if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+        PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE IF EXISTS user_person, hardware, node, feed;"
+    else
+        PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE IF EXISTS user_person, hardware, node, sensor, channel;"
+    fi
 }
 
 rollback_db() {
