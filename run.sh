@@ -36,6 +36,7 @@ else
     PASSWORD="perftest"
 fi
 
+echo "TYPE: $TYPE"
 echo "Host: $HOST:$PORT"
 echo "Test time: $TEST_TIME"
 echo "Sleep time: $SLEEP_TIME"

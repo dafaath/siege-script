@@ -1,0 +1,3103 @@
+Host: 10.104.0.4:8000
+Test time: 60s
+Sleep time: 120
+Timeout: 600
+Iteration: 5
+Concurency: 200 400 600 800 1000
+Auth method: jwt
+Username: perftest
+Password: perftest
+DROP TABLE
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE TABLE
+ALTER TABLE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+COPY 10000
+COPY 1200
+COPY 200
+COPY 1000
+COPY 20
+ setval 
+--------
+   1200
+(1 row)
+
+ setval 
+--------
+    200
+(1 row)
+
+ setval 
+--------
+   1000
+(1 row)
+
+ setval 
+--------
+     20
+(1 row)
+
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+Success auth Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InBlcmZ0ZXN0IiwiaXNfYWRtaW4iOmZhbHNlLCJpZF91c2VyIjoxfQ.oRhQa4rB4dh4uBpVJn6tEwjJ0m8Efhg4LwTo9_wbOro
+Testing connection...
+Connection test success
+Tue, 07 Mar 2023 23:18:36 +0700 (1678205916)
+Tue, 07 Mar 2023 23:18:36 +0700 (1678205916)
+[ GET /node 200][1]
+
+{	"transactions":			       89851,
+	"availability":			      100.00,
+	"elapsed_time":			       59.37,
+	"data_transferred":		       79.00,
+	"response_time":		        0.13,
+	"transaction_rate":		     1513.41,
+	"throughput":			        1.33,
+	"concurrency":			      198.75,
+	"successful_transactions":	       89851,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.46,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:21:39 +0700 (1678206099)
+[ GET /node 200][2]
+
+{	"transactions":			       87435,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		       76.88,
+	"response_time":		        0.14,
+	"transaction_rate":		     1464.57,
+	"throughput":			        1.29,
+	"concurrency":			      198.84,
+	"successful_transactions":	       87435,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.10,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:24:42 +0700 (1678206282)
+[ GET /node 200][3]
+
+{	"transactions":			       98665,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		       86.75,
+	"response_time":		        0.12,
+	"transaction_rate":		     1652.13,
+	"throughput":			        1.45,
+	"concurrency":			      199.06,
+	"successful_transactions":	       98665,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.01,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:27:45 +0700 (1678206465)
+[ GET /node 200][4]
+
+{	"transactions":			      118065,
+	"availability":			      100.00,
+	"elapsed_time":			       59.69,
+	"data_transferred":		      103.81,
+	"response_time":		        0.10,
+	"transaction_rate":		     1977.97,
+	"throughput":			        1.74,
+	"concurrency":			      199.52,
+	"successful_transactions":	      118065,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.19,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:30:48 +0700 (1678206648)
+[ GET /node 200][5]
+
+{	"transactions":			      101147,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		       88.94,
+	"response_time":		        0.12,
+	"transaction_rate":		     1697.10,
+	"throughput":			        1.49,
+	"concurrency":			      199.08,
+	"successful_transactions":	      101147,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.03,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:33:51 +0700 (1678206831)
+Tue, 07 Mar 2023 23:33:51 +0700 (1678206831)
+[ GET /node 400][1]
+
+{	"transactions":			       82068,
+	"availability":			      100.00,
+	"elapsed_time":			       59.85,
+	"data_transferred":		       72.16,
+	"response_time":		        0.29,
+	"transaction_rate":		     1371.23,
+	"throughput":			        1.21,
+	"concurrency":			      396.49,
+	"successful_transactions":	       82068,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.57,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:36:54 +0700 (1678207014)
+[ GET /node 400][2]
+
+{	"transactions":			       86502,
+	"availability":			      100.00,
+	"elapsed_time":			       59.74,
+	"data_transferred":		       76.06,
+	"response_time":		        0.27,
+	"transaction_rate":		     1447.97,
+	"throughput":			        1.27,
+	"concurrency":			      396.27,
+	"successful_transactions":	       86502,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.94,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:39:57 +0700 (1678207197)
+[ GET /node 400][3]
+
+{	"transactions":			       78856,
+	"availability":			      100.00,
+	"elapsed_time":			       59.69,
+	"data_transferred":		       69.34,
+	"response_time":		        0.30,
+	"transaction_rate":		     1321.09,
+	"throughput":			        1.16,
+	"concurrency":			      395.80,
+	"successful_transactions":	       78856,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.14,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:43:00 +0700 (1678207380)
+[ GET /node 400][4]
+
+{	"transactions":			      111090,
+	"availability":			      100.00,
+	"elapsed_time":			       59.74,
+	"data_transferred":		       97.68,
+	"response_time":		        0.21,
+	"transaction_rate":		     1859.56,
+	"throughput":			        1.64,
+	"concurrency":			      396.20,
+	"successful_transactions":	      111090,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.62,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:46:03 +0700 (1678207563)
+[ GET /node 400][5]
+
+{	"transactions":			      105494,
+	"availability":			      100.00,
+	"elapsed_time":			       59.86,
+	"data_transferred":		       92.76,
+	"response_time":		        0.22,
+	"transaction_rate":		     1762.35,
+	"throughput":			        1.55,
+	"concurrency":			      395.67,
+	"successful_transactions":	      105494,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.48,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:49:06 +0700 (1678207746)
+Tue, 07 Mar 2023 23:49:06 +0700 (1678207746)
+[ GET /node 600][1]
+
+{	"transactions":			      135230,
+	"availability":			      100.00,
+	"elapsed_time":			       59.81,
+	"data_transferred":		      118.91,
+	"response_time":		        0.26,
+	"transaction_rate":		     2260.99,
+	"throughput":			        1.99,
+	"concurrency":			      588.02,
+	"successful_transactions":	      135230,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.16,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:52:09 +0700 (1678207929)
+[ GET /node 600][2]
+
+{	"transactions":			      101535,
+	"availability":			      100.00,
+	"elapsed_time":			       59.32,
+	"data_transferred":		       89.28,
+	"response_time":		        0.35,
+	"transaction_rate":		     1711.65,
+	"throughput":			        1.51,
+	"concurrency":			      592.90,
+	"successful_transactions":	      101535,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.48,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:55:12 +0700 (1678208112)
+[ GET /node 600][3]
+
+{	"transactions":			      112668,
+	"availability":			      100.00,
+	"elapsed_time":			       59.89,
+	"data_transferred":		       99.07,
+	"response_time":		        0.31,
+	"transaction_rate":		     1881.25,
+	"throughput":			        1.65,
+	"concurrency":			      590.17,
+	"successful_transactions":	      112668,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.41,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Tue, 07 Mar 2023 23:58:15 +0700 (1678208295)
+[ GET /node 600][4]
+
+{	"transactions":			      101618,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		       89.35,
+	"response_time":		        0.35,
+	"transaction_rate":		     1704.14,
+	"throughput":			        1.50,
+	"concurrency":			      590.79,
+	"successful_transactions":	      101618,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.76,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:01:18 +0700 (1678208478)
+[ GET /node 600][5]
+
+{	"transactions":			       76005,
+	"availability":			      100.00,
+	"elapsed_time":			       59.75,
+	"data_transferred":		       66.83,
+	"response_time":		        0.46,
+	"transaction_rate":		     1272.05,
+	"throughput":			        1.12,
+	"concurrency":			      590.42,
+	"successful_transactions":	       76005,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.05,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:04:21 +0700 (1678208661)
+Wed, 08 Mar 2023 00:04:21 +0700 (1678208661)
+[ GET /node 800][1]
+
+{	"transactions":			      101715,
+	"availability":			      100.00,
+	"elapsed_time":			       59.80,
+	"data_transferred":		       89.44,
+	"response_time":		        0.46,
+	"transaction_rate":		     1700.92,
+	"throughput":			        1.50,
+	"concurrency":			      782.68,
+	"successful_transactions":	      101715,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.20,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:07:24 +0700 (1678208844)
+[ GET /node 800][2]
+
+{	"transactions":			       91751,
+	"availability":			      100.00,
+	"elapsed_time":			       59.67,
+	"data_transferred":		       80.68,
+	"response_time":		        0.51,
+	"transaction_rate":		     1537.64,
+	"throughput":			        1.35,
+	"concurrency":			      780.08,
+	"successful_transactions":	       91751,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.11,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:10:27 +0700 (1678209027)
+[ GET /node 800][3]
+
+{	"transactions":			       73072,
+	"availability":			      100.00,
+	"elapsed_time":			       59.64,
+	"data_transferred":		       64.25,
+	"response_time":		        0.64,
+	"transaction_rate":		     1225.22,
+	"throughput":			        1.08,
+	"concurrency":			      778.86,
+	"successful_transactions":	       73072,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.49,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:13:30 +0700 (1678209211)
+[ GET /node 800][4]
+
+{	"transactions":			      108499,
+	"availability":			      100.00,
+	"elapsed_time":			       60.47,
+	"data_transferred":		       95.40,
+	"response_time":		        0.44,
+	"transaction_rate":		     1794.26,
+	"throughput":			        1.58,
+	"concurrency":			      781.49,
+	"successful_transactions":	      108499,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.49,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:16:34 +0700 (1678209394)
+[ GET /node 800][5]
+
+{	"transactions":			      104157,
+	"availability":			      100.00,
+	"elapsed_time":			       59.46,
+	"data_transferred":		       91.58,
+	"response_time":		        0.45,
+	"transaction_rate":		     1751.72,
+	"throughput":			        1.54,
+	"concurrency":			      784.20,
+	"successful_transactions":	      104158,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.11,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:19:37 +0700 (1678209577)
+Wed, 08 Mar 2023 00:19:37 +0700 (1678209577)
+[ GET /node 1000][1]
+
+{	"transactions":			      109827,
+	"availability":			      100.00,
+	"elapsed_time":			       59.78,
+	"data_transferred":		       96.57,
+	"response_time":		        0.53,
+	"transaction_rate":		     1837.19,
+	"throughput":			        1.62,
+	"concurrency":			      975.14,
+	"successful_transactions":	      109827,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.89,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:22:40 +0700 (1678209760)
+[ GET /node 1000][2]
+
+{	"transactions":			      101282,
+	"availability":			      100.00,
+	"elapsed_time":			       59.59,
+	"data_transferred":		       89.06,
+	"response_time":		        0.57,
+	"transaction_rate":		     1699.65,
+	"throughput":			        1.49,
+	"concurrency":			      977.06,
+	"successful_transactions":	      101282,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.91,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:25:43 +0700 (1678209943)
+[ GET /node 1000][3]
+
+{	"transactions":			      154211,
+	"availability":			      100.00,
+	"elapsed_time":			       59.26,
+	"data_transferred":		      135.60,
+	"response_time":		        0.38,
+	"transaction_rate":		     2602.28,
+	"throughput":			        2.29,
+	"concurrency":			      993.13,
+	"successful_transactions":	      154211,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.93,
+	"shortest_transaction":		        0.01
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:28:46 +0700 (1678210126)
+[ GET /node 1000][4]
+
+{	"transactions":			      102445,
+	"availability":			      100.00,
+	"elapsed_time":			       60.11,
+	"data_transferred":		       90.08,
+	"response_time":		        0.57,
+	"transaction_rate":		     1704.29,
+	"throughput":			        1.50,
+	"concurrency":			      974.04,
+	"successful_transactions":	      102445,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.89,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:31:49 +0700 (1678210309)
+[ GET /node 1000][5]
+
+{	"transactions":			      134962,
+	"availability":			      100.00,
+	"elapsed_time":			       59.58,
+	"data_transferred":		      118.67,
+	"response_time":		        0.43,
+	"transaction_rate":		     2265.22,
+	"throughput":			        1.99,
+	"concurrency":			      979.75,
+	"successful_transactions":	      134962,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.97,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:34:52 +0700 (1678210492)
+Wed, 08 Mar 2023 00:34:52 +0700 (1678210492)
+[ GET /node/1 200][1]
+
+{	"transactions":			       61427,
+	"availability":			      100.00,
+	"elapsed_time":			       59.28,
+	"data_transferred":		       25.83,
+	"response_time":		        0.19,
+	"transaction_rate":		     1036.22,
+	"throughput":			        0.44,
+	"concurrency":			      198.96,
+	"successful_transactions":	       61428,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.72,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:37:55 +0700 (1678210675)
+[ GET /node/1 200][2]
+
+{	"transactions":			       57415,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		       24.15,
+	"response_time":		        0.21,
+	"transaction_rate":		      961.73,
+	"throughput":			        0.40,
+	"concurrency":			      198.96,
+	"successful_transactions":	       57415,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.92,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:40:58 +0700 (1678210858)
+[ GET /node/1 200][3]
+
+{	"transactions":			       61834,
+	"availability":			      100.00,
+	"elapsed_time":			       59.61,
+	"data_transferred":		       26.01,
+	"response_time":		        0.19,
+	"transaction_rate":		     1037.31,
+	"throughput":			        0.44,
+	"concurrency":			      199.18,
+	"successful_transactions":	       61834,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.86,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:44:01 +0700 (1678211041)
+[ GET /node/1 200][4]
+
+{	"transactions":			       60692,
+	"availability":			      100.00,
+	"elapsed_time":			       59.83,
+	"data_transferred":		       25.53,
+	"response_time":		        0.20,
+	"transaction_rate":		     1014.41,
+	"throughput":			        0.43,
+	"concurrency":			      199.05,
+	"successful_transactions":	       60692,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.99,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:47:04 +0700 (1678211224)
+[ GET /node/1 200][5]
+
+{	"transactions":			       59946,
+	"availability":			      100.00,
+	"elapsed_time":			       59.25,
+	"data_transferred":		       25.21,
+	"response_time":		        0.20,
+	"transaction_rate":		     1011.75,
+	"throughput":			        0.43,
+	"concurrency":			      198.98,
+	"successful_transactions":	       59946,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.52,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:50:07 +0700 (1678211407)
+Wed, 08 Mar 2023 00:50:07 +0700 (1678211407)
+[ GET /node/1 400][1]
+
+{	"transactions":			       58617,
+	"availability":			      100.00,
+	"elapsed_time":			       59.80,
+	"data_transferred":		       24.65,
+	"response_time":		        0.40,
+	"transaction_rate":		      980.22,
+	"throughput":			        0.41,
+	"concurrency":			      395.09,
+	"successful_transactions":	       58617,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.84,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:53:10 +0700 (1678211590)
+[ GET /node/1 400][2]
+
+{	"transactions":			       59424,
+	"availability":			      100.00,
+	"elapsed_time":			       59.46,
+	"data_transferred":		       24.99,
+	"response_time":		        0.40,
+	"transaction_rate":		      999.39,
+	"throughput":			        0.42,
+	"concurrency":			      395.30,
+	"successful_transactions":	       59424,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.95,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:56:13 +0700 (1678211773)
+[ GET /node/1 400][3]
+
+{	"transactions":			       65949,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		       27.74,
+	"response_time":		        0.36,
+	"transaction_rate":		     1105.04,
+	"throughput":			        0.46,
+	"concurrency":			      396.11,
+	"successful_transactions":	       65949,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.76,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 00:59:16 +0700 (1678211956)
+[ GET /node/1 400][4]
+
+{	"transactions":			       57193,
+	"availability":			      100.00,
+	"elapsed_time":			       59.78,
+	"data_transferred":		       24.05,
+	"response_time":		        0.41,
+	"transaction_rate":		      956.72,
+	"throughput":			        0.40,
+	"concurrency":			      394.41,
+	"successful_transactions":	       57193,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.75,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:02:19 +0700 (1678212139)
+[ GET /node/1 400][5]
+
+{	"transactions":			       57796,
+	"availability":			      100.00,
+	"elapsed_time":			       59.56,
+	"data_transferred":		       24.31,
+	"response_time":		        0.41,
+	"transaction_rate":		      970.38,
+	"throughput":			        0.41,
+	"concurrency":			      395.28,
+	"successful_transactions":	       57796,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.47,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:05:22 +0700 (1678212322)
+Wed, 08 Mar 2023 01:05:22 +0700 (1678212322)
+[ GET /node/1 600][1]
+
+{	"transactions":			       58195,
+	"availability":			      100.00,
+	"elapsed_time":			       59.76,
+	"data_transferred":		       24.48,
+	"response_time":		        0.61,
+	"transaction_rate":		      973.81,
+	"throughput":			        0.41,
+	"concurrency":			      589.90,
+	"successful_transactions":	       58195,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.42,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:08:25 +0700 (1678212505)
+[ GET /node/1 600][2]
+
+{	"transactions":			       59405,
+	"availability":			      100.00,
+	"elapsed_time":			       59.69,
+	"data_transferred":		       24.98,
+	"response_time":		        0.59,
+	"transaction_rate":		      995.23,
+	"throughput":			        0.42,
+	"concurrency":			      588.43,
+	"successful_transactions":	       59405,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.79,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:11:28 +0700 (1678212688)
+[ GET /node/1 600][3]
+
+{	"transactions":			       59105,
+	"availability":			      100.00,
+	"elapsed_time":			       59.81,
+	"data_transferred":		       24.86,
+	"response_time":		        0.59,
+	"transaction_rate":		      988.21,
+	"throughput":			        0.42,
+	"concurrency":			      586.33,
+	"successful_transactions":	       59105,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.00,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:14:31 +0700 (1678212871)
+[ GET /node/1 600][4]
+
+{	"transactions":			       68058,
+	"availability":			      100.00,
+	"elapsed_time":			       59.55,
+	"data_transferred":		       28.62,
+	"response_time":		        0.51,
+	"transaction_rate":		     1142.87,
+	"throughput":			        0.48,
+	"concurrency":			      588.51,
+	"successful_transactions":	       68058,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.16,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:17:34 +0700 (1678213054)
+[ GET /node/1 600][5]
+
+{	"transactions":			       58296,
+	"availability":			      100.00,
+	"elapsed_time":			       59.55,
+	"data_transferred":		       24.52,
+	"response_time":		        0.60,
+	"transaction_rate":		      978.94,
+	"throughput":			        0.41,
+	"concurrency":			      590.23,
+	"successful_transactions":	       58296,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.76,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:20:37 +0700 (1678213237)
+Wed, 08 Mar 2023 01:20:37 +0700 (1678213237)
+[ GET /node/1 800][1]
+
+{	"transactions":			       64421,
+	"availability":			      100.00,
+	"elapsed_time":			       59.79,
+	"data_transferred":		       27.09,
+	"response_time":		        0.73,
+	"transaction_rate":		     1077.45,
+	"throughput":			        0.45,
+	"concurrency":			      785.20,
+	"successful_transactions":	       64421,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.87,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:23:40 +0700 (1678213420)
+[ GET /node/1 800][2]
+
+{	"transactions":			       59525,
+	"availability":			      100.00,
+	"elapsed_time":			       59.71,
+	"data_transferred":		       25.03,
+	"response_time":		        0.79,
+	"transaction_rate":		      996.90,
+	"throughput":			        0.42,
+	"concurrency":			      783.47,
+	"successful_transactions":	       59525,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:26:43 +0700 (1678213603)
+[ GET /node/1 800][3]
+
+{	"transactions":			       62938,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		       26.47,
+	"response_time":		        0.74,
+	"transaction_rate":		     1054.59,
+	"throughput":			        0.44,
+	"concurrency":			      784.80,
+	"successful_transactions":	       62939,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.22,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:29:46 +0700 (1678213786)
+[ GET /node/1 800][4]
+
+{	"transactions":			       64316,
+	"availability":			      100.00,
+	"elapsed_time":			       59.76,
+	"data_transferred":		       27.05,
+	"response_time":		        0.73,
+	"transaction_rate":		     1076.24,
+	"throughput":			        0.45,
+	"concurrency":			      781.40,
+	"successful_transactions":	       64316,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.81,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:32:49 +0700 (1678213969)
+[ GET /node/1 800][5]
+
+{	"transactions":			       68453,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		       28.79,
+	"response_time":		        0.68,
+	"transaction_rate":		     1147.39,
+	"throughput":			        0.48,
+	"concurrency":			      784.76,
+	"successful_transactions":	       68453,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.95,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:35:52 +0700 (1678214152)
+Wed, 08 Mar 2023 01:35:52 +0700 (1678214152)
+[ GET /node/1 1000][1]
+
+{	"transactions":			       65262,
+	"availability":			      100.00,
+	"elapsed_time":			       60.02,
+	"data_transferred":		       27.45,
+	"response_time":		        0.89,
+	"transaction_rate":		     1087.34,
+	"throughput":			        0.46,
+	"concurrency":			      970.26,
+	"successful_transactions":	       65263,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.40,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:38:56 +0700 (1678214336)
+[ GET /node/1 1000][2]
+
+{	"transactions":			       71127,
+	"availability":			      100.00,
+	"elapsed_time":			       60.39,
+	"data_transferred":		       29.91,
+	"response_time":		        0.83,
+	"transaction_rate":		     1177.79,
+	"throughput":			        0.50,
+	"concurrency":			      976.75,
+	"successful_transactions":	       71127,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.64,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:41:59 +0700 (1678214519)
+[ GET /node/1 1000][3]
+
+{	"transactions":			       69184,
+	"availability":			      100.00,
+	"elapsed_time":			       59.77,
+	"data_transferred":		       29.10,
+	"response_time":		        0.84,
+	"transaction_rate":		     1157.50,
+	"throughput":			        0.49,
+	"concurrency":			      976.53,
+	"successful_transactions":	       69184,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.99,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:45:02 +0700 (1678214702)
+[ GET /node/1 1000][4]
+
+{	"transactions":			       68936,
+	"availability":			      100.00,
+	"elapsed_time":			       59.76,
+	"data_transferred":		       28.99,
+	"response_time":		        0.85,
+	"transaction_rate":		     1153.55,
+	"throughput":			        0.49,
+	"concurrency":			      975.49,
+	"successful_transactions":	       68937,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.96,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:48:06 +0700 (1678214886)
+[ GET /node/1 1000][5]
+
+{	"transactions":			       69553,
+	"availability":			      100.00,
+	"elapsed_time":			       60.54,
+	"data_transferred":		       29.25,
+	"response_time":		        0.85,
+	"transaction_rate":		     1148.88,
+	"throughput":			        0.48,
+	"concurrency":			      973.68,
+	"successful_transactions":	       69553,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.37,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:51:09 +0700 (1678215069)
+Wed, 08 Mar 2023 01:51:09 +0700 (1678215069)
+[ GET /sensor 200][1]
+
+{	"transactions":			       75841,
+	"availability":			      100.00,
+	"elapsed_time":			       59.20,
+	"data_transferred":		      301.53,
+	"response_time":		        0.15,
+	"transaction_rate":		     1281.10,
+	"throughput":			        5.09,
+	"concurrency":			      198.44,
+	"successful_transactions":	       75841,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.32,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:54:12 +0700 (1678215252)
+[ GET /sensor 200][2]
+
+{	"transactions":			       83039,
+	"availability":			      100.00,
+	"elapsed_time":			       59.76,
+	"data_transferred":		      330.16,
+	"response_time":		        0.14,
+	"transaction_rate":		     1389.54,
+	"throughput":			        5.52,
+	"concurrency":			      198.64,
+	"successful_transactions":	       83040,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.38,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 01:57:15 +0700 (1678215435)
+[ GET /sensor 200][3]
+
+{	"transactions":			       87125,
+	"availability":			      100.00,
+	"elapsed_time":			       59.71,
+	"data_transferred":		      346.40,
+	"response_time":		        0.14,
+	"transaction_rate":		     1459.14,
+	"throughput":			        5.80,
+	"concurrency":			      198.89,
+	"successful_transactions":	       87125,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.22,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:00:18 +0700 (1678215618)
+[ GET /sensor 200][4]
+
+{	"transactions":			       62423,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		      248.19,
+	"response_time":		        0.19,
+	"transaction_rate":		     1045.26,
+	"throughput":			        4.16,
+	"concurrency":			      199.05,
+	"successful_transactions":	       62423,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.54,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:03:21 +0700 (1678215801)
+[ GET /sensor 200][5]
+
+{	"transactions":			       77162,
+	"availability":			      100.00,
+	"elapsed_time":			       59.85,
+	"data_transferred":		      306.79,
+	"response_time":		        0.15,
+	"transaction_rate":		     1289.26,
+	"throughput":			        5.13,
+	"concurrency":			      198.32,
+	"successful_transactions":	       77162,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.11,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:06:24 +0700 (1678215984)
+Wed, 08 Mar 2023 02:06:24 +0700 (1678215984)
+[ GET /sensor 400][1]
+
+{	"transactions":			       79457,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		      315.91,
+	"response_time":		        0.30,
+	"transaction_rate":		     1330.49,
+	"throughput":			        5.29,
+	"concurrency":			      395.51,
+	"successful_transactions":	       79457,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.60,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:09:27 +0700 (1678216167)
+[ GET /sensor 400][2]
+
+{	"transactions":			       65494,
+	"availability":			      100.00,
+	"elapsed_time":			       59.80,
+	"data_transferred":		      260.40,
+	"response_time":		        0.36,
+	"transaction_rate":		     1095.22,
+	"throughput":			        4.35,
+	"concurrency":			      394.21,
+	"successful_transactions":	       65494,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.34,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:12:30 +0700 (1678216350)
+[ GET /sensor 400][3]
+
+{	"transactions":			       70123,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		      278.80,
+	"response_time":		        0.34,
+	"transaction_rate":		     1175.38,
+	"throughput":			        4.67,
+	"concurrency":			      394.62,
+	"successful_transactions":	       70123,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.90,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:15:33 +0700 (1678216533)
+[ GET /sensor 400][4]
+
+{	"transactions":			       57686,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		      229.35,
+	"response_time":		        0.41,
+	"transaction_rate":		      967.40,
+	"throughput":			        3.85,
+	"concurrency":			      396.10,
+	"successful_transactions":	       57686,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.82,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:18:36 +0700 (1678216716)
+[ GET /sensor 400][5]
+
+{	"transactions":			       71631,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		      284.80,
+	"response_time":		        0.33,
+	"transaction_rate":		     1199.85,
+	"throughput":			        4.77,
+	"concurrency":			      396.54,
+	"successful_transactions":	       71631,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.49,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:21:39 +0700 (1678216899)
+Wed, 08 Mar 2023 02:21:39 +0700 (1678216899)
+[ GET /sensor 600][1]
+
+{	"transactions":			       62177,
+	"availability":			      100.00,
+	"elapsed_time":			       59.92,
+	"data_transferred":		      247.21,
+	"response_time":		        0.57,
+	"transaction_rate":		     1037.67,
+	"throughput":			        4.13,
+	"concurrency":			      590.14,
+	"successful_transactions":	       62178,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.70,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:24:42 +0700 (1678217082)
+[ GET /sensor 600][2]
+
+{	"transactions":			       68123,
+	"availability":			      100.00,
+	"elapsed_time":			       59.53,
+	"data_transferred":		      270.85,
+	"response_time":		        0.52,
+	"transaction_rate":		     1144.35,
+	"throughput":			        4.55,
+	"concurrency":			      593.06,
+	"successful_transactions":	       68123,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.51,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:27:45 +0700 (1678217265)
+[ GET /sensor 600][3]
+
+{	"transactions":			       69862,
+	"availability":			      100.00,
+	"elapsed_time":			       60.95,
+	"data_transferred":		      277.76,
+	"response_time":		        0.50,
+	"transaction_rate":		     1146.22,
+	"throughput":			        4.56,
+	"concurrency":			      572.47,
+	"successful_transactions":	       69862,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.93,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:30:49 +0700 (1678217449)
+[ GET /sensor 600][4]
+
+{	"transactions":			       66210,
+	"availability":			      100.00,
+	"elapsed_time":			       59.39,
+	"data_transferred":		      263.24,
+	"response_time":		        0.53,
+	"transaction_rate":		     1114.83,
+	"throughput":			        4.43,
+	"concurrency":			      591.17,
+	"successful_transactions":	       66210,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.96,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:33:52 +0700 (1678217632)
+[ GET /sensor 600][5]
+
+{	"transactions":			       67046,
+	"availability":			      100.00,
+	"elapsed_time":			       59.89,
+	"data_transferred":		      266.57,
+	"response_time":		        0.53,
+	"transaction_rate":		     1119.49,
+	"throughput":			        4.45,
+	"concurrency":			      588.60,
+	"successful_transactions":	       67046,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.95,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:36:55 +0700 (1678217815)
+Wed, 08 Mar 2023 02:36:55 +0700 (1678217815)
+[ GET /sensor 800][1]
+
+{	"transactions":			       71819,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		      285.54,
+	"response_time":		        0.65,
+	"transaction_rate":		     1204.01,
+	"throughput":			        4.79,
+	"concurrency":			      785.24,
+	"successful_transactions":	       71819,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.57,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:39:58 +0700 (1678217998)
+[ GET /sensor 800][2]
+
+{	"transactions":			       63634,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		      253.00,
+	"response_time":		        0.74,
+	"transaction_rate":		     1066.61,
+	"throughput":			        4.24,
+	"concurrency":			      785.07,
+	"successful_transactions":	       63634,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.84,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:43:01 +0700 (1678218181)
+[ GET /sensor 800][3]
+
+{	"transactions":			       69009,
+	"availability":			      100.00,
+	"elapsed_time":			       59.67,
+	"data_transferred":		      274.37,
+	"response_time":		        0.68,
+	"transaction_rate":		     1156.51,
+	"throughput":			        4.60,
+	"concurrency":			      787.80,
+	"successful_transactions":	       69009,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.88,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:46:04 +0700 (1678218364)
+[ GET /sensor 800][4]
+
+{	"transactions":			       83715,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		      332.84,
+	"response_time":		        0.56,
+	"transaction_rate":		     1404.14,
+	"throughput":			        5.58,
+	"concurrency":			      786.49,
+	"successful_transactions":	       83715,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.39,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:49:07 +0700 (1678218547)
+[ GET /sensor 800][5]
+
+{	"transactions":			       73280,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		      291.35,
+	"response_time":		        0.64,
+	"transaction_rate":		     1228.50,
+	"throughput":			        4.88,
+	"concurrency":			      785.82,
+	"successful_transactions":	       73280,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.10,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:52:10 +0700 (1678218730)
+Wed, 08 Mar 2023 02:52:10 +0700 (1678218730)
+[ GET /sensor 1000][1]
+
+{	"transactions":			       77216,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		      307.00,
+	"response_time":		        0.76,
+	"transaction_rate":		     1295.14,
+	"throughput":			        5.15,
+	"concurrency":			      979.73,
+	"successful_transactions":	       77216,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.40,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:55:13 +0700 (1678218913)
+[ GET /sensor 1000][2]
+
+{	"transactions":			       70273,
+	"availability":			      100.00,
+	"elapsed_time":			       59.81,
+	"data_transferred":		      279.40,
+	"response_time":		        0.83,
+	"transaction_rate":		     1174.94,
+	"throughput":			        4.67,
+	"concurrency":			      977.01,
+	"successful_transactions":	       70273,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.56,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 02:58:16 +0700 (1678219096)
+[ GET /sensor 1000][3]
+
+{	"transactions":			       69902,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		      277.92,
+	"response_time":		        0.84,
+	"transaction_rate":		     1172.26,
+	"throughput":			        4.66,
+	"concurrency":			      980.84,
+	"successful_transactions":	       69902,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.57,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:01:19 +0700 (1678219279)
+[ GET /sensor 1000][4]
+
+{	"transactions":			       65632,
+	"availability":			      100.00,
+	"elapsed_time":			       59.83,
+	"data_transferred":		      260.95,
+	"response_time":		        0.89,
+	"transaction_rate":		     1096.97,
+	"throughput":			        4.36,
+	"concurrency":			      978.06,
+	"successful_transactions":	       65633,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.45,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:04:22 +0700 (1678219462)
+[ GET /sensor 1000][5]
+
+{	"transactions":			       66690,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		      265.15,
+	"response_time":		        0.88,
+	"transaction_rate":		     1116.71,
+	"throughput":			        4.44,
+	"concurrency":			      977.70,
+	"successful_transactions":	       66690,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.72,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:07:25 +0700 (1678219645)
+Wed, 08 Mar 2023 03:07:25 +0700 (1678219645)
+[ GET /sensor/1 200][1]
+
+{	"transactions":			       59577,
+	"availability":			      100.00,
+	"elapsed_time":			       59.31,
+	"data_transferred":		       46.48,
+	"response_time":		        0.20,
+	"transaction_rate":		     1004.50,
+	"throughput":			        0.78,
+	"concurrency":			      198.91,
+	"successful_transactions":	       59577,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.11,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:10:27 +0700 (1678219827)
+[ GET /sensor/1 200][2]
+
+{	"transactions":			       58655,
+	"availability":			      100.00,
+	"elapsed_time":			       59.15,
+	"data_transferred":		       45.76,
+	"response_time":		        0.20,
+	"transaction_rate":		      991.63,
+	"throughput":			        0.77,
+	"concurrency":			      199.00,
+	"successful_transactions":	       58655,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.61,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:13:29 +0700 (1678220009)
+[ GET /sensor/1 200][3]
+
+{	"transactions":			       62147,
+	"availability":			      100.00,
+	"elapsed_time":			       59.17,
+	"data_transferred":		       48.48,
+	"response_time":		        0.19,
+	"transaction_rate":		     1050.31,
+	"throughput":			        0.82,
+	"concurrency":			      198.90,
+	"successful_transactions":	       62147,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.84,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:16:31 +0700 (1678220191)
+[ GET /sensor/1 200][4]
+
+{	"transactions":			       57681,
+	"availability":			      100.00,
+	"elapsed_time":			       59.09,
+	"data_transferred":		       45.00,
+	"response_time":		        0.20,
+	"transaction_rate":		      976.16,
+	"throughput":			        0.76,
+	"concurrency":			      199.05,
+	"successful_transactions":	       57682,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.13,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:19:33 +0700 (1678220373)
+[ GET /sensor/1 200][5]
+
+{	"transactions":			       57181,
+	"availability":			      100.00,
+	"elapsed_time":			       59.13,
+	"data_transferred":		       44.61,
+	"response_time":		        0.21,
+	"transaction_rate":		      967.04,
+	"throughput":			        0.75,
+	"concurrency":			      199.02,
+	"successful_transactions":	       57181,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.94,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:22:35 +0700 (1678220555)
+Wed, 08 Mar 2023 03:22:35 +0700 (1678220555)
+[ GET /sensor/1 400][1]
+
+{	"transactions":			       54516,
+	"availability":			      100.00,
+	"elapsed_time":			       59.17,
+	"data_transferred":		       42.53,
+	"response_time":		        0.43,
+	"transaction_rate":		      921.35,
+	"throughput":			        0.72,
+	"concurrency":			      396.62,
+	"successful_transactions":	       54516,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.60,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:25:38 +0700 (1678220738)
+[ GET /sensor/1 400][2]
+
+{	"transactions":			       55212,
+	"availability":			      100.00,
+	"elapsed_time":			       60.13,
+	"data_transferred":		       43.07,
+	"response_time":		        0.43,
+	"transaction_rate":		      918.21,
+	"throughput":			        0.72,
+	"concurrency":			      396.01,
+	"successful_transactions":	       55212,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.62,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:28:41 +0700 (1678220921)
+[ GET /sensor/1 400][3]
+
+{	"transactions":			       64004,
+	"availability":			      100.00,
+	"elapsed_time":			       60.02,
+	"data_transferred":		       49.93,
+	"response_time":		        0.37,
+	"transaction_rate":		     1066.38,
+	"throughput":			        0.83,
+	"concurrency":			      396.22,
+	"successful_transactions":	       64004,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.63,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:31:44 +0700 (1678221104)
+[ GET /sensor/1 400][4]
+
+{	"transactions":			       55691,
+	"availability":			      100.00,
+	"elapsed_time":			       60.08,
+	"data_transferred":		       43.44,
+	"response_time":		        0.43,
+	"transaction_rate":		      926.95,
+	"throughput":			        0.72,
+	"concurrency":			      395.83,
+	"successful_transactions":	       55691,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.00,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:34:47 +0700 (1678221287)
+[ GET /sensor/1 400][5]
+
+{	"transactions":			       55810,
+	"availability":			      100.00,
+	"elapsed_time":			       60.01,
+	"data_transferred":		       43.54,
+	"response_time":		        0.43,
+	"transaction_rate":		      930.01,
+	"throughput":			        0.73,
+	"concurrency":			      396.56,
+	"successful_transactions":	       55810,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.04,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:37:50 +0700 (1678221470)
+Wed, 08 Mar 2023 03:37:50 +0700 (1678221470)
+[ GET /sensor/1 600][1]
+
+{	"transactions":			       57043,
+	"availability":			      100.00,
+	"elapsed_time":			       60.32,
+	"data_transferred":		       44.50,
+	"response_time":		        0.62,
+	"transaction_rate":		      945.67,
+	"throughput":			        0.74,
+	"concurrency":			      589.93,
+	"successful_transactions":	       57043,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.85,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:40:53 +0700 (1678221653)
+[ GET /sensor/1 600][2]
+
+{	"transactions":			       55808,
+	"availability":			      100.00,
+	"elapsed_time":			       59.92,
+	"data_transferred":		       43.54,
+	"response_time":		        0.64,
+	"transaction_rate":		      931.38,
+	"throughput":			        0.73,
+	"concurrency":			      591.64,
+	"successful_transactions":	       55808,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.63,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:43:56 +0700 (1678221836)
+[ GET /sensor/1 600][3]
+
+{	"transactions":			       56972,
+	"availability":			      100.00,
+	"elapsed_time":			       60.06,
+	"data_transferred":		       44.44,
+	"response_time":		        0.62,
+	"transaction_rate":		      948.58,
+	"throughput":			        0.74,
+	"concurrency":			      591.26,
+	"successful_transactions":	       56972,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.30,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:46:59 +0700 (1678222019)
+[ GET /sensor/1 600][4]
+
+{	"transactions":			       58409,
+	"availability":			      100.00,
+	"elapsed_time":			       60.08,
+	"data_transferred":		       45.57,
+	"response_time":		        0.61,
+	"transaction_rate":		      972.19,
+	"throughput":			        0.76,
+	"concurrency":			      590.78,
+	"successful_transactions":	       58409,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.58,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:50:02 +0700 (1678222202)
+[ GET /sensor/1 600][5]
+
+{	"transactions":			       57685,
+	"availability":			      100.00,
+	"elapsed_time":			       60.31,
+	"data_transferred":		       45.00,
+	"response_time":		        0.61,
+	"transaction_rate":		      956.47,
+	"throughput":			        0.75,
+	"concurrency":			      587.13,
+	"successful_transactions":	       57685,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.47,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:53:05 +0700 (1678222385)
+Wed, 08 Mar 2023 03:53:05 +0700 (1678222385)
+[ GET /sensor/1 800][1]
+
+{	"transactions":			       57372,
+	"availability":			      100.00,
+	"elapsed_time":			       59.88,
+	"data_transferred":		       44.76,
+	"response_time":		        0.82,
+	"transaction_rate":		      958.12,
+	"throughput":			        0.75,
+	"concurrency":			      783.50,
+	"successful_transactions":	       57372,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.80,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:56:08 +0700 (1678222568)
+[ GET /sensor/1 800][2]
+
+{	"transactions":			       55455,
+	"availability":			      100.00,
+	"elapsed_time":			       59.92,
+	"data_transferred":		       43.26,
+	"response_time":		        0.85,
+	"transaction_rate":		      925.48,
+	"throughput":			        0.72,
+	"concurrency":			      786.05,
+	"successful_transactions":	       55455,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.88,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 03:59:11 +0700 (1678222751)
+[ GET /sensor/1 800][3]
+
+{	"transactions":			       55357,
+	"availability":			      100.00,
+	"elapsed_time":			       60.20,
+	"data_transferred":		       43.18,
+	"response_time":		        0.85,
+	"transaction_rate":		      919.55,
+	"throughput":			        0.72,
+	"concurrency":			      782.18,
+	"successful_transactions":	       55357,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.56,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:02:14 +0700 (1678222934)
+[ GET /sensor/1 800][4]
+
+{	"transactions":			       56871,
+	"availability":			      100.00,
+	"elapsed_time":			       59.82,
+	"data_transferred":		       44.37,
+	"response_time":		        0.83,
+	"transaction_rate":		      950.70,
+	"throughput":			        0.74,
+	"concurrency":			      786.76,
+	"successful_transactions":	       56871,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.05,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:05:17 +0700 (1678223117)
+[ GET /sensor/1 800][5]
+
+{	"transactions":			       56687,
+	"availability":			      100.00,
+	"elapsed_time":			       60.12,
+	"data_transferred":		       44.22,
+	"response_time":		        0.83,
+	"transaction_rate":		      942.90,
+	"throughput":			        0.74,
+	"concurrency":			      784.66,
+	"successful_transactions":	       56687,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.12,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:08:20 +0700 (1678223300)
+Wed, 08 Mar 2023 04:08:20 +0700 (1678223300)
+[ GET /sensor/1 1000][1]
+
+{	"transactions":			       56330,
+	"availability":			      100.00,
+	"elapsed_time":			       60.01,
+	"data_transferred":		       43.94,
+	"response_time":		        1.04,
+	"transaction_rate":		      938.68,
+	"throughput":			        0.73,
+	"concurrency":			      977.66,
+	"successful_transactions":	       56330,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.53,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:11:23 +0700 (1678223483)
+[ GET /sensor/1 1000][2]
+
+{	"transactions":			       57315,
+	"availability":			      100.00,
+	"elapsed_time":			       60.09,
+	"data_transferred":		       44.71,
+	"response_time":		        1.02,
+	"transaction_rate":		      953.82,
+	"throughput":			        0.74,
+	"concurrency":			      975.66,
+	"successful_transactions":	       57315,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.80,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:14:26 +0700 (1678223666)
+[ GET /sensor/1 1000][3]
+
+{	"transactions":			       57838,
+	"availability":			      100.00,
+	"elapsed_time":			       59.97,
+	"data_transferred":		       45.12,
+	"response_time":		        1.01,
+	"transaction_rate":		      964.45,
+	"throughput":			        0.75,
+	"concurrency":			      977.56,
+	"successful_transactions":	       57838,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.32,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:17:29 +0700 (1678223849)
+[ GET /sensor/1 1000][4]
+
+{	"transactions":			       59732,
+	"availability":			      100.00,
+	"elapsed_time":			       60.24,
+	"data_transferred":		       46.60,
+	"response_time":		        0.98,
+	"transaction_rate":		      991.57,
+	"throughput":			        0.77,
+	"concurrency":			      971.18,
+	"successful_transactions":	       59732,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.92,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:20:32 +0700 (1678224032)
+[ GET /sensor/1 1000][5]
+
+{	"transactions":			       57074,
+	"availability":			      100.00,
+	"elapsed_time":			       59.76,
+	"data_transferred":		       44.52,
+	"response_time":		        1.02,
+	"transaction_rate":		      955.05,
+	"throughput":			        0.75,
+	"concurrency":			      978.32,
+	"successful_transactions":	       57074,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.18,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:23:35 +0700 (1678224215)
+Wed, 08 Mar 2023 04:23:35 +0700 (1678224215)
+[ PUT /node/1 200][1]
+
+{	"transactions":			       44158,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		        3.41,
+	"response_time":		        0.27,
+	"transaction_rate":		      740.66,
+	"throughput":			        0.06,
+	"concurrency":			      199.23,
+	"successful_transactions":	       44158,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.35,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:26:38 +0700 (1678224398)
+[ PUT /node/1 200][2]
+
+{	"transactions":			       43800,
+	"availability":			      100.00,
+	"elapsed_time":			       59.78,
+	"data_transferred":		        3.38,
+	"response_time":		        0.27,
+	"transaction_rate":		      732.69,
+	"throughput":			        0.06,
+	"concurrency":			      199.23,
+	"successful_transactions":	       43800,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.51,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:29:41 +0700 (1678224581)
+[ PUT /node/1 200][3]
+
+{	"transactions":			       46319,
+	"availability":			      100.00,
+	"elapsed_time":			       59.82,
+	"data_transferred":		        3.58,
+	"response_time":		        0.26,
+	"transaction_rate":		      774.31,
+	"throughput":			        0.06,
+	"concurrency":			      199.20,
+	"successful_transactions":	       46319,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:32:44 +0700 (1678224764)
+[ PUT /node/1 200][4]
+
+{	"transactions":			       47039,
+	"availability":			      100.00,
+	"elapsed_time":			       59.77,
+	"data_transferred":		        3.63,
+	"response_time":		        0.25,
+	"transaction_rate":		      787.00,
+	"throughput":			        0.06,
+	"concurrency":			      198.88,
+	"successful_transactions":	       47039,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.36,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:35:47 +0700 (1678224947)
+[ PUT /node/1 200][5]
+
+{	"transactions":			       42863,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		        3.31,
+	"response_time":		        0.28,
+	"transaction_rate":		      718.94,
+	"throughput":			        0.06,
+	"concurrency":			      198.69,
+	"successful_transactions":	       42863,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.85,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:38:50 +0700 (1678225130)
+Wed, 08 Mar 2023 04:38:50 +0700 (1678225130)
+[ PUT /node/1 400][1]
+
+{	"transactions":			       41618,
+	"availability":			      100.00,
+	"elapsed_time":			       59.64,
+	"data_transferred":		        3.21,
+	"response_time":		        0.57,
+	"transaction_rate":		      697.82,
+	"throughput":			        0.05,
+	"concurrency":			      396.64,
+	"successful_transactions":	       41618,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.15,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:41:53 +0700 (1678225313)
+[ PUT /node/1 400][2]
+
+{	"transactions":			       44698,
+	"availability":			      100.00,
+	"elapsed_time":			       59.74,
+	"data_transferred":		        3.45,
+	"response_time":		        0.53,
+	"transaction_rate":		      748.21,
+	"throughput":			        0.06,
+	"concurrency":			      395.89,
+	"successful_transactions":	       44698,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.62,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:44:56 +0700 (1678225496)
+[ PUT /node/1 400][3]
+
+{	"transactions":			       44283,
+	"availability":			      100.00,
+	"elapsed_time":			       59.76,
+	"data_transferred":		        3.42,
+	"response_time":		        0.53,
+	"transaction_rate":		      741.01,
+	"throughput":			        0.06,
+	"concurrency":			      395.30,
+	"successful_transactions":	       44283,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.10,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:47:59 +0700 (1678225679)
+[ PUT /node/1 400][4]
+
+{	"transactions":			       42529,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		        3.29,
+	"response_time":		        0.55,
+	"transaction_rate":		      712.14,
+	"throughput":			        0.06,
+	"concurrency":			      394.94,
+	"successful_transactions":	       42529,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.16,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:51:02 +0700 (1678225862)
+[ PUT /node/1 400][5]
+
+{	"transactions":			       42446,
+	"availability":			      100.00,
+	"elapsed_time":			       59.57,
+	"data_transferred":		        3.28,
+	"response_time":		        0.55,
+	"transaction_rate":		      712.54,
+	"throughput":			        0.06,
+	"concurrency":			      393.01,
+	"successful_transactions":	       42446,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.40,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:54:05 +0700 (1678226045)
+Wed, 08 Mar 2023 04:54:05 +0700 (1678226045)
+[ PUT /node/1 600][1]
+
+{	"transactions":			       44359,
+	"availability":			      100.00,
+	"elapsed_time":			       59.45,
+	"data_transferred":		        3.43,
+	"response_time":		        0.78,
+	"transaction_rate":		      746.16,
+	"throughput":			        0.06,
+	"concurrency":			      583.82,
+	"successful_transactions":	       44359,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.08,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 04:57:08 +0700 (1678226228)
+[ PUT /node/1 600][2]
+
+{	"transactions":			       39469,
+	"availability":			      100.00,
+	"elapsed_time":			       59.46,
+	"data_transferred":		        3.05,
+	"response_time":		        0.89,
+	"transaction_rate":		      663.79,
+	"throughput":			        0.05,
+	"concurrency":			      593.39,
+	"successful_transactions":	       39469,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.18,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:00:11 +0700 (1678226411)
+[ PUT /node/1 600][3]
+
+{	"transactions":			       38155,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		        2.95,
+	"response_time":		        0.92,
+	"transaction_rate":		      639.11,
+	"throughput":			        0.05,
+	"concurrency":			      587.58,
+	"successful_transactions":	       38155,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.00,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:03:14 +0700 (1678226594)
+[ PUT /node/1 600][4]
+
+{	"transactions":			       43748,
+	"availability":			      100.00,
+	"elapsed_time":			       59.73,
+	"data_transferred":		        3.38,
+	"response_time":		        0.81,
+	"transaction_rate":		      732.43,
+	"throughput":			        0.06,
+	"concurrency":			      593.79,
+	"successful_transactions":	       43748,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.45,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:06:17 +0700 (1678226777)
+[ PUT /node/1 600][5]
+
+{	"transactions":			       42709,
+	"availability":			      100.00,
+	"elapsed_time":			       59.77,
+	"data_transferred":		        3.30,
+	"response_time":		        0.83,
+	"transaction_rate":		      714.56,
+	"throughput":			        0.06,
+	"concurrency":			      592.62,
+	"successful_transactions":	       42709,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.46,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:09:20 +0700 (1678226960)
+Wed, 08 Mar 2023 05:09:20 +0700 (1678226960)
+[ PUT /node/1 800][1]
+
+{	"transactions":			       42739,
+	"availability":			      100.00,
+	"elapsed_time":			       59.74,
+	"data_transferred":		        3.30,
+	"response_time":		        1.09,
+	"transaction_rate":		      715.42,
+	"throughput":			        0.06,
+	"concurrency":			      781.27,
+	"successful_transactions":	       42739,
+	"failed_transactions":		           0,
+	"longest_transaction":		       11.58,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:12:23 +0700 (1678227143)
+[ PUT /node/1 800][2]
+
+{	"transactions":			       44176,
+	"availability":			      100.00,
+	"elapsed_time":			       59.49,
+	"data_transferred":		        3.41,
+	"response_time":		        1.06,
+	"transaction_rate":		      742.58,
+	"throughput":			        0.06,
+	"concurrency":			      789.47,
+	"successful_transactions":	       44176,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.91,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:15:26 +0700 (1678227326)
+[ PUT /node/1 800][3]
+
+{	"transactions":			       43132,
+	"availability":			      100.00,
+	"elapsed_time":			       59.73,
+	"data_transferred":		        3.33,
+	"response_time":		        1.09,
+	"transaction_rate":		      722.12,
+	"throughput":			        0.06,
+	"concurrency":			      788.20,
+	"successful_transactions":	       43132,
+	"failed_transactions":		           0,
+	"longest_transaction":		       11.56,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:18:29 +0700 (1678227509)
+[ PUT /node/1 800][4]
+
+{	"transactions":			       42945,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		        3.32,
+	"response_time":		        1.08,
+	"transaction_rate":		      719.83,
+	"throughput":			        0.06,
+	"concurrency":			      777.78,
+	"successful_transactions":	       42945,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.57,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:21:32 +0700 (1678227692)
+[ PUT /node/1 800][5]
+
+{	"transactions":			       39326,
+	"availability":			      100.00,
+	"elapsed_time":			       59.74,
+	"data_transferred":		        3.04,
+	"response_time":		        1.19,
+	"transaction_rate":		      658.29,
+	"throughput":			        0.05,
+	"concurrency":			      783.70,
+	"successful_transactions":	       39326,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.66,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:24:35 +0700 (1678227875)
+Wed, 08 Mar 2023 05:24:35 +0700 (1678227875)
+[ PUT /node/1 1000][1]
+
+{	"transactions":			       42237,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		        3.26,
+	"response_time":		        1.39,
+	"transaction_rate":		      708.08,
+	"throughput":			        0.05,
+	"concurrency":			      980.95,
+	"successful_transactions":	       42237,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.41,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:27:38 +0700 (1678228058)
+[ PUT /node/1 1000][2]
+
+{	"transactions":			       41438,
+	"availability":			      100.00,
+	"elapsed_time":			       59.64,
+	"data_transferred":		        3.20,
+	"response_time":		        1.41,
+	"transaction_rate":		      694.80,
+	"throughput":			        0.05,
+	"concurrency":			      981.87,
+	"successful_transactions":	       41438,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.67,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:30:41 +0700 (1678228241)
+[ PUT /node/1 1000][3]
+
+{	"transactions":			       40192,
+	"availability":			      100.00,
+	"elapsed_time":			       59.14,
+	"data_transferred":		        3.10,
+	"response_time":		        1.42,
+	"transaction_rate":		      679.61,
+	"throughput":			        0.05,
+	"concurrency":			      968.35,
+	"successful_transactions":	       40192,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.27,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:33:44 +0700 (1678228424)
+[ PUT /node/1 1000][4]
+
+{	"transactions":			       42461,
+	"availability":			      100.00,
+	"elapsed_time":			       59.73,
+	"data_transferred":		        3.28,
+	"response_time":		        1.38,
+	"transaction_rate":		      710.88,
+	"throughput":			        0.05,
+	"concurrency":			      977.75,
+	"successful_transactions":	       42461,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.98,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:36:47 +0700 (1678228607)
+[ PUT /node/1 1000][5]
+
+{	"transactions":			       43061,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		        3.33,
+	"response_time":		        1.34,
+	"transaction_rate":		      721.89,
+	"throughput":			        0.06,
+	"concurrency":			      963.99,
+	"successful_transactions":	       43062,
+	"failed_transactions":		           0,
+	"longest_transaction":		       14.27,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:39:50 +0700 (1678228790)
+Wed, 08 Mar 2023 05:39:50 +0700 (1678228790)
+[ POST /node 200][1]
+
+{	"transactions":			       60760,
+	"availability":			      100.00,
+	"elapsed_time":			       59.73,
+	"data_transferred":		        4.40,
+	"response_time":		        0.20,
+	"transaction_rate":		     1017.24,
+	"throughput":			        0.07,
+	"concurrency":			      199.15,
+	"successful_transactions":	       60760,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.00,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:42:53 +0700 (1678228973)
+[ POST /node 200][2]
+
+{	"transactions":			       63638,
+	"availability":			      100.00,
+	"elapsed_time":			       59.22,
+	"data_transferred":		        4.61,
+	"response_time":		        0.19,
+	"transaction_rate":		     1074.60,
+	"throughput":			        0.08,
+	"concurrency":			      199.19,
+	"successful_transactions":	       63639,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.47,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:45:56 +0700 (1678229156)
+[ POST /node 200][3]
+
+{	"transactions":			       62112,
+	"availability":			      100.00,
+	"elapsed_time":			       59.23,
+	"data_transferred":		        4.50,
+	"response_time":		        0.19,
+	"transaction_rate":		     1048.66,
+	"throughput":			        0.08,
+	"concurrency":			      199.13,
+	"successful_transactions":	       62113,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.39,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:48:59 +0700 (1678229339)
+[ POST /node 200][4]
+
+{	"transactions":			       63142,
+	"availability":			      100.00,
+	"elapsed_time":			       59.30,
+	"data_transferred":		        4.58,
+	"response_time":		        0.19,
+	"transaction_rate":		     1064.79,
+	"throughput":			        0.08,
+	"concurrency":			      199.02,
+	"successful_transactions":	       63142,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.77,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:52:02 +0700 (1678229522)
+[ POST /node 200][5]
+
+{	"transactions":			       60160,
+	"availability":			      100.00,
+	"elapsed_time":			       59.13,
+	"data_transferred":		        4.36,
+	"response_time":		        0.20,
+	"transaction_rate":		     1017.42,
+	"throughput":			        0.07,
+	"concurrency":			      198.76,
+	"successful_transactions":	       60160,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.79,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:55:06 +0700 (1678229706)
+Wed, 08 Mar 2023 05:55:06 +0700 (1678229706)
+[ POST /node 400][1]
+
+{	"transactions":			       64176,
+	"availability":			      100.00,
+	"elapsed_time":			       59.85,
+	"data_transferred":		        4.65,
+	"response_time":		        0.37,
+	"transaction_rate":		     1072.28,
+	"throughput":			        0.08,
+	"concurrency":			      396.44,
+	"successful_transactions":	       64176,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.20,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 05:58:09 +0700 (1678229889)
+[ POST /node 400][2]
+
+{	"transactions":			       61922,
+	"availability":			      100.00,
+	"elapsed_time":			       60.13,
+	"data_transferred":		        4.49,
+	"response_time":		        0.38,
+	"transaction_rate":		     1029.80,
+	"throughput":			        0.07,
+	"concurrency":			      396.07,
+	"successful_transactions":	       61922,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.41,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:01:13 +0700 (1678230073)
+[ POST /node 400][3]
+
+{	"transactions":			       63169,
+	"availability":			      100.00,
+	"elapsed_time":			       59.15,
+	"data_transferred":		        4.58,
+	"response_time":		        0.37,
+	"transaction_rate":		     1067.95,
+	"throughput":			        0.08,
+	"concurrency":			      396.83,
+	"successful_transactions":	       63169,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.99,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+psql: error: connection to server at "10.104.0.4", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+psql: error: connection to server at "10.104.0.4", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+Wed, 08 Mar 2023 06:04:16 +0700 (1678230256)
+[ POST /node 400][4]
+
+{	"transactions":			           0,
+	"availability":			        0.00,
+	"elapsed_time":			        0.86,
+	"data_transferred":		        0.19,
+	"response_time":		        0.00,
+	"transaction_rate":		        0.00,
+	"throughput":			        0.22,
+	"concurrency":			      327.03,
+	"successful_transactions":	           0,
+	"failed_transactions":		        1423,
+	"longest_transaction":		        0.83,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:06:21 +0700 (1678230381)
+[ POST /node 400][5]
+
+{	"transactions":			       61757,
+	"availability":			      100.00,
+	"elapsed_time":			       60.01,
+	"data_transferred":		        4.48,
+	"response_time":		        0.39,
+	"transaction_rate":		     1029.11,
+	"throughput":			        0.07,
+	"concurrency":			      396.43,
+	"successful_transactions":	       61757,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.74,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:09:24 +0700 (1678230564)
+Wed, 08 Mar 2023 06:09:24 +0700 (1678230564)
+[ POST /node 600][1]
+
+{	"transactions":			       61710,
+	"availability":			      100.00,
+	"elapsed_time":			       59.84,
+	"data_transferred":		        4.47,
+	"response_time":		        0.57,
+	"transaction_rate":		     1031.25,
+	"throughput":			        0.07,
+	"concurrency":			      592.15,
+	"successful_transactions":	       61710,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.24,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:12:28 +0700 (1678230748)
+[ POST /node 600][2]
+
+{	"transactions":			       62019,
+	"availability":			      100.00,
+	"elapsed_time":			       60.06,
+	"data_transferred":		        4.50,
+	"response_time":		        0.57,
+	"transaction_rate":		     1032.62,
+	"throughput":			        0.07,
+	"concurrency":			      590.77,
+	"successful_transactions":	       62019,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.99,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:15:32 +0700 (1678230932)
+[ POST /node 600][3]
+
+{	"transactions":			       58904,
+	"availability":			      100.00,
+	"elapsed_time":			       60.15,
+	"data_transferred":		        4.27,
+	"response_time":		        0.60,
+	"transaction_rate":		      979.29,
+	"throughput":			        0.07,
+	"concurrency":			      590.68,
+	"successful_transactions":	       58904,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.36,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:18:36 +0700 (1678231116)
+[ POST /node 600][4]
+
+{	"transactions":			       63448,
+	"availability":			      100.00,
+	"elapsed_time":			       60.08,
+	"data_transferred":		        4.60,
+	"response_time":		        0.56,
+	"transaction_rate":		     1056.06,
+	"throughput":			        0.08,
+	"concurrency":			      591.51,
+	"successful_transactions":	       63448,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.72,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:21:40 +0700 (1678231300)
+[ POST /node 600][5]
+
+{	"transactions":			       60811,
+	"availability":			      100.00,
+	"elapsed_time":			       60.10,
+	"data_transferred":		        4.41,
+	"response_time":		        0.59,
+	"transaction_rate":		     1011.83,
+	"throughput":			        0.07,
+	"concurrency":			      592.26,
+	"successful_transactions":	       60811,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.55,
+	"shortest_transaction":		        0.01
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:24:44 +0700 (1678231484)
+Wed, 08 Mar 2023 06:24:44 +0700 (1678231484)
+[ POST /node 800][1]
+
+{	"transactions":			       64374,
+	"availability":			      100.00,
+	"elapsed_time":			       60.16,
+	"data_transferred":		        4.67,
+	"response_time":		        0.74,
+	"transaction_rate":		     1070.05,
+	"throughput":			        0.08,
+	"concurrency":			      786.99,
+	"successful_transactions":	       64374,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.17,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:27:48 +0700 (1678231668)
+[ POST /node 800][2]
+
+{	"transactions":			       63215,
+	"availability":			      100.00,
+	"elapsed_time":			       61.56,
+	"data_transferred":		        4.58,
+	"response_time":		        0.73,
+	"transaction_rate":		     1026.88,
+	"throughput":			        0.07,
+	"concurrency":			      754.02,
+	"successful_transactions":	       63217,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.64,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:30:53 +0700 (1678231853)
+[ POST /node 800][3]
+
+{	"transactions":			       66046,
+	"availability":			      100.00,
+	"elapsed_time":			       59.44,
+	"data_transferred":		        4.79,
+	"response_time":		        0.71,
+	"transaction_rate":		     1111.14,
+	"throughput":			        0.08,
+	"concurrency":			      786.93,
+	"successful_transactions":	       66046,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.75,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:33:57 +0700 (1678232037)
+[ POST /node 800][4]
+
+{	"transactions":			       64915,
+	"availability":			      100.00,
+	"elapsed_time":			       60.19,
+	"data_transferred":		        4.70,
+	"response_time":		        0.73,
+	"transaction_rate":		     1078.50,
+	"throughput":			        0.08,
+	"concurrency":			      785.20,
+	"successful_transactions":	       64915,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:37:01 +0700 (1678232221)
+[ POST /node 800][5]
+
+{	"transactions":			       64499,
+	"availability":			      100.00,
+	"elapsed_time":			       59.94,
+	"data_transferred":		        4.67,
+	"response_time":		        0.73,
+	"transaction_rate":		     1076.06,
+	"throughput":			        0.08,
+	"concurrency":			      785.19,
+	"successful_transactions":	       64499,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:40:05 +0700 (1678232405)
+Wed, 08 Mar 2023 06:40:05 +0700 (1678232405)
+[ POST /node 1000][1]
+
+{	"transactions":			       65225,
+	"availability":			      100.00,
+	"elapsed_time":			       59.96,
+	"data_transferred":		        4.73,
+	"response_time":		        0.90,
+	"transaction_rate":		     1087.81,
+	"throughput":			        0.08,
+	"concurrency":			      976.52,
+	"successful_transactions":	       65225,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.57,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:43:09 +0700 (1678232589)
+[ POST /node 1000][2]
+
+{	"transactions":			       65264,
+	"availability":			      100.00,
+	"elapsed_time":			       60.28,
+	"data_transferred":		        4.73,
+	"response_time":		        0.90,
+	"transaction_rate":		     1082.68,
+	"throughput":			        0.08,
+	"concurrency":			      971.94,
+	"successful_transactions":	       65264,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.82,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:46:13 +0700 (1678232773)
+[ POST /node 1000][3]
+
+{	"transactions":			       62366,
+	"availability":			      100.00,
+	"elapsed_time":			       59.80,
+	"data_transferred":		        4.52,
+	"response_time":		        0.94,
+	"transaction_rate":		     1042.91,
+	"throughput":			        0.08,
+	"concurrency":			      976.57,
+	"successful_transactions":	       62366,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.38,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:49:17 +0700 (1678232957)
+[ POST /node 1000][4]
+
+{	"transactions":			       64270,
+	"availability":			      100.00,
+	"elapsed_time":			       60.24,
+	"data_transferred":		        4.66,
+	"response_time":		        0.91,
+	"transaction_rate":		     1066.90,
+	"throughput":			        0.08,
+	"concurrency":			      975.25,
+	"successful_transactions":	       64270,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:52:21 +0700 (1678233141)
+[ POST /node 1000][5]
+
+{	"transactions":			       62828,
+	"availability":			      100.00,
+	"elapsed_time":			       60.01,
+	"data_transferred":		        4.55,
+	"response_time":		        0.93,
+	"transaction_rate":		     1046.96,
+	"throughput":			        0.08,
+	"concurrency":			      975.70,
+	"successful_transactions":	       62828,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.17,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:55:25 +0700 (1678233325)
+Wed, 08 Mar 2023 06:55:25 +0700 (1678233325)
+[ POST /channel 200][1]
+
+{	"transactions":			       60156,
+	"availability":			      100.00,
+	"elapsed_time":			       59.84,
+	"data_transferred":		        4.53,
+	"response_time":		        0.20,
+	"transaction_rate":		     1005.28,
+	"throughput":			        0.08,
+	"concurrency":			      199.10,
+	"successful_transactions":	       60156,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.00,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 06:58:28 +0700 (1678233508)
+[ POST /channel 200][2]
+
+{	"transactions":			       60252,
+	"availability":			      100.00,
+	"elapsed_time":			       59.16,
+	"data_transferred":		        4.54,
+	"response_time":		        0.20,
+	"transaction_rate":		     1018.46,
+	"throughput":			        0.08,
+	"concurrency":			      198.93,
+	"successful_transactions":	       60252,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.26,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:01:31 +0700 (1678233691)
+[ POST /channel 200][3]
+
+{	"transactions":			       61074,
+	"availability":			      100.00,
+	"elapsed_time":			       59.14,
+	"data_transferred":		        4.60,
+	"response_time":		        0.19,
+	"transaction_rate":		     1032.70,
+	"throughput":			        0.08,
+	"concurrency":			      198.83,
+	"successful_transactions":	       61074,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.54,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:04:34 +0700 (1678233874)
+[ POST /channel 200][4]
+
+{	"transactions":			       58817,
+	"availability":			      100.00,
+	"elapsed_time":			       59.26,
+	"data_transferred":		        4.43,
+	"response_time":		        0.20,
+	"transaction_rate":		      992.52,
+	"throughput":			        0.07,
+	"concurrency":			      199.11,
+	"successful_transactions":	       58817,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.54,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:07:37 +0700 (1678234057)
+[ POST /channel 200][5]
+
+{	"transactions":			       58060,
+	"availability":			      100.00,
+	"elapsed_time":			       59.21,
+	"data_transferred":		        4.37,
+	"response_time":		        0.20,
+	"transaction_rate":		      980.58,
+	"throughput":			        0.07,
+	"concurrency":			      198.74,
+	"successful_transactions":	       58060,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.61,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:10:40 +0700 (1678234240)
+Wed, 08 Mar 2023 07:10:40 +0700 (1678234240)
+[ POST /channel 400][1]
+
+{	"transactions":			       60459,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		        4.55,
+	"response_time":		        0.39,
+	"transaction_rate":		     1013.90,
+	"throughput":			        0.08,
+	"concurrency":			      396.92,
+	"successful_transactions":	       60459,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.44,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:13:43 +0700 (1678234423)
+[ POST /channel 400][2]
+
+{	"transactions":			       61834,
+	"availability":			      100.00,
+	"elapsed_time":			       59.57,
+	"data_transferred":		        4.66,
+	"response_time":		        0.38,
+	"transaction_rate":		     1038.01,
+	"throughput":			        0.08,
+	"concurrency":			      396.04,
+	"successful_transactions":	       61835,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.52,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:16:46 +0700 (1678234606)
+[ POST /channel 400][3]
+
+{	"transactions":			       61566,
+	"availability":			      100.00,
+	"elapsed_time":			       59.52,
+	"data_transferred":		        4.64,
+	"response_time":		        0.38,
+	"transaction_rate":		     1034.38,
+	"throughput":			        0.08,
+	"concurrency":			      396.11,
+	"successful_transactions":	       61566,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.76,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:19:50 +0700 (1678234790)
+[ POST /channel 400][4]
+
+{	"transactions":			       61306,
+	"availability":			      100.00,
+	"elapsed_time":			       60.11,
+	"data_transferred":		        4.62,
+	"response_time":		        0.39,
+	"transaction_rate":		     1019.90,
+	"throughput":			        0.08,
+	"concurrency":			      396.23,
+	"successful_transactions":	       61306,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.89,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:22:53 +0700 (1678234973)
+[ POST /channel 400][5]
+
+{	"transactions":			       63859,
+	"availability":			      100.00,
+	"elapsed_time":			       60.16,
+	"data_transferred":		        4.81,
+	"response_time":		        0.37,
+	"transaction_rate":		     1061.49,
+	"throughput":			        0.08,
+	"concurrency":			      396.18,
+	"successful_transactions":	       63859,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.90,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:25:57 +0700 (1678235157)
+Wed, 08 Mar 2023 07:25:58 +0700 (1678235158)
+[ POST /channel 600][1]
+
+{	"transactions":			       61036,
+	"availability":			      100.00,
+	"elapsed_time":			       60.29,
+	"data_transferred":		        4.60,
+	"response_time":		        0.58,
+	"transaction_rate":		     1012.37,
+	"throughput":			        0.08,
+	"concurrency":			      589.16,
+	"successful_transactions":	       61036,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.43,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:29:02 +0700 (1678235342)
+[ POST /channel 600][2]
+
+{	"transactions":			       63550,
+	"availability":			      100.00,
+	"elapsed_time":			       60.59,
+	"data_transferred":		        4.79,
+	"response_time":		        0.56,
+	"transaction_rate":		     1048.85,
+	"throughput":			        0.08,
+	"concurrency":			      583.64,
+	"successful_transactions":	       63550,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.02,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:32:06 +0700 (1678235526)
+[ POST /channel 600][3]
+
+{	"transactions":			       60479,
+	"availability":			      100.00,
+	"elapsed_time":			       59.47,
+	"data_transferred":		        4.56,
+	"response_time":		        0.58,
+	"transaction_rate":		     1016.97,
+	"throughput":			        0.08,
+	"concurrency":			      590.56,
+	"successful_transactions":	       60479,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.84,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:35:09 +0700 (1678235709)
+[ POST /channel 600][4]
+
+{	"transactions":			       60485,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		        4.56,
+	"response_time":		        0.58,
+	"transaction_rate":		     1012.81,
+	"throughput":			        0.08,
+	"concurrency":			      588.57,
+	"successful_transactions":	       60485,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.00,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:38:13 +0700 (1678235893)
+[ POST /channel 600][5]
+
+{	"transactions":			       61301,
+	"availability":			      100.00,
+	"elapsed_time":			       60.10,
+	"data_transferred":		        4.62,
+	"response_time":		        0.58,
+	"transaction_rate":		     1019.98,
+	"throughput":			        0.08,
+	"concurrency":			      589.50,
+	"successful_transactions":	       61301,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.35,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:41:17 +0700 (1678236077)
+Wed, 08 Mar 2023 07:41:17 +0700 (1678236077)
+[ POST /channel 800][1]
+
+{	"transactions":			       63616,
+	"availability":			      100.00,
+	"elapsed_time":			       60.28,
+	"data_transferred":		        4.79,
+	"response_time":		        0.74,
+	"transaction_rate":		     1055.34,
+	"throughput":			        0.08,
+	"concurrency":			      782.00,
+	"successful_transactions":	       63616,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.83,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:44:21 +0700 (1678236261)
+[ POST /channel 800][2]
+
+{	"transactions":			       60600,
+	"availability":			      100.00,
+	"elapsed_time":			       60.11,
+	"data_transferred":		        4.57,
+	"response_time":		        0.78,
+	"transaction_rate":		     1008.15,
+	"throughput":			        0.08,
+	"concurrency":			      784.48,
+	"successful_transactions":	       60600,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.49,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:47:25 +0700 (1678236445)
+[ POST /channel 800][3]
+
+{	"transactions":			       65420,
+	"availability":			      100.00,
+	"elapsed_time":			       60.27,
+	"data_transferred":		        4.93,
+	"response_time":		        0.72,
+	"transaction_rate":		     1085.45,
+	"throughput":			        0.08,
+	"concurrency":			      781.30,
+	"successful_transactions":	       65420,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.35,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:50:29 +0700 (1678236629)
+[ POST /channel 800][4]
+
+{	"transactions":			       61402,
+	"availability":			      100.00,
+	"elapsed_time":			       60.28,
+	"data_transferred":		        4.63,
+	"response_time":		        0.77,
+	"transaction_rate":		     1018.61,
+	"throughput":			        0.08,
+	"concurrency":			      780.61,
+	"successful_transactions":	       61402,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.69,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:53:33 +0700 (1678236813)
+[ POST /channel 800][5]
+
+{	"transactions":			       67863,
+	"availability":			      100.00,
+	"elapsed_time":			       60.20,
+	"data_transferred":		        5.11,
+	"response_time":		        0.69,
+	"transaction_rate":		     1127.29,
+	"throughput":			        0.08,
+	"concurrency":			      782.51,
+	"successful_transactions":	       67863,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.38,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:56:36 +0700 (1678236996)
+Wed, 08 Mar 2023 07:56:36 +0700 (1678236996)
+[ POST /channel 1000][1]
+
+{	"transactions":			       64720,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		        4.88,
+	"response_time":		        0.90,
+	"transaction_rate":		     1084.09,
+	"throughput":			        0.08,
+	"concurrency":			      972.82,
+	"successful_transactions":	       64720,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.83,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 07:59:40 +0700 (1678237180)
+[ POST /channel 1000][2]
+
+{	"transactions":			       60072,
+	"availability":			      100.00,
+	"elapsed_time":			       60.21,
+	"data_transferred":		        4.53,
+	"response_time":		        0.98,
+	"transaction_rate":		      997.71,
+	"throughput":			        0.08,
+	"concurrency":			      973.68,
+	"successful_transactions":	       60072,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.41,
+	"shortest_transaction":		        0.01
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 08:02:44 +0700 (1678237364)
+[ POST /channel 1000][3]
+
+{	"transactions":			       63019,
+	"availability":			      100.00,
+	"elapsed_time":			       60.00,
+	"data_transferred":		        4.75,
+	"response_time":		        0.93,
+	"transaction_rate":		     1050.32,
+	"throughput":			        0.08,
+	"concurrency":			      977.05,
+	"successful_transactions":	       63019,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.40,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 08:05:48 +0700 (1678237548)
+[ POST /channel 1000][4]
+
+{	"transactions":			       67958,
+	"availability":			      100.00,
+	"elapsed_time":			       60.29,
+	"data_transferred":		        5.12,
+	"response_time":		        0.87,
+	"transaction_rate":		     1127.19,
+	"throughput":			        0.08,
+	"concurrency":			      975.72,
+	"successful_transactions":	       67958,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.26,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
+Wed, 08 Mar 2023 08:08:52 +0700 (1678237732)
+[ POST /channel 1000][5]
+
+{	"transactions":			       65265,
+	"availability":			      100.00,
+	"elapsed_time":			       60.30,
+	"data_transferred":		        4.92,
+	"response_time":		        0.90,
+	"transaction_rate":		     1082.34,
+	"throughput":			        0.08,
+	"concurrency":			      975.36,
+	"successful_transactions":	       65265,
+	"failed_transactions":		           0,
+	"longest_transaction":		       10.67,
+	"shortest_transaction":		        0.00
+}
+Sleeping 120 seconds...
