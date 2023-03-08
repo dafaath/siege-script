@@ -21,17 +21,17 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: channel; Type: TABLE; Schema: public; Owner: postgres
+-- Name: feed; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.channel (
+CREATE TABLE public.feed (
     "time" timestamp without time zone NOT NULL,
     value double precision[] NOT NULL,
     id_node integer NOT NULL
 );
 
 
-ALTER TABLE public.channel OWNER TO postgres;
+ALTER TABLE public.feed OWNER TO postgres;
 
 --
 -- Name: hardware; Type: TABLE; Schema: public; Owner: postgres
@@ -169,10 +169,10 @@ ALTER TABLE ONLY public.user_person ALTER COLUMN id_user SET DEFAULT nextval('pu
 
 
 --
--- Data for Name: channel; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: feed; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.channel ("time", value, id_node) FROM stdin;
+COPY public.feed ("time", value, id_node) FROM stdin;
 2022-07-19 18:55:33	{739.74,250.92,730.41,477.74,155.06,853.97,236.93,890.55,666.11,556.44}	70
 2022-12-22 10:35:33	{933.35,617.47,591.89,186.38,436.05,596.54,510.78,740.03,755.89,969.09}	68
 2022-02-21 01:32:41	{341.31,885.83,537.27,640.24,826.44,677.02,941.35,577.85,755.01,848.88}	17
@@ -1383,11 +1383,11 @@ ALTER TABLE ONLY public.user_person
 
 
 --
--- Name: channel channel_id_node_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: feed feed_id_node_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.channel
-    ADD CONSTRAINT channel_id_node_fkey FOREIGN KEY (id_node) REFERENCES public.node(id_node) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE ONLY public.feed
+    ADD CONSTRAINT feed_id_node_fkey FOREIGN KEY (id_node) REFERENCES public.node(id_node) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --
