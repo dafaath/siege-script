@@ -144,9 +144,15 @@ echo "Testing connection..."
 test_connection "GET" "/node" "" false
 test_connection "GET" "/node/1" "" false
 if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
-    test_connection "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
-    test_connection "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
-    test_connection "POST" "/channel" "{\"value\": [3.21, 3.14, 8.39, 9.12, 3.94, 13.23, 183.2, 192.3, 72.3, 93.2], \"id_node\": 1}" true
+    if [ "$TYPE" == "alvinv2" ]; then
+        test_connection "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": \"{\\\"test\\\",\\\"asd\\\",\\\"sensor3\\\",\\\"sensor4\\\",\\\"sensor5\\\",\\\"sensor6\\\",\\\"sensor7\\\",\\\"sensor8\\\",\\\"sensor9\\\",\\\"sensor10\\\"}\"}" true
+        test_connection "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": \"{\\\"test\\\",\\\"asd\\\",\\\"sensor3\\\",\\\"sensor4\\\",\\\"sensor5\\\",\\\"sensor6\\\",\\\"sensor7\\\",\\\"sensor8\\\",\\\"sensor9\\\",\\\"sensor10\\\"}\"}" true
+        test_connection "POST" "/channel" "{\"value\": \"{3.21,3.14,8.39,9.12,3.94,13.23,183.2,192.3,72.3,93.2}\", \"id_node\": 1}" true
+    else
+        test_connection "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+        test_connection "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+        test_connection "POST" "/channel" "{\"value\": [3.21, 3.14, 8.39, 9.12, 3.94, 13.23, 183.2, 192.3, 72.3, 93.2], \"id_node\": 1}" true
+    fi
 else
     test_connection "GET" "/sensor" "" false
     test_connection "GET" "/sensor/1" "" false
@@ -160,9 +166,15 @@ echo "Connection test success"
 perftest "GET" "/node" "" false
 perftest "GET" "/node/1" "" false
 if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
-    perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
-    perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
-    perftest "POST" "/channel" "{\"value\": [3.21, 3.14, 8.39, 9.12, 3.94, 13.23, 183.2, 192.3, 72.3, 93.2], \"id_node\": 1}" true
+    if [ "$TYPE" == "alvinv2" ]; then
+        perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": \"{\\\"test\\\",\\\"asd\\\",\\\"sensor3\\\",\\\"sensor4\\\",\\\"sensor5\\\",\\\"sensor6\\\",\\\"sensor7\\\",\\\"sensor8\\\",\\\"sensor9\\\",\\\"sensor10\\\"}\"}" true
+        perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": \"{\\\"test\\\",\\\"asd\\\",\\\"sensor3\\\",\\\"sensor4\\\",\\\"sensor5\\\",\\\"sensor6\\\",\\\"sensor7\\\",\\\"sensor8\\\",\\\"sensor9\\\",\\\"sensor10\\\"}\"}" true
+        perftest "POST" "/channel" "{\"value\": \"{3.21,3.14,8.39,9.12,3.94,13.23,183.2,192.3,72.3,93.2}\", \"id_node\": 1}" true
+    else
+        perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+        perftest "POST" "/node" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : [3, 4, 4, 17, 8, 7, 3,  4 , 5 ,7], \"field_sensor\": [\"test\", \"asd\", \"sensor3\",\"sensor4\", \"sensor5\", \"sensor6\", \"sensor7\", \"sensor8\", \"sensor9\", \"sensor10\"] }" true
+        perftest "POST" "/channel" "{\"value\": [3.21, 3.14, 8.39, 9.12, 3.94, 13.23, 183.2, 192.3, 72.3, 93.2], \"id_node\": 1}" true
+    fi
 else
     perftest "GET" "/sensor" "" false
     perftest "GET" "/sensor/1" "" false
