@@ -1,7 +1,0 @@
-09:33:48,553 server IoT Logger Session 2023-02-23_09:33:48 INFO 🎬 Starting Session
-09:33:48,553 server IoT Logger Session 2023-02-23_09:33:48 INFO Sleep time: 30
-09:33:48,553 server IoT Logger Session 2023-02-23_09:33:48 INFO Test time: 60s
-09:33:48,553 server IoT Logger Session 2023-02-23_09:33:48 INFO Iteration: 5
-09:33:48,553 server IoT Logger Session 2023-02-23_09:33:48 INFO Concurrence: [200, 400, 600, 800, 1000]
-09:33:48,553 server IoT Logger Session 2023-02-23_09:33:48 INFO 🔑 Logging in to server-iot-dafa with admin and admin
-09:33:48,556 urllib3.connectionpool DEBUG Starting new HTTP connection (1): 127.0.0.1:3000

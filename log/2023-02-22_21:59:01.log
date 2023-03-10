@@ -1,3 +1,0 @@
-21:59:01,488 server IoT Logger Session 2023-02-22_21:59:01 INFO 🎬 Starting Session
-21:59:01,490 urllib3.connectionpool DEBUG Starting new HTTP connection (1): 127.0.0.1:3000
-21:59:02,353 urllib3.connectionpool DEBUG http://127.0.0.1:3000 "POST /user/login HTTP/1.1" 200 221

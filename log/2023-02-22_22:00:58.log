@@ -1,9 +1,0 @@
-22:00:58,375 server IoT Logger Session 2023-02-22_22:00:58 INFO 🎬 Starting Session
-22:00:58,377 urllib3.connectionpool DEBUG Starting new HTTP connection (1): 127.0.0.1:3000
-22:00:59,234 urllib3.connectionpool DEBUG http://127.0.0.1:3000 "POST /user/login HTTP/1.1" 200 221
-22:00:59,234 server IoT Logger Session 2023-02-22_22:00:58 INFO 🦾 Running commands siege -t1s -c "200" "http://127.0.0.1:3000/" --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNjc3MDc4MDU5LCJpZFVzZXIiOjEsImlzQWRtaW4iOnRydWUsInN0YXR1cyI6dHJ1ZSwidXNlcm5hbWUiOiJhZG1pbiJ9.eKv64NyxJNUZZxU7UhHAjFcU1ZUjvEFyuJ6kD9svaZU"
-22:01:01,23 server IoT Logger Session 2023-02-22_22:00:58 INFO 🏁 Finished running commands for server-iot-dafa / GET 200 0
-22:01:01,23 server IoT Logger Session 2023-02-22_22:00:58 INFO 📊 Output: 
-22:01:01,23 server IoT Logger Session 2023-02-22_22:00:58 INFO 💾 Saving output to file
-22:01:01,24 server IoT Logger Session 2023-02-22_22:00:58 INFO 💤 Sleeping for 0 seconds
-22:01:01,24 server IoT Logger Session 2023-02-22_22:00:58 INFO 🦾 Running commands siege -t1s -c "200" "http://127.0.0.1:3000/" --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNjc3MDc4MDU5LCJpZFVzZXIiOjEsImlzQWRtaW4iOnRydWUsInN0YXR1cyI6dHJ1ZSwidXNlcm5hbWUiOiJhZG1pbiJ9.eKv64NyxJNUZZxU7UhHAjFcU1ZUjvEFyuJ6kD9svaZU"
