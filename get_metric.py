@@ -8,6 +8,7 @@ The output is a JSON file in the metric folder with the following format:
 
 from datetime import datetime
 import json
+from typing import Dict, List, Optional
 import requests
 import sys
 import os
@@ -28,21 +29,92 @@ DIGITAL_OCEAN_API_KEY = os.environ.get("DIGITAL_OCEAN_API_KEY")
 METRICS_TO_GET = [
     "cpu",
     "memory_free",
+    "memory_available",
+    "memory_total",
     "load_15",
     "load_5",
     "load_1",
 ]
+
+BASE_SERVER_HOST_ID = {
+    "dafa": "343177628",
+    "alvin": "344294881",
+    "hanin": "343280614",
+}
+
+
+def get_start_and_end_from_server_data(server_data):
+    server_data.sort_values(by=["epoch"])
+    start = server_data.iloc[0]["epoch"]
+    end = server_data.iloc[-1]["epoch"]
+    return start, end
+
+
+def get_server_host_id(server_name):
+    for base_server in BASE_SERVER_HOST_ID:
+        if base_server in server_name:
+            return BASE_SERVER_HOST_ID[base_server]
+
+    return None
+
+
+def get_metric_from_summary_file(summary_file_name):
+    df = pd.read_excel(summary_file_name, sheet_name="All")
+    server_metric_data: Dict[str, Optional[Dict[str, str]]] = {}
+    server_names = df["server"].unique()
+    for server_name in server_names:
+        df_server = df.loc[df["server"] == server_name]
+        start, end = get_start_and_end_from_server_data(df_server)
+        host_id = get_server_host_id(server_name)
+
+        if host_id is None:
+            server_metric_data[server_name] = None
+            print(f"Cannot find host_id for {server_name}")
+            continue
+
+        server_metric_data[server_name] = {
+            "host_id": host_id,
+            "start": start,
+            "end": end,
+        }
+
+    metric_dataframes: List[pd.DataFrame] = []
+    for server_name, server_metric in server_metric_data.items():
+        if server_metric is not None:
+            metric_df = get_metric(
+                server_metric["host_id"],
+                server_metric["start"],
+                server_metric["end"],
+                server_name,
+            )
+            metric_dataframes.append(metric_df)
+        else:
+            print(f"Cannot find host_id for {server_name}")
+
+    return pd.concat(metric_dataframes)
 
 
 def get_metric(host_id, start, end, output_name):
     all_metric_data = {}
 
     for metric in METRICS_TO_GET:
-        url = f"{DIGITAL_OCEAN_BASE_URL_API}/{metric}"
-        params = {"host_id": host_id, "start": start, "end": end}
-        header = {"Authorization": f"Bearer {DIGITAL_OCEAN_API_KEY}"}
-        response = requests.get(url, params=params, headers=header)
-        json_response = response.json()
+        output_filename = os.path.join(
+            OUTPUT_FOLDER, f"{output_name}_{metric}_{start}_{end}.json"
+        )
+
+        if os.path.exists(output_filename):
+            print(f"Using cached file {output_filename}")
+            json_response = json.load(open(output_filename))
+        else:
+            url = f"{DIGITAL_OCEAN_BASE_URL_API}/{metric}"
+            params = {"host_id": host_id, "start": start, "end": end}
+            header = {"Authorization": f"Bearer {DIGITAL_OCEAN_API_KEY}"}
+            response = requests.get(url, params=params, headers=header)
+            json_response = response.json()
+            with open(output_filename, "w") as output_file:
+                output_file.write(json.dumps(json_response, indent=2))
+                print(f"Output written to {output_file.name}")
+
         result = json_response["data"]["result"]
         for res in result:
             mode = ""
@@ -61,17 +133,11 @@ def get_metric(host_id, start, end, output_name):
                         **all_metric_data[v[0]],
                     }
 
-        with open(
-            f"{OUTPUT_FOLDER}/{output_name}_{metric}_{start}_{end}.json", "w"
-        ) as output_file:
-            output_file.write(json.dumps(json_response, indent=2))
-            print(f"Output written to {output_file.name}")
-
     all_metric_data_matrix = []
     for time in all_metric_data:
         all_metric_data_matrix.append(
             {
-                "output_name": output_name,
+                "server": output_name,
                 "epoch": time,
                 "time": datetime.fromtimestamp(time).strftime("%Y-%m-%d %H:%M:%S %Z"),
                 **all_metric_data[time],
@@ -79,18 +145,6 @@ def get_metric(host_id, start, end, output_name):
         )
 
     df = pd.DataFrame(all_metric_data_matrix)
-    df["cpu_percentage"] = (
-        df["cpu-idle"]
-        / (
-            df["cpu-user"]
-            + df["cpu-system"]
-            + df["cpu-softirq"]
-            + df["cpu-nice"]
-            + df["cpu-irq"]
-            + df["cpu-iowait"]
-        )
-        * 100
-    )
     return df
 
 

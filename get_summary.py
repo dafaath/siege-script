@@ -2,7 +2,7 @@
 """_summary_: Clean the result of run.sh script and generate a summary file"""
 
 import json
-import logging
+# import logging
 from pathlib import Path
 from typing import Dict, List
 import pytz
@@ -16,9 +16,9 @@ THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FOLDER = os.path.join(THIS_FOLDER, "summary")
 RESULT_FOLDER = os.path.join(THIS_FOLDER, "result")
 
-logging.basicConfig(
-    format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", level=logging.INFO
-)
+# logging.basicConfig(
+#     format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", level=logging.INFO
+# )
 
 
 def convert_data_frames_to_excel(data_frames: Dict[str, pd.DataFrame], writer: pd.ExcelWriter):
@@ -45,7 +45,7 @@ def convert_data_frames_to_excel(data_frames: Dict[str, pd.DataFrame], writer: p
 def get_summary(input_file_name):
     input_file = open(input_file_name, "r")
     filename_without_ext = Path(input_file_name).with_suffix("").name
-    logging.info(f"Processing {filename_without_ext}")
+    print(f"Processing {filename_without_ext}")
     content = input_file.readlines()
     output_data = []
 
@@ -98,7 +98,7 @@ def get_summary(input_file_name):
         elif line.startswith("Sleeping"):
             continue
 
-    logging.info(f"Constructing dataframe from {filename_without_ext}")
+    print(f"Constructing dataframe from {filename_without_ext}")
 
     df = pd.DataFrame(output_data)
     df_group_by_concurrent = df.groupby(
@@ -124,14 +124,14 @@ def get_summary(input_file_name):
     writer.close()
     input_file.close()
 
-    logging.info(f"Finish processing {filename_without_ext}")
-    logging.info(f"Output to {OUTPUT_FOLDER}/summary_{filename_without_ext}.xlsx")
+    print(f"Finish processing {filename_without_ext}")
+    print(f"Output to {OUTPUT_FOLDER}/summary_{filename_without_ext}.xlsx")
 
     return df
 
 
 def combine_summary(data_frames: List[pd.DataFrame]):
-    logging.info("Combine all summary")
+    print("Combine all summary")
     df = pd.concat(data_frames)
 
     df_group_by_concurrent = df.groupby(
@@ -154,11 +154,11 @@ def combine_summary(data_frames: List[pd.DataFrame]):
     }
     convert_data_frames_to_excel(dfs, writer)
 
-    logging.info(f"Output to {output_filename}")
+    print(f"Output to {output_filename}")
 
     # Close the Pandas Excel writer and output the Excel file.
     writer.close()
-    logging.info("Finish Combine all summary")
+    print("Finish Combine all summary")
 
 
 def main():
