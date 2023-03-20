@@ -16,8 +16,19 @@ logging.basicConfig(
     format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", level=logging.INFO
 )
 
-V1_SERVER = ["alvinv1", "dafav1", "hanin", "dafav1_optimized"]
-V2_SERVER = ["alvinv2", "dafav2", "dafav2_optimized"]
+V1_SERVER = [
+    "hanin",
+    "alvinv1",
+    "dafav1",
+    "dafav1_optimized",
+    #  "dafav1_5_min",
+]
+V2_SERVER = [
+    "alvinv2",
+    "dafav2",
+    "dafav2_optimized",
+    # "dafav2_5_min",
+]
 SERVER = {
     "v1": V1_SERVER,
     "v2": V2_SERVER,

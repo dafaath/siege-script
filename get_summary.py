@@ -2,6 +2,7 @@
 """_summary_: Clean the result of run.sh script and generate a summary file"""
 
 import json
+
 # import logging
 from pathlib import Path
 from typing import Dict, List
@@ -21,7 +22,9 @@ RESULT_FOLDER = os.path.join(THIS_FOLDER, "result")
 # )
 
 
-def convert_data_frames_to_excel(data_frames: Dict[str, pd.DataFrame], writer: pd.ExcelWriter):
+def convert_data_frames_to_excel(
+    data_frames: Dict[str, pd.DataFrame], writer: pd.ExcelWriter
+):
     for (
         sheetname,
         data_frame,
