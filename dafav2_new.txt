@@ -1,0 +1,2402 @@
+TYPE: dafav2
+Host: 10.104.0.2:3000
+Test time: 60s
+Sleep time: 30
+Timeout: 600
+Iteration: 5
+Concurency: 200 400 600 800 1000
+Auth method: jwt
+Username: admin
+Password: admin
+NOTICE:  drop cascades to 2 other objects
+DETAIL:  drop cascades to constraint sensor_id_node_fkey on table sensor
+drop cascades to constraint sensor_id_hardware_fkey on table sensor
+DROP TABLE
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE TABLE
+ALTER TABLE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+CREATE TABLE
+ALTER TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER SEQUENCE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+COPY 999
+COPY 20
+COPY 100
+COPY 2
+ setval 
+--------
+     20
+(1 row)
+
+ setval 
+--------
+    100
+(1 row)
+
+ setval 
+--------
+      2
+(1 row)
+
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+Success auth Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNjc5NjY2MjE2LCJpZFVzZXIiOjEsImlzQWRtaW4iOnRydWUsInN0YXR1cyI6dHJ1ZSwidXNlcm5hbWUiOiJhZG1pbiJ9.KohQJgbXSn16KA4HRtTHO9VV8ECOqpI3-6P_jwOIY5Q
+Testing connection...
+Connection test success
+Fri, 24 Mar 2023 20:56:57 +0700 (1679666217)
+Fri, 24 Mar 2023 20:56:57 +0700 (1679666217)
+[ GET /node 200][1]
+
+{	"transactions":			       32474,
+	"availability":			      100.00,
+	"elapsed_time":			       59.83,
+	"data_transferred":		     1786.27,
+	"response_time":		        0.37,
+	"transaction_rate":		      542.77,
+	"throughput":			       29.86,
+	"concurrency":			      198.14,
+	"successful_transactions":	       32474,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.88,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 20:58:30 +0700 (1679666310)
+[ GET /node 200][2]
+
+{	"transactions":			       31171,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		     1714.59,
+	"response_time":		        0.38,
+	"transaction_rate":		      522.30,
+	"throughput":			       28.73,
+	"concurrency":			      198.19,
+	"successful_transactions":	       31171,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.83,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:00:03 +0700 (1679666403)
+[ GET /node 200][3]
+
+{	"transactions":			       28723,
+	"availability":			      100.00,
+	"elapsed_time":			       59.96,
+	"data_transferred":		     1579.94,
+	"response_time":		        0.41,
+	"transaction_rate":		      479.04,
+	"throughput":			       26.35,
+	"concurrency":			      198.66,
+	"successful_transactions":	       28723,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.28,
+	"shortest_transaction":		        0.11
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:01:36 +0700 (1679666496)
+[ GET /node 200][4]
+
+{	"transactions":			       31378,
+	"availability":			      100.00,
+	"elapsed_time":			       59.91,
+	"data_transferred":		     1725.98,
+	"response_time":		        0.38,
+	"transaction_rate":		      523.75,
+	"throughput":			       28.81,
+	"concurrency":			      198.46,
+	"successful_transactions":	       31378,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.70,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:03:09 +0700 (1679666589)
+[ GET /node 200][5]
+
+{	"transactions":			       31964,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		     1758.21,
+	"response_time":		        0.37,
+	"transaction_rate":		      536.31,
+	"throughput":			       29.50,
+	"concurrency":			      198.82,
+	"successful_transactions":	       31964,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.21,
+	"shortest_transaction":		        0.11
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:04:42 +0700 (1679666682)
+Fri, 24 Mar 2023 21:04:42 +0700 (1679666682)
+[ GET /node 400][1]
+
+{	"transactions":			       33204,
+	"availability":			      100.00,
+	"elapsed_time":			       59.90,
+	"data_transferred":		     1826.42,
+	"response_time":		        0.71,
+	"transaction_rate":		      554.32,
+	"throughput":			       30.49,
+	"concurrency":			      393.24,
+	"successful_transactions":	       33204,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.41,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:06:15 +0700 (1679666775)
+[ GET /node 400][2]
+
+{	"transactions":			       33679,
+	"availability":			      100.00,
+	"elapsed_time":			       59.86,
+	"data_transferred":		     1852.55,
+	"response_time":		        0.70,
+	"transaction_rate":		      562.63,
+	"throughput":			       30.95,
+	"concurrency":			      394.18,
+	"successful_transactions":	       33679,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.63,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:07:48 +0700 (1679666868)
+[ GET /node 400][3]
+
+{	"transactions":			       30483,
+	"availability":			      100.00,
+	"elapsed_time":			       59.94,
+	"data_transferred":		     1676.75,
+	"response_time":		        0.77,
+	"transaction_rate":		      508.56,
+	"throughput":			       27.97,
+	"concurrency":			      393.59,
+	"successful_transactions":	       30483,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.43,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:09:21 +0700 (1679666961)
+[ GET /node 400][4]
+
+{	"transactions":			       30537,
+	"availability":			      100.00,
+	"elapsed_time":			       59.49,
+	"data_transferred":		     1679.72,
+	"response_time":		        0.77,
+	"transaction_rate":		      513.31,
+	"throughput":			       28.24,
+	"concurrency":			      393.13,
+	"successful_transactions":	       30537,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.09,
+	"shortest_transaction":		        0.16
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:10:54 +0700 (1679667054)
+[ GET /node 400][5]
+
+{	"transactions":			       28538,
+	"availability":			      100.00,
+	"elapsed_time":			       59.78,
+	"data_transferred":		     1569.76,
+	"response_time":		        0.83,
+	"transaction_rate":		      477.38,
+	"throughput":			       26.26,
+	"concurrency":			      394.87,
+	"successful_transactions":	       28538,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.96,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:12:27 +0700 (1679667147)
+Fri, 24 Mar 2023 21:12:27 +0700 (1679667147)
+[ GET /node 600][1]
+./run.sh: line 98: 1492948 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 21:22:27 +0700 (1679667747)
+
+{	"transactions":			       31151,
+	"availability":			      100.00,
+	"elapsed_time":			       59.58,
+	"data_transferred":		     1713.49,
+	"response_time":		        1.11,
+	"transaction_rate":		      522.84,
+	"throughput":			       28.76,
+	"concurrency":			      582.84,
+	"successful_transactions":	       31151,
+	"failed_transactions":		           0,
+	"longest_transaction":		       13.38,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:24:00 +0700 (1679667840)
+[ GET /node 600][2]
+
+{	"transactions":			       29990,
+	"availability":			      100.00,
+	"elapsed_time":			       59.46,
+	"data_transferred":		     1649.63,
+	"response_time":		        1.16,
+	"transaction_rate":		      504.37,
+	"throughput":			       27.74,
+	"concurrency":			      583.79,
+	"successful_transactions":	       29990,
+	"failed_transactions":		           0,
+	"longest_transaction":		       13.67,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:25:33 +0700 (1679667933)
+[ GET /node 600][3]
+
+{	"transactions":			       30468,
+	"availability":			      100.00,
+	"elapsed_time":			       59.50,
+	"data_transferred":		     1675.92,
+	"response_time":		        1.14,
+	"transaction_rate":		      512.07,
+	"throughput":			       28.17,
+	"concurrency":			      585.30,
+	"successful_transactions":	       30468,
+	"failed_transactions":		           0,
+	"longest_transaction":		       11.54,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:27:06 +0700 (1679668026)
+[ GET /node 600][4]
+
+{	"transactions":			       32227,
+	"availability":			      100.00,
+	"elapsed_time":			       59.85,
+	"data_transferred":		     1772.68,
+	"response_time":		        1.08,
+	"transaction_rate":		      538.46,
+	"throughput":			       29.62,
+	"concurrency":			      582.68,
+	"successful_transactions":	       32227,
+	"failed_transactions":		           0,
+	"longest_transaction":		       15.92,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:28:39 +0700 (1679668119)
+[ GET /node 600][5]
+
+{	"transactions":			       21105,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		     1160.90,
+	"response_time":		        1.65,
+	"transaction_rate":		      353.52,
+	"throughput":			       19.45,
+	"concurrency":			      584.68,
+	"successful_transactions":	       21105,
+	"failed_transactions":		           0,
+	"longest_transaction":		       20.59,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:30:12 +0700 (1679668212)
+Fri, 24 Mar 2023 21:30:12 +0700 (1679668212)
+[ GET /node 800][1]
+
+{	"transactions":			       28088,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		     1545.01,
+	"response_time":		        1.64,
+	"transaction_rate":		      471.12,
+	"throughput":			       25.91,
+	"concurrency":			      770.58,
+	"successful_transactions":	       28088,
+	"failed_transactions":		           0,
+	"longest_transaction":		       15.84,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:31:45 +0700 (1679668305)
+[ GET /node 800][2]
+
+{	"transactions":			       27551,
+	"availability":			      100.00,
+	"elapsed_time":			       59.49,
+	"data_transferred":		     1515.47,
+	"response_time":		        1.67,
+	"transaction_rate":		      463.12,
+	"throughput":			       25.47,
+	"concurrency":			      772.85,
+	"successful_transactions":	       27551,
+	"failed_transactions":		           0,
+	"longest_transaction":		       21.85,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:33:18 +0700 (1679668398)
+[ GET /node 800][3]
+
+{	"transactions":			       28949,
+	"availability":			      100.00,
+	"elapsed_time":			       59.50,
+	"data_transferred":		     1592.37,
+	"response_time":		        1.59,
+	"transaction_rate":		      486.54,
+	"throughput":			       26.76,
+	"concurrency":			      774.70,
+	"successful_transactions":	       28949,
+	"failed_transactions":		           0,
+	"longest_transaction":		       26.49,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:34:51 +0700 (1679668491)
+[ GET /node 800][4]
+
+{	"transactions":			       30122,
+	"availability":			      100.00,
+	"elapsed_time":			       59.85,
+	"data_transferred":		     1656.89,
+	"response_time":		        1.53,
+	"transaction_rate":		      503.29,
+	"throughput":			       27.68,
+	"concurrency":			      771.58,
+	"successful_transactions":	       30122,
+	"failed_transactions":		           0,
+	"longest_transaction":		       21.44,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:36:24 +0700 (1679668584)
+[ GET /node 800][5]
+
+{	"transactions":			       30447,
+	"availability":			      100.00,
+	"elapsed_time":			       59.59,
+	"data_transferred":		     1674.77,
+	"response_time":		        1.51,
+	"transaction_rate":		      510.94,
+	"throughput":			       28.10,
+	"concurrency":			      773.91,
+	"successful_transactions":	       30447,
+	"failed_transactions":		           0,
+	"longest_transaction":		       20.31,
+	"shortest_transaction":		        0.04
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:37:57 +0700 (1679668677)
+Fri, 24 Mar 2023 21:37:57 +0700 (1679668677)
+[ GET /node 1000][1]
+
+{	"transactions":			       28695,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		     1578.40,
+	"response_time":		        1.99,
+	"transaction_rate":		      481.06,
+	"throughput":			       26.46,
+	"concurrency":			      957.47,
+	"successful_transactions":	       28695,
+	"failed_transactions":		           0,
+	"longest_transaction":		       25.85,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:39:30 +0700 (1679668770)
+[ GET /node 1000][2]
+./run.sh: line 98: 1505288 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 21:49:30 +0700 (1679669370)
+
+{	"transactions":			       27434,
+	"availability":			      100.00,
+	"elapsed_time":			       59.33,
+	"data_transferred":		     1509.04,
+	"response_time":		        2.07,
+	"transaction_rate":		      462.40,
+	"throughput":			       25.43,
+	"concurrency":			      958.34,
+	"successful_transactions":	       27434,
+	"failed_transactions":		           0,
+	"longest_transaction":		       20.74,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 21:51:03 +0700 (1679669463)
+[ GET /node 1000][3]
+./run.sh: line 98: 1508362 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 22:01:03 +0700 (1679670063)
+[[1;32malert[0m] socket: select and discovered it's not ready sock.c:384: Connection timed out
+[[1;32malert[0m] socket: read check timed out(30) sock.c:273: Connection timed out
+[[1;32malert[0m] socket: select and discovered it's not ready sock.c:384: Connection timed out
+[[1;32malert[0m] socket: read check timed out(30) sock.c:273: Connection timed out
+[[1;32malert[0m] socket: select and discovered it's not ready sock.c:384: Connection timed out
+[[1;32malert[0m] socket: read check timed out(30) sock.c:273: Connection timed out
+[[1;32malert[0m] socket: select and discovered it's not ready sock.c:384: Connection timed out
+[[1;32malert[0m] socket: read check timed out(30) sock.c:273: Connection timed out
+[[1;32malert[0m] socket: select and discovered it's not ready sock.c:384: Connection timed out
+[[1;32malert[0m] socket: read check timed out(30) sock.c:273: Connection timed out
+[[1;32malert[0m] socket: select and discovered it's not ready sock.c:384: Connection timed out
+[[1;32malert[0m] socket: read check timed out(30) sock.c:273: Connection timed out
+
+{	"transactions":			       34611,
+	"availability":			       99.98,
+	"elapsed_time":			       59.34,
+	"data_transferred":		     1903.81,
+	"response_time":		        1.64,
+	"transaction_rate":		      583.27,
+	"throughput":			       32.08,
+	"concurrency":			      958.72,
+	"successful_transactions":	       34611,
+	"failed_transactions":		           6,
+	"longest_transaction":		       38.46,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:02:36 +0700 (1679670156)
+[ GET /node 1000][4]
+./run.sh: line 98: 1511431 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 22:12:36 +0700 (1679670756)
+
+{	"transactions":			       36308,
+	"availability":			      100.00,
+	"elapsed_time":			       59.75,
+	"data_transferred":		     1997.16,
+	"response_time":		        1.59,
+	"transaction_rate":		      607.67,
+	"throughput":			       33.43,
+	"concurrency":			      967.41,
+	"successful_transactions":	       36308,
+	"failed_transactions":		           0,
+	"longest_transaction":		       37.67,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:14:09 +0700 (1679670849)
+[ GET /node 1000][5]
+./run.sh: line 98: 1514459 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 22:24:09 +0700 (1679671449)
+
+{	"transactions":			       27184,
+	"availability":			      100.00,
+	"elapsed_time":			       59.85,
+	"data_transferred":		     1495.28,
+	"response_time":		        2.10,
+	"transaction_rate":		      454.20,
+	"throughput":			       24.98,
+	"concurrency":			      955.39,
+	"successful_transactions":	       27184,
+	"failed_transactions":		           0,
+	"longest_transaction":		       19.55,
+	"shortest_transaction":		        0.07
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:25:42 +0700 (1679671542)
+Fri, 24 Mar 2023 22:25:42 +0700 (1679671542)
+[ GET /node/1 200][1]
+
+{	"transactions":			      124613,
+	"availability":			      100.00,
+	"elapsed_time":			       59.38,
+	"data_transferred":		      249.56,
+	"response_time":		        0.09,
+	"transaction_rate":		     2098.57,
+	"throughput":			        4.20,
+	"concurrency":			      198.76,
+	"successful_transactions":	      124613,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.11,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:27:15 +0700 (1679671635)
+[ GET /node/1 200][2]
+
+{	"transactions":			      149303,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		      299.01,
+	"response_time":		        0.08,
+	"transaction_rate":		     2502.98,
+	"throughput":			        5.01,
+	"concurrency":			      198.87,
+	"successful_transactions":	      149303,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.31,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:28:48 +0700 (1679671728)
+[ GET /node/1 200][3]
+
+{	"transactions":			       87181,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		      174.60,
+	"response_time":		        0.14,
+	"transaction_rate":		     1461.54,
+	"throughput":			        2.93,
+	"concurrency":			      198.91,
+	"successful_transactions":	       87181,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:30:21 +0700 (1679671821)
+[ GET /node/1 200][4]
+
+{	"transactions":			      154601,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		      309.62,
+	"response_time":		        0.08,
+	"transaction_rate":		     2591.37,
+	"throughput":			        5.19,
+	"concurrency":			      199.32,
+	"successful_transactions":	      154601,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.31,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:31:54 +0700 (1679671914)
+[ GET /node/1 200][5]
+
+{	"transactions":			      165535,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		      331.52,
+	"response_time":		        0.07,
+	"transaction_rate":		     2774.64,
+	"throughput":			        5.56,
+	"concurrency":			      198.80,
+	"successful_transactions":	      165536,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.28,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:33:27 +0700 (1679672007)
+Fri, 24 Mar 2023 22:33:27 +0700 (1679672007)
+[ GET /node/1 400][1]
+
+{	"transactions":			      145876,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		      292.15,
+	"response_time":		        0.16,
+	"transaction_rate":		     2444.30,
+	"throughput":			        4.90,
+	"concurrency":			      398.10,
+	"successful_transactions":	      145876,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.28,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:35:00 +0700 (1679672100)
+[ GET /node/1 400][2]
+./run.sh: line 98: 1519359 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 22:45:00 +0700 (1679672700)
+./run.sh: line 98: 1520435 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 22:55:00 +0700 (1679673300)
+
+{	"transactions":			      135183,
+	"availability":			      100.00,
+	"elapsed_time":			       59.59,
+	"data_transferred":		      270.73,
+	"response_time":		        0.18,
+	"transaction_rate":		     2268.55,
+	"throughput":			        4.54,
+	"concurrency":			      397.74,
+	"successful_transactions":	      135183,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.26,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:56:33 +0700 (1679673393)
+[ GET /node/1 400][3]
+
+{	"transactions":			      154076,
+	"availability":			      100.00,
+	"elapsed_time":			       59.59,
+	"data_transferred":		      308.57,
+	"response_time":		        0.15,
+	"transaction_rate":		     2585.60,
+	"throughput":			        5.18,
+	"concurrency":			      398.67,
+	"successful_transactions":	      154076,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.18,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 22:58:06 +0700 (1679673486)
+[ GET /node/1 400][4]
+./run.sh: line 98: 1521960 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 23:08:06 +0700 (1679674086)
+./run.sh: line 98: 1522537 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 23:18:06 +0700 (1679674686)
+
+{	"transactions":			      152713,
+	"availability":			      100.00,
+	"elapsed_time":			       59.80,
+	"data_transferred":		      305.84,
+	"response_time":		        0.16,
+	"transaction_rate":		     2553.73,
+	"throughput":			        5.11,
+	"concurrency":			      396.99,
+	"successful_transactions":	      152713,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.21,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:19:39 +0700 (1679674779)
+[ GET /node/1 400][5]
+
+{	"transactions":			      155514,
+	"availability":			      100.00,
+	"elapsed_time":			       59.42,
+	"data_transferred":		      311.45,
+	"response_time":		        0.15,
+	"transaction_rate":		     2617.20,
+	"throughput":			        5.24,
+	"concurrency":			      398.73,
+	"successful_transactions":	      155514,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.19,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:21:12 +0700 (1679674872)
+Fri, 24 Mar 2023 23:21:12 +0700 (1679674872)
+[ GET /node/1 600][1]
+./run.sh: line 98: 1523957 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 23:31:12 +0700 (1679675472)
+
+{	"transactions":			      130833,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		      262.02,
+	"response_time":		        0.27,
+	"transaction_rate":		     2195.18,
+	"throughput":			        4.40,
+	"concurrency":			      596.06,
+	"successful_transactions":	      130833,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.25,
+	"shortest_transaction":		        0.06
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:32:45 +0700 (1679675565)
+[ GET /node/1 600][2]
+
+{	"transactions":			      159107,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		      318.65,
+	"response_time":		        0.22,
+	"transaction_rate":		     2668.69,
+	"throughput":			        5.34,
+	"concurrency":			      596.35,
+	"successful_transactions":	      159107,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.22,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:34:18 +0700 (1679675658)
+[ GET /node/1 600][3]
+
+{	"transactions":			      134836,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		      270.04,
+	"response_time":		        0.26,
+	"transaction_rate":		     2262.35,
+	"throughput":			        4.53,
+	"concurrency":			      595.69,
+	"successful_transactions":	      134836,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.79,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:35:51 +0700 (1679675751)
+[ GET /node/1 600][4]
+
+{	"transactions":			      147039,
+	"availability":			      100.00,
+	"elapsed_time":			       59.64,
+	"data_transferred":		      294.48,
+	"response_time":		        0.24,
+	"transaction_rate":		     2465.44,
+	"throughput":			        4.94,
+	"concurrency":			      596.27,
+	"successful_transactions":	      147039,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.26,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:37:24 +0700 (1679675844)
+[ GET /node/1 600][5]
+
+{	"transactions":			      132361,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		      265.08,
+	"response_time":		        0.27,
+	"transaction_rate":		     2220.82,
+	"throughput":			        4.45,
+	"concurrency":			      595.68,
+	"successful_transactions":	      132361,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.21,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:38:57 +0700 (1679675937)
+Fri, 24 Mar 2023 23:38:57 +0700 (1679675937)
+[ GET /node/1 800][1]
+
+{	"transactions":			      133480,
+	"availability":			      100.00,
+	"elapsed_time":			       59.58,
+	"data_transferred":		      267.32,
+	"response_time":		        0.35,
+	"transaction_rate":		     2240.35,
+	"throughput":			        4.49,
+	"concurrency":			      793.25,
+	"successful_transactions":	      133480,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.96,
+	"shortest_transaction":		        0.12
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:40:30 +0700 (1679676030)
+[ GET /node/1 800][2]
+
+{	"transactions":			      158787,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		      318.01,
+	"response_time":		        0.30,
+	"transaction_rate":		     2664.21,
+	"throughput":			        5.34,
+	"concurrency":			      792.50,
+	"successful_transactions":	      158787,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.29,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Fri, 24 Mar 2023 23:42:03 +0700 (1679676123)
+[ GET /node/1 800][3]
+./run.sh: line 98: 1529544 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Fri, 24 Mar 2023 23:52:03 +0700 (1679676723)
+./run.sh: line 98: 1530482 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 00:02:03 +0700 (1679677323)
+
+{	"transactions":			      120547,
+	"availability":			      100.00,
+	"elapsed_time":			       59.53,
+	"data_transferred":		      241.42,
+	"response_time":		        0.39,
+	"transaction_rate":		     2024.98,
+	"throughput":			        4.06,
+	"concurrency":			      781.41,
+	"successful_transactions":	      120547,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.02,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 00:03:36 +0700 (1679677416)
+[ GET /node/1 800][4]
+./run.sh: line 98: 1532301 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 00:13:36 +0700 (1679678016)
+
+{	"transactions":			      145366,
+	"availability":			      100.00,
+	"elapsed_time":			       59.43,
+	"data_transferred":		      291.13,
+	"response_time":		        0.32,
+	"transaction_rate":		     2446.00,
+	"throughput":			        4.90,
+	"concurrency":			      788.73,
+	"successful_transactions":	      145366,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.66,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 00:15:09 +0700 (1679678109)
+[ GET /node/1 800][5]
+./run.sh: line 98: 1534220 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 00:25:09 +0700 (1679678709)
+./run.sh: line 98: 1535279 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 00:35:09 +0700 (1679679309)
+./run.sh: line 98: 1536406 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 00:45:09 +0700 (1679679909)
+./run.sh: line 98: 1537398 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 00:55:09 +0700 (1679680509)
+./run.sh: line 98: 1538772 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 01:05:09 +0700 (1679681109)
+./run.sh: line 98: 1540385 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 01:15:09 +0700 (1679681709)
+
+{	"transactions":			      146589,
+	"availability":			      100.00,
+	"elapsed_time":			       59.51,
+	"data_transferred":		      293.58,
+	"response_time":		        0.32,
+	"transaction_rate":		     2463.27,
+	"throughput":			        4.93,
+	"concurrency":			      793.30,
+	"successful_transactions":	      146590,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.18,
+	"shortest_transaction":		        0.10
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 01:16:42 +0700 (1679681802)
+Sat, 25 Mar 2023 01:16:42 +0700 (1679681802)
+[ GET /node/1 1000][1]
+./run.sh: line 98: 1542782 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 01:26:42 +0700 (1679682402)
+
+{	"transactions":			      171173,
+	"availability":			      100.00,
+	"elapsed_time":			       59.53,
+	"data_transferred":		      342.81,
+	"response_time":		        0.34,
+	"transaction_rate":		     2875.41,
+	"throughput":			        5.76,
+	"concurrency":			      989.34,
+	"successful_transactions":	      171174,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.55,
+	"shortest_transaction":		        0.08
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 01:28:15 +0700 (1679682495)
+[ GET /node/1 1000][2]
+./run.sh: line 98: 1545162 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 01:38:15 +0700 (1679683095)
+./run.sh: line 98: 1546343 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 01:48:15 +0700 (1679683695)
+
+{	"transactions":			      143547,
+	"availability":			      100.00,
+	"elapsed_time":			       59.89,
+	"data_transferred":		      287.48,
+	"response_time":		        0.41,
+	"transaction_rate":		     2396.84,
+	"throughput":			        4.80,
+	"concurrency":			      989.06,
+	"successful_transactions":	      143547,
+	"failed_transactions":		           0,
+	"longest_transaction":		       11.68,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 01:49:48 +0700 (1679683788)
+[ GET /node/1 1000][3]
+
+{	"transactions":			      143509,
+	"availability":			      100.00,
+	"elapsed_time":			       59.49,
+	"data_transferred":		      287.41,
+	"response_time":		        0.41,
+	"transaction_rate":		     2412.32,
+	"throughput":			        4.83,
+	"concurrency":			      985.27,
+	"successful_transactions":	      143509,
+	"failed_transactions":		           0,
+	"longest_transaction":		       11.65,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 01:51:21 +0700 (1679683881)
+[ GET /node/1 1000][4]
+
+{	"transactions":			      135735,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		      271.84,
+	"response_time":		        0.43,
+	"transaction_rate":		     2275.14,
+	"throughput":			        4.56,
+	"concurrency":			      989.52,
+	"successful_transactions":	      135735,
+	"failed_transactions":		           0,
+	"longest_transaction":		        7.27,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 01:52:54 +0700 (1679683974)
+[ GET /node/1 1000][5]
+./run.sh: line 98: 1550522 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+Timeout hit, restarting... Sat, 25 Mar 2023 02:02:54 +0700 (1679684574)
+
+{	"transactions":			      150106,
+	"availability":			      100.00,
+	"elapsed_time":			       59.57,
+	"data_transferred":		      300.62,
+	"response_time":		        0.39,
+	"transaction_rate":		     2519.83,
+	"throughput":			        5.05,
+	"concurrency":			      985.25,
+	"successful_transactions":	      150106,
+	"failed_transactions":		           0,
+	"longest_transaction":		       11.54,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:04:27 +0700 (1679684667)
+Sat, 25 Mar 2023 02:04:27 +0700 (1679684667)
+[ PUT /node/1 200][1]
+
+{	"transactions":			      100376,
+	"availability":			      100.00,
+	"elapsed_time":			       59.59,
+	"data_transferred":		        1.63,
+	"response_time":		        0.12,
+	"transaction_rate":		     1684.44,
+	"throughput":			        0.03,
+	"concurrency":			      199.29,
+	"successful_transactions":	      100376,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.51,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:06:00 +0700 (1679684760)
+[ PUT /node/1 200][2]
+
+{	"transactions":			      104019,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		        1.69,
+	"response_time":		        0.11,
+	"transaction_rate":		     1743.82,
+	"throughput":			        0.03,
+	"concurrency":			      199.18,
+	"successful_transactions":	      104019,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.42,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:07:33 +0700 (1679684853)
+[ PUT /node/1 200][3]
+
+{	"transactions":			      108072,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		        1.75,
+	"response_time":		        0.11,
+	"transaction_rate":		     1809.65,
+	"throughput":			        0.03,
+	"concurrency":			      199.55,
+	"successful_transactions":	      108072,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.46,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:09:06 +0700 (1679684946)
+[ PUT /node/1 200][4]
+
+{	"transactions":			      101131,
+	"availability":			      100.00,
+	"elapsed_time":			       59.67,
+	"data_transferred":		        1.64,
+	"response_time":		        0.12,
+	"transaction_rate":		     1694.84,
+	"throughput":			        0.03,
+	"concurrency":			      199.44,
+	"successful_transactions":	      101131,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.56,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:10:39 +0700 (1679685039)
+[ PUT /node/1 200][5]
+
+{	"transactions":			      108045,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		        1.75,
+	"response_time":		        0.11,
+	"transaction_rate":		     1812.23,
+	"throughput":			        0.03,
+	"concurrency":			      199.31,
+	"successful_transactions":	      108045,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.40,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:12:12 +0700 (1679685132)
+Sat, 25 Mar 2023 02:12:12 +0700 (1679685132)
+[ PUT /node/1 400][1]
+
+{	"transactions":			      107463,
+	"availability":			      100.00,
+	"elapsed_time":			       59.67,
+	"data_transferred":		        1.74,
+	"response_time":		        0.22,
+	"transaction_rate":		     1800.96,
+	"throughput":			        0.03,
+	"concurrency":			      398.62,
+	"successful_transactions":	      107463,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.53,
+	"shortest_transaction":		        0.12
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:13:45 +0700 (1679685225)
+[ PUT /node/1 400][2]
+
+{	"transactions":			      105552,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		        1.71,
+	"response_time":		        0.23,
+	"transaction_rate":		     1768.63,
+	"throughput":			        0.03,
+	"concurrency":			      398.58,
+	"successful_transactions":	      105552,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.58,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:15:18 +0700 (1679685318)
+[ PUT /node/1 400][3]
+
+{	"transactions":			      103497,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		        1.68,
+	"response_time":		        0.23,
+	"transaction_rate":		     1734.20,
+	"throughput":			        0.03,
+	"concurrency":			      398.58,
+	"successful_transactions":	      103497,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.57,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:16:51 +0700 (1679685411)
+[ PUT /node/1 400][4]
+
+{	"transactions":			      102069,
+	"availability":			      100.00,
+	"elapsed_time":			       59.70,
+	"data_transferred":		        1.65,
+	"response_time":		        0.23,
+	"transaction_rate":		     1709.70,
+	"throughput":			        0.03,
+	"concurrency":			      398.15,
+	"successful_transactions":	      102069,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.55,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:18:24 +0700 (1679685504)
+[ PUT /node/1 400][5]
+
+{	"transactions":			      104327,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		        1.69,
+	"response_time":		        0.23,
+	"transaction_rate":		     1748.99,
+	"throughput":			        0.03,
+	"concurrency":			      398.06,
+	"successful_transactions":	      104327,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.70,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:19:57 +0700 (1679685597)
+Sat, 25 Mar 2023 02:19:57 +0700 (1679685597)
+[ PUT /node/1 600][1]
+
+{	"transactions":			      100805,
+	"availability":			      100.00,
+	"elapsed_time":			       59.72,
+	"data_transferred":		        1.63,
+	"response_time":		        0.35,
+	"transaction_rate":		     1687.96,
+	"throughput":			        0.03,
+	"concurrency":			      597.07,
+	"successful_transactions":	      100805,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.79,
+	"shortest_transaction":		        0.17
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:21:30 +0700 (1679685690)
+[ PUT /node/1 600][2]
+
+{	"transactions":			      103213,
+	"availability":			      100.00,
+	"elapsed_time":			       59.78,
+	"data_transferred":		        1.67,
+	"response_time":		        0.35,
+	"transaction_rate":		     1726.55,
+	"throughput":			        0.03,
+	"concurrency":			      595.93,
+	"successful_transactions":	      103213,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.16,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:23:03 +0700 (1679685783)
+[ PUT /node/1 600][3]
+
+{	"transactions":			       98411,
+	"availability":			      100.00,
+	"elapsed_time":			       59.33,
+	"data_transferred":		        1.60,
+	"response_time":		        0.36,
+	"transaction_rate":		     1658.71,
+	"throughput":			        0.03,
+	"concurrency":			      594.81,
+	"successful_transactions":	       98411,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.46,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:24:36 +0700 (1679685876)
+[ PUT /node/1 600][4]
+
+{	"transactions":			      106829,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		        1.73,
+	"response_time":		        0.33,
+	"transaction_rate":		     1792.43,
+	"throughput":			        0.03,
+	"concurrency":			      595.84,
+	"successful_transactions":	      106829,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.07,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:26:09 +0700 (1679685969)
+[ PUT /node/1 600][5]
+
+{	"transactions":			      110540,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		        1.79,
+	"response_time":		        0.32,
+	"transaction_rate":		     1853.76,
+	"throughput":			        0.03,
+	"concurrency":			      594.38,
+	"successful_transactions":	      110540,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.45,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:27:42 +0700 (1679686062)
+Sat, 25 Mar 2023 02:27:42 +0700 (1679686062)
+[ PUT /node/1 800][1]
+./run.sh: line 98: 1559056 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 02:37:42 +0700 (1679686662)
+
+{	"transactions":			      109697,
+	"availability":			      100.00,
+	"elapsed_time":			       59.65,
+	"data_transferred":		        1.78,
+	"response_time":		        0.43,
+	"transaction_rate":		     1839.01,
+	"throughput":			        0.03,
+	"concurrency":			      795.02,
+	"successful_transactions":	      109697,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.77,
+	"shortest_transaction":		        0.14
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:39:15 +0700 (1679686755)
+[ PUT /node/1 800][2]
+
+{	"transactions":			      107128,
+	"availability":			      100.00,
+	"elapsed_time":			       59.71,
+	"data_transferred":		        1.74,
+	"response_time":		        0.44,
+	"transaction_rate":		     1794.14,
+	"throughput":			        0.03,
+	"concurrency":			      795.23,
+	"successful_transactions":	      107128,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.09,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:40:48 +0700 (1679686848)
+[ PUT /node/1 800][3]
+./run.sh: line 98: 1561755 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 02:50:48 +0700 (1679687448)
+
+{	"transactions":			      105694,
+	"availability":			      100.00,
+	"elapsed_time":			       59.66,
+	"data_transferred":		        1.71,
+	"response_time":		        0.45,
+	"transaction_rate":		     1771.61,
+	"throughput":			        0.03,
+	"concurrency":			      795.21,
+	"successful_transactions":	      105694,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.51,
+	"shortest_transaction":		        0.15
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:52:21 +0700 (1679687541)
+[ PUT /node/1 800][4]
+
+{	"transactions":			      108982,
+	"availability":			      100.00,
+	"elapsed_time":			       59.53,
+	"data_transferred":		        1.77,
+	"response_time":		        0.43,
+	"transaction_rate":		     1830.71,
+	"throughput":			        0.03,
+	"concurrency":			      794.73,
+	"successful_transactions":	      108982,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.78,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:53:54 +0700 (1679687634)
+[ PUT /node/1 800][5]
+
+{	"transactions":			      111228,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		        1.80,
+	"response_time":		        0.43,
+	"transaction_rate":		     1863.74,
+	"throughput":			        0.03,
+	"concurrency":			      793.93,
+	"successful_transactions":	      111228,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.79,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 02:55:27 +0700 (1679687727)
+Sat, 25 Mar 2023 02:55:27 +0700 (1679687727)
+[ PUT /node/1 1000][1]
+./run.sh: line 98: 1565232 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 03:05:27 +0700 (1679688327)
+
+{	"transactions":			      102775,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		        1.67,
+	"response_time":		        0.57,
+	"transaction_rate":		     1722.10,
+	"throughput":			        0.03,
+	"concurrency":			      982.45,
+	"successful_transactions":	      102775,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.27,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:07:00 +0700 (1679688420)
+[ PUT /node/1 1000][2]
+./run.sh: line 98: 1567356 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 03:17:00 +0700 (1679689020)
+
+{	"transactions":			      107860,
+	"availability":			      100.00,
+	"elapsed_time":			       59.50,
+	"data_transferred":		        1.75,
+	"response_time":		        0.55,
+	"transaction_rate":		     1812.77,
+	"throughput":			        0.03,
+	"concurrency":			      992.80,
+	"successful_transactions":	      107860,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.65,
+	"shortest_transaction":		        0.19
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:18:33 +0700 (1679689113)
+[ PUT /node/1 1000][3]
+./run.sh: line 98: 1569457 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 03:28:33 +0700 (1679689713)
+
+{	"transactions":			       91285,
+	"availability":			      100.00,
+	"elapsed_time":			       59.53,
+	"data_transferred":		        1.48,
+	"response_time":		        0.63,
+	"transaction_rate":		     1533.43,
+	"throughput":			        0.02,
+	"concurrency":			      966.47,
+	"successful_transactions":	       91285,
+	"failed_transactions":		           0,
+	"longest_transaction":		        9.09,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:30:06 +0700 (1679689806)
+[ PUT /node/1 1000][4]
+
+{	"transactions":			      108016,
+	"availability":			      100.00,
+	"elapsed_time":			       59.38,
+	"data_transferred":		        1.75,
+	"response_time":		        0.54,
+	"transaction_rate":		     1819.06,
+	"throughput":			        0.03,
+	"concurrency":			      976.97,
+	"successful_transactions":	      108016,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.74,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:31:39 +0700 (1679689899)
+[ PUT /node/1 1000][5]
+
+{	"transactions":			      106245,
+	"availability":			      100.00,
+	"elapsed_time":			       59.42,
+	"data_transferred":		        1.72,
+	"response_time":		        0.54,
+	"transaction_rate":		     1788.03,
+	"throughput":			        0.03,
+	"concurrency":			      972.88,
+	"successful_transactions":	      106245,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.61,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:33:12 +0700 (1679689992)
+Sat, 25 Mar 2023 03:33:12 +0700 (1679689992)
+[ POST /node 200][1]
+
+{	"transactions":			      144867,
+	"availability":			      100.00,
+	"elapsed_time":			       59.59,
+	"data_transferred":		        2.76,
+	"response_time":		        0.08,
+	"transaction_rate":		     2431.06,
+	"throughput":			        0.05,
+	"concurrency":			      199.30,
+	"successful_transactions":	      144867,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.30,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:34:45 +0700 (1679690085)
+[ POST /node 200][2]
+
+{	"transactions":			      129785,
+	"availability":			      100.00,
+	"elapsed_time":			       59.61,
+	"data_transferred":		        2.48,
+	"response_time":		        0.09,
+	"transaction_rate":		     2177.24,
+	"throughput":			        0.04,
+	"concurrency":			      199.22,
+	"successful_transactions":	      129785,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.30,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:36:18 +0700 (1679690178)
+[ POST /node 200][3]
+
+{	"transactions":			      122620,
+	"availability":			      100.00,
+	"elapsed_time":			       59.56,
+	"data_transferred":		        2.34,
+	"response_time":		        0.10,
+	"transaction_rate":		     2058.76,
+	"throughput":			        0.04,
+	"concurrency":			      199.30,
+	"successful_transactions":	      122620,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.28,
+	"shortest_transaction":		        0.03
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:37:51 +0700 (1679690271)
+[ POST /node 200][4]
+
+{	"transactions":			      137682,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		        2.63,
+	"response_time":		        0.09,
+	"transaction_rate":		     2309.33,
+	"throughput":			        0.04,
+	"concurrency":			      199.47,
+	"successful_transactions":	      137682,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.31,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:39:24 +0700 (1679690364)
+[ POST /node 200][5]
+
+{	"transactions":			      138580,
+	"availability":			      100.00,
+	"elapsed_time":			       59.62,
+	"data_transferred":		        2.64,
+	"response_time":		        0.09,
+	"transaction_rate":		     2324.39,
+	"throughput":			        0.04,
+	"concurrency":			      199.26,
+	"successful_transactions":	      138580,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.33,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:40:57 +0700 (1679690457)
+Sat, 25 Mar 2023 03:40:57 +0700 (1679690457)
+[ POST /node 400][1]
+
+{	"transactions":			      145296,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		        2.77,
+	"response_time":		        0.16,
+	"transaction_rate":		     2436.63,
+	"throughput":			        0.05,
+	"concurrency":			      397.96,
+	"successful_transactions":	      145296,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.13,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:42:30 +0700 (1679690550)
+[ POST /node 400][2]
+
+{	"transactions":			      155681,
+	"availability":			      100.00,
+	"elapsed_time":			       59.56,
+	"data_transferred":		        2.97,
+	"response_time":		        0.15,
+	"transaction_rate":		     2613.85,
+	"throughput":			        0.05,
+	"concurrency":			      398.39,
+	"successful_transactions":	      155681,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.47,
+	"shortest_transaction":		        0.04
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:44:03 +0700 (1679690643)
+[ POST /node 400][3]
+
+{	"transactions":			      136967,
+	"availability":			      100.00,
+	"elapsed_time":			       59.61,
+	"data_transferred":		        2.61,
+	"response_time":		        0.17,
+	"transaction_rate":		     2297.72,
+	"throughput":			        0.04,
+	"concurrency":			      398.05,
+	"successful_transactions":	      136967,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.46,
+	"shortest_transaction":		        0.02
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:45:36 +0700 (1679690736)
+[ POST /node 400][4]
+
+{	"transactions":			      135423,
+	"availability":			      100.00,
+	"elapsed_time":			       59.50,
+	"data_transferred":		        2.58,
+	"response_time":		        0.18,
+	"transaction_rate":		     2276.02,
+	"throughput":			        0.04,
+	"concurrency":			      398.66,
+	"successful_transactions":	      135423,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.44,
+	"shortest_transaction":		        0.08
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:47:09 +0700 (1679690829)
+[ POST /node 400][5]
+
+{	"transactions":			      139759,
+	"availability":			      100.00,
+	"elapsed_time":			       59.51,
+	"data_transferred":		        2.67,
+	"response_time":		        0.17,
+	"transaction_rate":		     2348.50,
+	"throughput":			        0.04,
+	"concurrency":			      398.53,
+	"successful_transactions":	      139759,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.48,
+	"shortest_transaction":		        0.07
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:48:42 +0700 (1679690922)
+Sat, 25 Mar 2023 03:48:42 +0700 (1679690922)
+[ POST /node 600][1]
+
+{	"transactions":			      137271,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		        2.62,
+	"response_time":		        0.26,
+	"transaction_rate":		     2303.20,
+	"throughput":			        0.04,
+	"concurrency":			      596.97,
+	"successful_transactions":	      137271,
+	"failed_transactions":		           0,
+	"longest_transaction":		        2.89,
+	"shortest_transaction":		        0.06
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:50:15 +0700 (1679691015)
+[ POST /node 600][2]
+
+{	"transactions":			      141379,
+	"availability":			      100.00,
+	"elapsed_time":			       59.60,
+	"data_transferred":		        2.70,
+	"response_time":		        0.25,
+	"transaction_rate":		     2372.13,
+	"throughput":			        0.05,
+	"concurrency":			      596.71,
+	"successful_transactions":	      141379,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.69,
+	"shortest_transaction":		        0.12
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:51:48 +0700 (1679691108)
+[ POST /node 600][3]
+
+{	"transactions":			      125862,
+	"availability":			      100.00,
+	"elapsed_time":			       59.48,
+	"data_transferred":		        2.40,
+	"response_time":		        0.28,
+	"transaction_rate":		     2116.04,
+	"throughput":			        0.04,
+	"concurrency":			      597.01,
+	"successful_transactions":	      125862,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.97,
+	"shortest_transaction":		        0.09
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:53:21 +0700 (1679691201)
+[ POST /node 600][4]
+
+{	"transactions":			      148554,
+	"availability":			      100.00,
+	"elapsed_time":			       59.68,
+	"data_transferred":		        2.83,
+	"response_time":		        0.24,
+	"transaction_rate":		     2489.18,
+	"throughput":			        0.05,
+	"concurrency":			      597.92,
+	"successful_transactions":	      148554,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.42,
+	"shortest_transaction":		        0.11
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 03:54:54 +0700 (1679691294)
+[ POST /node 600][5]
+./run.sh: line 98: 1579399 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 04:04:54 +0700 (1679691894)
+
+{	"transactions":			      149216,
+	"availability":			      100.00,
+	"elapsed_time":			       59.50,
+	"data_transferred":		        2.85,
+	"response_time":		        0.24,
+	"transaction_rate":		     2507.83,
+	"throughput":			        0.05,
+	"concurrency":			      597.65,
+	"successful_transactions":	      149216,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.34,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 04:06:27 +0700 (1679691987)
+Sat, 25 Mar 2023 04:06:27 +0700 (1679691987)
+[ POST /node 800][1]
+./run.sh: line 98: 1580682 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 04:16:27 +0700 (1679692587)
+
+{	"transactions":			      135328,
+	"availability":			      100.00,
+	"elapsed_time":			       59.56,
+	"data_transferred":		        2.58,
+	"response_time":		        0.35,
+	"transaction_rate":		     2272.13,
+	"throughput":			        0.04,
+	"concurrency":			      792.96,
+	"successful_transactions":	      135328,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.66,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 04:18:00 +0700 (1679692680)
+[ POST /node 800][2]
+./run.sh: line 98: 1582470 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 04:28:00 +0700 (1679693280)
+./run.sh: line 98: 1583343 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 04:38:00 +0700 (1679693880)
+./run.sh: line 98: 1584324 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 04:48:00 +0700 (1679694480)
+./run.sh: line 98: 1585252 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 04:58:00 +0700 (1679695080)
+
+{	"transactions":			      150301,
+	"availability":			      100.00,
+	"elapsed_time":			       59.48,
+	"data_transferred":		        2.87,
+	"response_time":		        0.31,
+	"transaction_rate":		     2526.92,
+	"throughput":			        0.05,
+	"concurrency":			      795.08,
+	"successful_transactions":	      150301,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.00,
+	"shortest_transaction":		        0.15
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 04:59:33 +0700 (1679695173)
+[ POST /node 800][3]
+
+{	"transactions":			      135907,
+	"availability":			      100.00,
+	"elapsed_time":			       59.46,
+	"data_transferred":		        2.59,
+	"response_time":		        0.35,
+	"transaction_rate":		     2285.69,
+	"throughput":			        0.04,
+	"concurrency":			      794.74,
+	"successful_transactions":	      135907,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.87,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:01:06 +0700 (1679695266)
+[ POST /node 800][4]
+./run.sh: line 98: 1587840 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 05:11:06 +0700 (1679695866)
+
+{	"transactions":			      136955,
+	"availability":			      100.00,
+	"elapsed_time":			       59.54,
+	"data_transferred":		        2.61,
+	"response_time":		        0.34,
+	"transaction_rate":		     2300.22,
+	"throughput":			        0.04,
+	"concurrency":			      791.21,
+	"successful_transactions":	      136955,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.07,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:12:39 +0700 (1679695959)
+[ POST /node 800][5]
+
+{	"transactions":			      138876,
+	"availability":			      100.00,
+	"elapsed_time":			       59.43,
+	"data_transferred":		        2.65,
+	"response_time":		        0.34,
+	"transaction_rate":		     2336.80,
+	"throughput":			        0.04,
+	"concurrency":			      792.32,
+	"successful_transactions":	      138876,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.00,
+	"shortest_transaction":		        0.08
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:14:12 +0700 (1679696052)
+Sat, 25 Mar 2023 05:14:12 +0700 (1679696052)
+[ POST /node 1000][1]
+
+{	"transactions":			      151462,
+	"availability":			      100.00,
+	"elapsed_time":			       59.58,
+	"data_transferred":		        2.89,
+	"response_time":		        0.39,
+	"transaction_rate":		     2542.16,
+	"throughput":			        0.05,
+	"concurrency":			      993.96,
+	"successful_transactions":	      151462,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.98,
+	"shortest_transaction":		        0.04
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:15:45 +0700 (1679696145)
+[ POST /node 1000][2]
+
+{	"transactions":			      150983,
+	"availability":			      100.00,
+	"elapsed_time":			       59.56,
+	"data_transferred":		        2.88,
+	"response_time":		        0.39,
+	"transaction_rate":		     2534.97,
+	"throughput":			        0.05,
+	"concurrency":			      991.06,
+	"successful_transactions":	      150983,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.04,
+	"shortest_transaction":		        0.16
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:17:18 +0700 (1679696238)
+[ POST /node 1000][3]
+
+{	"transactions":			      133183,
+	"availability":			      100.00,
+	"elapsed_time":			       59.41,
+	"data_transferred":		        2.54,
+	"response_time":		        0.44,
+	"transaction_rate":		     2241.76,
+	"throughput":			        0.04,
+	"concurrency":			      984.35,
+	"successful_transactions":	      133183,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.87,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:18:51 +0700 (1679696331)
+[ POST /node 1000][4]
+
+{	"transactions":			      136785,
+	"availability":			      100.00,
+	"elapsed_time":			       59.47,
+	"data_transferred":		        2.61,
+	"response_time":		        0.43,
+	"transaction_rate":		     2300.07,
+	"throughput":			        0.04,
+	"concurrency":			      991.85,
+	"successful_transactions":	      136785,
+	"failed_transactions":		           0,
+	"longest_transaction":		       12.94,
+	"shortest_transaction":		        0.04
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:20:24 +0700 (1679696424)
+[ POST /node 1000][5]
+./run.sh: line 98: 1594700 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 05:30:24 +0700 (1679697024)
+./run.sh: line 98: 1595909 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 05:40:24 +0700 (1679697624)
+
+{	"transactions":			      157537,
+	"availability":			      100.00,
+	"elapsed_time":			       59.49,
+	"data_transferred":		        3.00,
+	"response_time":		        0.37,
+	"transaction_rate":		     2648.13,
+	"throughput":			        0.05,
+	"concurrency":			      986.81,
+	"successful_transactions":	      157537,
+	"failed_transactions":		           0,
+	"longest_transaction":		        5.16,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:41:57 +0700 (1679697717)
+Sat, 25 Mar 2023 05:41:57 +0700 (1679697717)
+[ POST /channel 200][1]
+
+{	"transactions":			      193868,
+	"availability":			      100.00,
+	"elapsed_time":			       59.46,
+	"data_transferred":		        2.77,
+	"response_time":		        0.06,
+	"transaction_rate":		     3260.48,
+	"throughput":			        0.05,
+	"concurrency":			      199.29,
+	"successful_transactions":	      193868,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.26,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:43:30 +0700 (1679697810)
+[ POST /channel 200][2]
+
+{	"transactions":			      182318,
+	"availability":			      100.00,
+	"elapsed_time":			       59.63,
+	"data_transferred":		        2.61,
+	"response_time":		        0.07,
+	"transaction_rate":		     3057.49,
+	"throughput":			        0.04,
+	"concurrency":			      199.30,
+	"successful_transactions":	      182318,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.28,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:45:03 +0700 (1679697903)
+[ POST /channel 200][3]
+./run.sh: line 98: 1598650 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 05:55:03 +0700 (1679698503)
+
+{	"transactions":			      129232,
+	"availability":			      100.00,
+	"elapsed_time":			       59.28,
+	"data_transferred":		        1.85,
+	"response_time":		        0.09,
+	"transaction_rate":		     2180.03,
+	"throughput":			        0.03,
+	"concurrency":			      199.26,
+	"successful_transactions":	      129232,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.38,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:56:36 +0700 (1679698596)
+[ POST /channel 200][4]
+
+{	"transactions":			      156477,
+	"availability":			      100.00,
+	"elapsed_time":			       59.14,
+	"data_transferred":		        2.24,
+	"response_time":		        0.08,
+	"transaction_rate":		     2645.87,
+	"throughput":			        0.04,
+	"concurrency":			      199.34,
+	"successful_transactions":	      156477,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.26,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:58:09 +0700 (1679698689)
+[ POST /channel 200][5]
+
+{	"transactions":			      187695,
+	"availability":			      100.00,
+	"elapsed_time":			       59.42,
+	"data_transferred":		        2.68,
+	"response_time":		        0.06,
+	"transaction_rate":		     3158.78,
+	"throughput":			        0.05,
+	"concurrency":			      199.53,
+	"successful_transactions":	      187695,
+	"failed_transactions":		           0,
+	"longest_transaction":		        0.20,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 05:59:42 +0700 (1679698782)
+Sat, 25 Mar 2023 05:59:42 +0700 (1679698782)
+[ POST /channel 400][1]
+
+{	"transactions":			      155392,
+	"availability":			      100.00,
+	"elapsed_time":			       59.15,
+	"data_transferred":		        2.22,
+	"response_time":		        0.15,
+	"transaction_rate":		     2627.08,
+	"throughput":			        0.04,
+	"concurrency":			      398.06,
+	"successful_transactions":	      155392,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.15,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:01:15 +0700 (1679698875)
+[ POST /channel 400][2]
+
+{	"transactions":			      146541,
+	"availability":			      100.00,
+	"elapsed_time":			       60.02,
+	"data_transferred":		        2.10,
+	"response_time":		        0.16,
+	"transaction_rate":		     2441.54,
+	"throughput":			        0.03,
+	"concurrency":			      398.54,
+	"successful_transactions":	      146541,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.15,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:02:49 +0700 (1679698969)
+[ POST /channel 400][3]
+
+{	"transactions":			      135872,
+	"availability":			      100.00,
+	"elapsed_time":			       59.20,
+	"data_transferred":		        1.94,
+	"response_time":		        0.17,
+	"transaction_rate":		     2295.14,
+	"throughput":			        0.03,
+	"concurrency":			      398.62,
+	"successful_transactions":	      135872,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.20,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:04:22 +0700 (1679699062)
+[ POST /channel 400][4]
+
+{	"transactions":			      147644,
+	"availability":			      100.00,
+	"elapsed_time":			       59.27,
+	"data_transferred":		        2.11,
+	"response_time":		        0.16,
+	"transaction_rate":		     2491.04,
+	"throughput":			        0.04,
+	"concurrency":			      398.51,
+	"successful_transactions":	      147644,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.19,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:05:55 +0700 (1679699155)
+[ POST /channel 400][5]
+
+{	"transactions":			      154695,
+	"availability":			      100.00,
+	"elapsed_time":			       59.19,
+	"data_transferred":		        2.21,
+	"response_time":		        0.15,
+	"transaction_rate":		     2613.53,
+	"throughput":			        0.04,
+	"concurrency":			      396.83,
+	"successful_transactions":	      154695,
+	"failed_transactions":		           0,
+	"longest_transaction":		        1.18,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:07:28 +0700 (1679699248)
+Sat, 25 Mar 2023 06:07:28 +0700 (1679699248)
+[ POST /channel 600][1]
+./run.sh: line 98: 1601931 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 06:17:28 +0700 (1679699848)
+
+{	"transactions":			      135318,
+	"availability":			      100.00,
+	"elapsed_time":			       59.15,
+	"data_transferred":		        1.94,
+	"response_time":		        0.26,
+	"transaction_rate":		     2287.71,
+	"throughput":			        0.03,
+	"concurrency":			      596.73,
+	"successful_transactions":	      135318,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.51,
+	"shortest_transaction":		        0.10
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:19:01 +0700 (1679699941)
+[ POST /channel 600][2]
+
+{	"transactions":			      131678,
+	"availability":			      100.00,
+	"elapsed_time":			       59.16,
+	"data_transferred":		        1.88,
+	"response_time":		        0.27,
+	"transaction_rate":		     2225.79,
+	"throughput":			        0.03,
+	"concurrency":			      593.27,
+	"successful_transactions":	      131678,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.50,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:20:35 +0700 (1679700035)
+[ POST /channel 600][3]
+
+{	"transactions":			      157526,
+	"availability":			      100.00,
+	"elapsed_time":			       59.92,
+	"data_transferred":		        2.25,
+	"response_time":		        0.23,
+	"transaction_rate":		     2628.94,
+	"throughput":			        0.04,
+	"concurrency":			      595.42,
+	"successful_transactions":	      157526,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.95,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:22:08 +0700 (1679700128)
+[ POST /channel 600][4]
+
+{	"transactions":			      185205,
+	"availability":			      100.00,
+	"elapsed_time":			       59.21,
+	"data_transferred":		        2.65,
+	"response_time":		        0.19,
+	"transaction_rate":		     3127.93,
+	"throughput":			        0.04,
+	"concurrency":			      596.58,
+	"successful_transactions":	      185205,
+	"failed_transactions":		           0,
+	"longest_transaction":		        4.40,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:23:41 +0700 (1679700221)
+[ POST /channel 600][5]
+
+{	"transactions":			      138473,
+	"availability":			      100.00,
+	"elapsed_time":			       59.24,
+	"data_transferred":		        1.98,
+	"response_time":		        0.26,
+	"transaction_rate":		     2337.49,
+	"throughput":			        0.03,
+	"concurrency":			      596.69,
+	"successful_transactions":	      138473,
+	"failed_transactions":		           0,
+	"longest_transaction":		        3.48,
+	"shortest_transaction":		        0.08
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:25:14 +0700 (1679700314)
+Sat, 25 Mar 2023 06:25:14 +0700 (1679700314)
+[ POST /channel 800][1]
+
+{	"transactions":			      154611,
+	"availability":			      100.00,
+	"elapsed_time":			       59.16,
+	"data_transferred":		        2.21,
+	"response_time":		        0.30,
+	"transaction_rate":		     2613.44,
+	"throughput":			        0.04,
+	"concurrency":			      786.88,
+	"successful_transactions":	      154611,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.06,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:26:47 +0700 (1679700407)
+[ POST /channel 800][2]
+
+{	"transactions":			      134329,
+	"availability":			      100.00,
+	"elapsed_time":			       59.43,
+	"data_transferred":		        1.92,
+	"response_time":		        0.35,
+	"transaction_rate":		     2260.29,
+	"throughput":			        0.03,
+	"concurrency":			      792.67,
+	"successful_transactions":	      134330,
+	"failed_transactions":		           0,
+	"longest_transaction":		       12.92,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:28:20 +0700 (1679700500)
+[ POST /channel 800][3]
+
+{	"transactions":			       97428,
+	"availability":			      100.00,
+	"elapsed_time":			       59.29,
+	"data_transferred":		        1.39,
+	"response_time":		        0.48,
+	"transaction_rate":		     1643.24,
+	"throughput":			        0.02,
+	"concurrency":			      790.97,
+	"successful_transactions":	       97428,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.79,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:29:54 +0700 (1679700594)
+[ POST /channel 800][4]
+
+{	"transactions":			      135874,
+	"availability":			      100.00,
+	"elapsed_time":			       59.98,
+	"data_transferred":		        1.94,
+	"response_time":		        0.35,
+	"transaction_rate":		     2265.32,
+	"throughput":			        0.03,
+	"concurrency":			      789.81,
+	"successful_transactions":	      135874,
+	"failed_transactions":		           0,
+	"longest_transaction":		       13.33,
+	"shortest_transaction":		        0.01
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 06:31:27 +0700 (1679700687)
+[ POST /channel 800][5]
+./run.sh: line 98: 1609311 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 06:41:27 +0700 (1679701287)
+./run.sh: line 98: 1610446 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 06:51:27 +0700 (1679701887)
+./run.sh: line 98: 1611477 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 07:01:27 +0700 (1679702487)
+./run.sh: line 98: 1612506 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 07:11:27 +0700 (1679703087)
+
+{	"transactions":			      136568,
+	"availability":			      100.00,
+	"elapsed_time":			       59.20,
+	"data_transferred":		        1.95,
+	"response_time":		        0.34,
+	"transaction_rate":		     2306.89,
+	"throughput":			        0.03,
+	"concurrency":			      791.58,
+	"successful_transactions":	      136568,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.58,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 07:13:00 +0700 (1679703180)
+Sat, 25 Mar 2023 07:13:00 +0700 (1679703180)
+[ POST /channel 1000][1]
+
+{	"transactions":			      180628,
+	"availability":			      100.00,
+	"elapsed_time":			       59.12,
+	"data_transferred":		        2.58,
+	"response_time":		        0.32,
+	"transaction_rate":		     3055.28,
+	"throughput":			        0.04,
+	"concurrency":			      980.38,
+	"successful_transactions":	      180628,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.37,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 07:14:33 +0700 (1679703273)
+[ POST /channel 1000][2]
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+./run.sh: line 98: 1615263 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 07:24:33 +0700 (1679703873)
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+./run.sh: line 98: 1616346 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 07:34:33 +0700 (1679704473)
+./run.sh: line 98: 1617502 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 07:44:33 +0700 (1679705073)
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+
+{	"transactions":			      136614,
+	"availability":			       99.99,
+	"elapsed_time":			       59.17,
+	"data_transferred":		        1.95,
+	"response_time":		        0.42,
+	"transaction_rate":		     2308.84,
+	"throughput":			        0.03,
+	"concurrency":			      976.27,
+	"successful_transactions":	      136614,
+	"failed_transactions":		          12,
+	"longest_transaction":		        8.83,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 07:46:06 +0700 (1679705166)
+[ POST /channel 1000][3]
+
+{	"transactions":			      156839,
+	"availability":			      100.00,
+	"elapsed_time":			       59.94,
+	"data_transferred":		        2.24,
+	"response_time":		        0.37,
+	"transaction_rate":		     2616.60,
+	"throughput":			        0.04,
+	"concurrency":			      976.42,
+	"successful_transactions":	      156839,
+	"failed_transactions":		           0,
+	"longest_transaction":		        8.75,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 07:47:40 +0700 (1679705260)
+[ POST /channel 1000][4]
+./run.sh: line 98: 1620733 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 07:57:40 +0700 (1679705860)
+./run.sh: line 98: 1621840 Killed                  timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
+Timeout hit, restarting... Sat, 25 Mar 2023 08:07:40 +0700 (1679706460)
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+[[1;33merror[0m] socket: unable to connect sock.c:282: Connection timed out
+
+{	"transactions":			      130539,
+	"availability":			       99.97,
+	"elapsed_time":			       59.14,
+	"data_transferred":		        1.87,
+	"response_time":		        0.45,
+	"transaction_rate":		     2207.29,
+	"throughput":			        0.03,
+	"concurrency":			      986.08,
+	"successful_transactions":	      130539,
+	"failed_transactions":		          37,
+	"longest_transaction":		        9.47,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
+Sat, 25 Mar 2023 08:09:13 +0700 (1679706553)
+[ POST /channel 1000][5]
+
+{	"transactions":			      158187,
+	"availability":			      100.00,
+	"elapsed_time":			       59.38,
+	"data_transferred":		        2.26,
+	"response_time":		        0.37,
+	"transaction_rate":		     2663.98,
+	"throughput":			        0.04,
+	"concurrency":			      984.07,
+	"successful_transactions":	      158187,
+	"failed_transactions":		           0,
+	"longest_transaction":		        6.35,
+	"shortest_transaction":		        0.00
+}
+Sleeping 30 seconds...
