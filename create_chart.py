@@ -1,5 +1,9 @@
-from typing import List
+from typing import Dict, List
+import matplotlib
 import pandas as pd
+
+from scipy.interpolate import interp1d
+import numpy as np
 import sys
 from slugify import slugify
 
@@ -11,10 +15,13 @@ from get_metric import METRICS_TO_GET, get_metric_from_summary_file
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 PLOT_FOLDER = os.path.join(THIS_FOLDER, "plot")
+COLOR = ["cyan", "orange", "limegreen", "tomato", "purple"]
 
 logging.basicConfig(
     format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", level=logging.INFO
 )
+
+ENDPOINT_TO_EXCLUDE = ["GET /sensor/1", "GET /sensor"]
 
 V1_SERVER = [
     "hanin",
@@ -23,15 +30,36 @@ V1_SERVER = [
     "dafav1_optimized",
     #  "dafav1_5_min",
 ]
+
+V1_SERVER_LABEL: Dict[str, str] = {
+    "hanin": "Falcon (Hanin)",
+    "alvinv1": "Sanic (Alvin)",
+    "dafav1": "Fiber",
+    "dafav1_optimized": "Fiber + Go-json",
+}
+
 V2_SERVER = [
+    "alvinv1",
     "alvinv2",
+    "dafav1_optimized",
     "dafav2",
-    "dafav2_optimized",
-    # "dafav2_5_min",
 ]
+
+V2_SERVER_LABEL: Dict[str, str] = {
+    "alvinv1": "Sanic Iterasi 1 (Alvin))",
+    "alvinv2": "Sanic Iterasi 2 (Alvin))",
+    "dafav1_optimized": "Fiber + Go-json Iterasi 1",
+    "dafav2": "Fiber + Go-json Iterasi 2",
+}
+
 SERVER = {
     "v1": V1_SERVER,
     "v2": V2_SERVER,
+}
+
+LABEL = {
+    "v1": V1_SERVER_LABEL,
+    "v2": V2_SERVER_LABEL,
 }
 
 
@@ -44,53 +72,113 @@ def split_dataframe_per_version(df):
     }
 
 
+def create_time_chart(df: pd.DataFrame, version: str):
+    metrics = ["memory_usage_percent"]
+    for metric in metrics:
+        logging.info(f"Creating plot for {metric}")
+
+        servers = df["server"].unique()
+        title = f"{metric} comparison"
+        new_df_data = {}
+        for server in servers:
+            plt.clf()
+            plt.cla()
+            server_df: pd.DataFrame = df[df["server"] == server].sort_values(
+                by=["epoch"]
+            )
+            server_df_data = server_df[metric].to_list()
+            new_df_data[server] = server_df_data
+            min = server_df["epoch"].min()
+            max = server_df["epoch"].max()
+            xnew = np.linspace(min, max, num=1000, endpoint=True)
+            f_cubic = interp1d(server_df["epoch"], server_df[metric], kind="cubic")
+
+            x = xnew
+            y = f_cubic(xnew)
+            plt.plot(x, y)
+            plt.fill_between(x, y)
+            # plt.ylim(0, 100)
+            # ax = server_df.plot(
+            #     # rot=0,
+            #     # kind="line",
+            #     # title=to_title_case(title),
+            #     x=xnew,
+            #     # legend=True,
+            #     y=f_cubic(xnew),
+            #     figsize=(10, 5),
+            # )
+
+            filename = slugify(f"{version}-{title}-timechart-{server}") + ".png"
+            logging.info(f"Saving {filename}")
+            plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
+        # new_df = pd.DataFrame(new_df_data)
+
+
+def create_bar_chart(df: pd.DataFrame, version: str):
+    df_grouped_by_server = df.groupby("server").mean(numeric_only=True)
+    # Create a dictionary to store the data
+    metrics = METRICS_TO_GET + ["memory_usage_percent", "memory_usage"]
+    for metric in metrics:
+        plt.clf()
+        plt.cla()
+        logging.info(f"Creating plot for {metric}")
+
+        title = f"{metric} comparison"
+        if metric == "memory_usage_percent":
+            fmt = "%.2f%%"
+            ylim = (0, 50)
+        else:
+            fmt = "%.2f"
+            ylim = None
+
+        server_labelled = []
+        for server in SERVER[version]:
+            server_labelled.append(LABEL[version][server])
+        df_metric = df_grouped_by_server[metric].reindex(server_labelled)
+        ax = df_metric.plot(
+            kind="bar",
+            rot=0,
+            # title=to_title_case(title),
+            ylim=ylim,  # type: ignore
+            ylabel="Memory usage (%)",
+            figsize=(10, 5),
+            color=COLOR,
+        )
+
+        bars = ax.patches
+        hatches = "".join(h * len(df_grouped_by_server) for h in "x/O.")
+
+        for bar, hatch in zip(bars, hatches):
+            bar.set_hatch(hatch)
+        modify_ax(ax, title, font_size=12, show_legend=False, fmt=fmt)
+
+        filename = slugify(f"{version}-{title}") + ".png"
+        logging.info(f"Saving {filename}")
+        plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
+
+
 def create_chart_metric(input_file):
     df = get_metric_from_summary_file(input_file)
-    df["cpu"] = (
-        df["cpu-idle"]
-        / (
-            df["cpu-user"]
-            + df["cpu-system"]
-            + df["cpu-softirq"]
-            + df["cpu-nice"]
-            + df["cpu-irq"]
-            + df["cpu-iowait"]
-        )
-        * 100
-    )
     df["memory_usage"] = df["memory_total"] - df["memory_available"]
     df["memory_usage_percent"] = df["memory_usage"] / df["memory_total"] * 100
     data_frames = split_dataframe_per_version(df)
     for version in data_frames:
         df_version = data_frames[version]
-        df_grouped_by_server = df_version.groupby("server").mean(numeric_only=True)
-        servers = df_version["server"].unique()
-        # Create a dictionary to store the data
-        metrics = METRICS_TO_GET + ["cpu", "memory_usage_percent", "memory_usage"]
-        for metric in metrics:
-            plt.clf()
-            plt.cla()
-            logging.info(f"Creating plot for {metric}")
-
-            title = f"{metric} comparison"
-            df_grouped_by_server.sort_values(by=["server"])
-            ax = df_grouped_by_server[metric].plot(
-                kind="bar",
-                rot=0,
-                title=to_title_case(title),
-            )
-            modify_ax(ax, title, font_size=14, show_legend=False)
-
-            filename = slugify(f"{version}-{title}") + ".png"
-            logging.info(f"Saving {filename}")
-            plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
+        label_version = LABEL[version]
+        for old_label in label_version:
+            new_label = label_version[old_label]
+            df_version.loc[df_version["server"] == old_label, "server"] = new_label
+        create_bar_chart(df_version, version)
+        create_time_chart(df_version, version)
 
 
 def to_title_case(inp: str):
     return inp.replace("_", " ").title()
 
 
-def modify_ax(ax: plt.Axes, title: str, font_size: int = 7, show_legend=True):
+def modify_ax(
+    ax: plt.Axes, title: str, font_size: int = 6, show_legend=True, fmt: str = "%.1f"
+):
     if show_legend:
         ax.legend(
             loc="upper center",
@@ -102,12 +190,107 @@ def modify_ax(ax: plt.Axes, title: str, font_size: int = 7, show_legend=True):
         )
 
     for container in ax.containers:  # type: ignore
-        ax.bar_label(container, label_type="edge", fontsize=font_size, fmt="%.1f")
+        ax.bar_label(container, label_type="edge", fontsize=font_size, fmt=fmt)
+
+
+def create_chart_per_endpoint(
+    endpoint: str, df_version: pd.DataFrame, version: str, column_to_compare: str
+):
+    logging.info(f"Creating plot for {endpoint}")
+    df_endpoint_separated = df_version.loc[df_version["endpoint"] == endpoint]
+    concurrents = df_endpoint_separated["concurrent"].unique()
+    data = {"concurrent": concurrents}
+    for v1_server_name in SERVER[version]:
+        df_v1_server = df_endpoint_separated.loc[
+            df_endpoint_separated["server"] == v1_server_name
+        ]
+        df_v1_server = (
+            df_v1_server.groupby(["concurrent"], dropna=False)
+            .mean(numeric_only=True)
+            .sort_values(by=["concurrent"])
+        )
+        label = LABEL[version][v1_server_name]
+        data[label] = df_v1_server[column_to_compare].tolist()
+
+    new_df = pd.DataFrame(data)
+
+    title = f"{endpoint}"
+    y_label = [l for l in LABEL[version].values()]
+    hatches = ["|||", "///", "xxx", "+++", "---", "+++", "---", "+++", "---"]
+    ax = new_df.plot(
+        kind="bar",
+        x="concurrent",
+        y=y_label,
+        ylabel="Transaksi per detik",
+        xlabel="Konkurensi",
+        rot=0,
+        width=0.85,
+        figsize=(10, 5),
+        color=COLOR,
+        # fill=False,
+    )
+    bars = ax.patches
+    hatches = "".join(h * len(new_df) for h in "x/O.")
+
+    for bar, hatch in zip(bars, hatches):
+        bar.set_hatch(hatch)
+
+    modify_ax(ax, title)
+
+    logging.info(f"{version} Saving {title}")
+    filename = slugify(f"{version}-{title}") + ".png"
+    plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
+
+
+def create_chart_all_endpoint(
+    df_version: pd.DataFrame, column_to_compare: str, version: str
+):
+    endpoints = df_version["endpoint"].unique()
+    datas = {"endpoint": endpoints}
+    for v1_server_name in SERVER[version]:
+        df_v1_server = df_version.loc[df_version["server"] == v1_server_name]
+        df_endpoint_grouped = (
+            df_v1_server.groupby(["endpoint"], dropna=False)
+            .mean(numeric_only=True)
+            .sort_values(by=["endpoint"])
+        )
+        label = LABEL[version][v1_server_name]
+        datas[label] = df_endpoint_grouped[column_to_compare].tolist()
+
+    new_df = pd.DataFrame(datas)
+    title = f"Komparasi Semua Endpoint"
+    y_label = [l for l in LABEL[version].values()]
+    hatches = ["|||", "///", "xxx", "+++", "---", "+++", "---", "+++", "---"]
+    ax = new_df.plot(
+        kind="bar",
+        x="endpoint",
+        y=y_label,
+        ylabel="Transaksi per detik",
+        xlabel="Endpoint",
+        rot=0,
+        width=0.85,
+        figsize=(10, 5),
+        color=COLOR,
+        # fill=False,
+    )
+    bars = ax.patches
+    hatches = "".join(h * len(new_df) for h in "x/O.")
+
+    for bar, hatch in zip(bars, hatches):
+        bar.set_hatch(hatch)
+
+    modify_ax(ax, title)
+
+    logging.info(f"{version} Saving {title}")
+    filename = slugify(f"{version}-{title}") + ".png"
+    plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
 
 
 def create_chart_siege_result(input_file):
     logging.info(f"Creating chart from {input_file}")
     df = pd.read_excel(input_file, sheet_name="All")
+    df = df.loc[~df["endpoint"].isin(ENDPOINT_TO_EXCLUDE)]
+
     data_frames = split_dataframe_per_version(df)
     column_to_compare = "transaction_rate"
 
@@ -115,36 +298,8 @@ def create_chart_siege_result(input_file):
         df_version = data_frames[version]
         endpoints = df_version["endpoint"].unique()
         for endpoint in endpoints:
-            logging.info(f"Creating plot for {endpoint}")
-            df_endpoint_separated = df_version.loc[df_version["endpoint"] == endpoint]
-            concurrents = df_endpoint_separated["concurrent"].unique()
-            data = {"concurrent": concurrents}
-            for v1_server_name in SERVER[version]:
-                df_v1_server = df_endpoint_separated.loc[
-                    df_endpoint_separated["server"] == v1_server_name
-                ]
-                df_v1_server = df_v1_server.groupby(["concurrent"], dropna=False).mean(
-                    numeric_only=True
-                )
-                data[v1_server_name] = df_v1_server[column_to_compare].tolist()
-
-            new_df = pd.DataFrame(data)
-
-            title = f"{endpoint}"
-            ax = new_df.plot(
-                kind="bar",
-                x="concurrent",
-                y=SERVER[version],
-                ylabel="Request Per Second",
-                rot=0,
-                width=0.85,
-                figsize=(10, 5),
-            )
-            modify_ax(ax, title)
-
-            logging.info(f"{version} Saving {title}")
-            filename = slugify(f"{version}-{title}") + ".png"
-            plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
+            create_chart_per_endpoint(endpoint, df_version, version, column_to_compare)
+        create_chart_all_endpoint(df_version, column_to_compare, version)
 
 
 def main():

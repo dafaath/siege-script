@@ -27,13 +27,13 @@ DIGITAL_OCEAN_API_KEY = os.environ.get("DIGITAL_OCEAN_API_KEY")
 # See https://docs.digitalocean.com/reference/api/api-reference/#tag/Monitoring
 # for the full detail
 METRICS_TO_GET = [
-    "cpu",
+    # "cpu",
     "memory_free",
     "memory_available",
     "memory_total",
-    "load_15",
-    "load_5",
-    "load_1",
+    # "load_15",
+    # "load_5",
+    # "load_1",
 ]
 
 BASE_SERVER_HOST_ID = {

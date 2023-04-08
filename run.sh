@@ -2,7 +2,7 @@
 
 TYPE=$1
 
-if [ "$TYPE" == "dafav1" ] || [ "$TYPE" == "dafav2" ]; then
+if [ "$TYPE" == "dafav1" ] || [ "$TYPE" == "dafav2" ] || [ "$TYPE" == "dafav3" ]; then
     HOST=10.104.0.2
     PORT=3000
     AUTH_METHOD=jwt
@@ -28,7 +28,7 @@ TIMEOUT=600 # 10 minutes
 ITERATION=5
 CONCURENCY=(200 400 600 800 1000)
 
-if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ] || [ "$TYPE" == "dafav3" ]; then
     USERNAME="admin"
     PASSWORD="admin"
 else
@@ -48,7 +48,7 @@ echo "Username: $USERNAME"
 echo "Password: $PASSWORD"
 
 init_db() {
-    if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+    if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ] || [ "$TYPE" == "dafav3" ]; then
         PGPASSWORD=postgres psql -h $HOST -U postgres postgres <version2.sql
     else
         PGPASSWORD=postgres psql -h $HOST -U postgres postgres <version1.sql
@@ -56,7 +56,7 @@ init_db() {
 }
 
 drop_table_db() {
-    if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
+    if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ] || [ "$TYPE" == "dafav3" ]; then
         PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE IF EXISTS user_person, hardware, node, feed CASCADE;"
     else
         PGPASSWORD=postgres psql -h $HOST -U postgres postgres -c "DROP TABLE IF EXISTS user_person, hardware, node, sensor, channel CASCADE;"
@@ -75,8 +75,13 @@ test_connection() {
     local data=$3
     local do_rollback=$4
     if [ $method == "GET" ] || [ $method == "DELETE" ]; then
-        local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint" --header "$HEADER" | xargs)"
-        local EXIT_CODE=$?
+        if [ $TYPE == "dafav3" ]; then
+            local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint" --header "$HEADER" --header "Accept:text/html" | xargs)"
+            local EXIT_CODE=$?
+        else
+            local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint" --header "$HEADER" | xargs)"
+            local EXIT_CODE=$?
+        fi
     else
         local STATUS="$(curl -s -o /dev/null -w "%{http_code}" "$HOST:$PORT$endpoint" -X $method --header "$HEADER" --header "Content-type: application/json" -d "$data" | xargs)"
         local EXIT_CODE=$?
@@ -102,7 +107,11 @@ perftest() {
             # Run command with timeout, if timeout hit, restart
             while true; do
                 if [ $method == "GET" ] || [ $method == "DELETE" ]; then
-                    timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+                    if [ $TYPE == "dafav3" ]; then
+                        timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER" --header="Accept:text/html"
+                    else
+                        timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint" --header="$HEADER"
+                    fi
                 elif [ $method == "PUT" ] || [ $method == "POST" ]; then
                     timeout --signal=SIGKILL $TIMEOUT siege -t$TEST_TIME -c$concurrent "$HOST:$PORT$endpoint $method $data" --header="$HEADER" --content-type "application/json"
                 fi
@@ -145,8 +154,14 @@ rollback_db
 auth
 
 echo "Testing connection..."
-test_connection "GET" "/node" "" false
-test_connection "GET" "/node/1" "" false
+if [ $TYPE == "dafav3" ]; then
+    perftest "GET" "/node" "" false
+    perftest "GET" "/node/1" "" false
+else
+    perftest "GET" "/node" "" false
+    perftest "GET" "/node/1" "" false
+fi
+
 if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
     if [ "$TYPE" == "alvinv2" ]; then
         test_connection "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : \"{3,4,4,17,8,7,3,4,5,7}\", \"field_sensor\": \"{\\\"test\\\",\\\"asd\\\",\\\"sensor3\\\",\\\"sensor4\\\",\\\"sensor5\\\",\\\"sensor6\\\",\\\"sensor7\\\",\\\"sensor8\\\",\\\"sensor9\\\",\\\"sensor10\\\"}\"}" true
@@ -167,8 +182,14 @@ fi
 echo "Connection test success"
 
 ## perftest METHOD ENDPOINT DATA DO_ROLLBACK
-perftest "GET" "/node" "" false
-perftest "GET" "/node/1" "" false
+if [ $TYPE == "dafav3" ]; then
+    perftest "GET" "/node" "" false
+    perftest "GET" "/node/1" "" false
+else
+    perftest "GET" "/node" "" false
+    perftest "GET" "/node/1" "" false
+fi
+
 if [ "$TYPE" == "alvinv2" ] || [ "$TYPE" == "dafav2" ]; then
     if [ "$TYPE" == "alvinv2" ]; then
         perftest "PUT" "/node/1" "{ \"name\":\"test\",\"location\":\"test\",\"id_hardware_node\":1, \"id_hardware_sensor\" : \"{3,4,4,17,8,7,3,4,5,7}\", \"field_sensor\": \"{\\\"test\\\",\\\"asd\\\",\\\"sensor3\\\",\\\"sensor4\\\",\\\"sensor5\\\",\\\"sensor6\\\",\\\"sensor7\\\",\\\"sensor8\\\",\\\"sensor9\\\",\\\"sensor10\\\"}\"}" true
