@@ -59,6 +59,14 @@ def get_server_host_id(server_name):
 
 
 def get_metric_from_summary_file(summary_file_name):
+    """read the summary file and get the metric for each server
+
+    Args:
+        summary_file_name (_type_): xslx file with the summary
+
+    Returns:
+        pd.DataFrame: dataframe with the metric for each server
+    """
     df = pd.read_excel(summary_file_name, sheet_name="All")
     server_metric_data: Dict[str, Optional[Dict[str, str]]] = {}
     server_names = df["server"].unique()

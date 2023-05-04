@@ -15,13 +15,22 @@ from get_metric import METRICS_TO_GET, get_metric_from_summary_file
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 PLOT_FOLDER = os.path.join(THIS_FOLDER, "plot")
-COLOR = ["cyan", "orange", "limegreen", "tomato", "purple"]
 
 logging.basicConfig(
     format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", level=logging.INFO
 )
 
-ENDPOINT_TO_EXCLUDE = ["GET /sensor/1", "GET /sensor"]
+# Configuration for managing the chart
+COLOR = ["cyan", "orange", "limegreen", "tomato", "purple"]
+HATCH = [None, "|||||", "/////", "\\\\\\\\\\", "+++", "---"]
+
+# Exclude some endpoints from the chart
+EXCLUDE_ENDPOINT_ALL = ["GET /sensor/1", "GET /sensor"]
+ENDPOINT_EXCLUDE_VERSION = {
+    "v1": EXCLUDE_ENDPOINT_ALL,
+    "v2": EXCLUDE_ENDPOINT_ALL,
+    "v3": EXCLUDE_ENDPOINT_ALL + ["POST /node", "PUT /node/1", "POST /channel"],
+}
 
 V1_SERVER = [
     "hanin",
@@ -52,27 +61,55 @@ V2_SERVER_LABEL: Dict[str, str] = {
     "dafav2": "Fiber + Go-json Iterasi 2",
 }
 
+V3_SERVER = [
+    "dafav2",
+    "dafav3",
+]
+
+V3_SERVER_LABEL: Dict[str, str] = {
+    "dafav2": "Fiber REST API (Iterasi 2)",
+    "dafav3": "Fiber Antarmuka Pengguna (Iterasi 3)",
+}
+
 SERVER = {
     "v1": V1_SERVER,
     "v2": V2_SERVER,
+    "v3": V3_SERVER,
 }
 
 LABEL = {
     "v1": V1_SERVER_LABEL,
     "v2": V2_SERVER_LABEL,
+    "v3": V3_SERVER_LABEL,
 }
 
 
-def split_dataframe_per_version(df):
+def split_dataframe_per_version(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
+    """Create a dictionary of dataframe per version
+
+    Args:
+        df (pd.DataFrame): _description_
+
+    Returns:
+        Dict[str, pd.DataFrame]: _description_
+    """
     df_v1 = df[df["server"].isin(V1_SERVER)]
     df_v2 = df[df["server"].isin(V2_SERVER)]
+    df_v3 = df[df["server"].isin(V3_SERVER)]
     return {
         "v1": df_v1,
         "v2": df_v2,
+        "v3": df_v3,
     }
 
 
 def create_time_chart(df: pd.DataFrame, version: str):
+    """Create time chart for each server
+
+    Args:
+        df (pd.DataFrame): pandas dataframe that contains the data to be plotted
+        version (str): version of the server
+    """
     metrics = ["memory_usage_percent"]
     for metric in metrics:
         logging.info(f"Creating plot for {metric}")
@@ -115,6 +152,12 @@ def create_time_chart(df: pd.DataFrame, version: str):
 
 
 def create_bar_chart(df: pd.DataFrame, version: str):
+    """Create bar chart for each server
+
+    Args:
+        df (pd.DataFrame): pandas dataframe that contains the data to be plotted
+        version (str): version of the server
+    """
     df_grouped_by_server = df.groupby("server").mean(numeric_only=True)
     # Create a dictionary to store the data
     metrics = METRICS_TO_GET + ["memory_usage_percent", "memory_usage"]
@@ -140,13 +183,16 @@ def create_bar_chart(df: pd.DataFrame, version: str):
             rot=0,
             # title=to_title_case(title),
             ylim=ylim,  # type: ignore
-            ylabel="Memory usage (%)",
+            xlabel="Server",
+            ylabel="Penggunaan memori (%)",
             figsize=(10, 5),
             color=COLOR,
         )
+        excel_filename = slugify(f"{version}-{title}") + ".xlsx"
+        df_metric.to_excel(os.path.join(PLOT_FOLDER, excel_filename))
 
         bars = ax.patches
-        hatches = "".join(h * len(df_grouped_by_server) for h in "x/O.")
+        hatches = [h for h in HATCH for j in range(len(df_metric))]
 
         for bar, hatch in zip(bars, hatches):
             bar.set_hatch(hatch)
@@ -158,6 +204,11 @@ def create_bar_chart(df: pd.DataFrame, version: str):
 
 
 def create_chart_metric(input_file):
+    """Create chart for each metric in the input file and save it to the PLOT_FOLDER folder
+
+    Args:
+        input_file (_type_): xlsx file that contains the data to be plotted
+    """
     df = get_metric_from_summary_file(input_file)
     df["memory_usage"] = df["memory_total"] - df["memory_available"]
     df["memory_usage_percent"] = df["memory_usage"] / df["memory_total"] * 100
@@ -173,12 +224,29 @@ def create_chart_metric(input_file):
 
 
 def to_title_case(inp: str):
+    """Convert input string to title case
+
+    Args:
+        inp (str): input string
+
+    Returns:
+        _type_: string in title case
+    """
     return inp.replace("_", " ").title()
 
 
 def modify_ax(
     ax: plt.Axes, title: str, font_size: int = 6, show_legend=True, fmt: str = "%.1f"
 ):
+    """Modify the axis of the plot
+
+    Args:
+        ax (plt.Axes): axis of the plot
+        title (str): title of the plot
+        font_size (int, optional): _description_. Defaults to 6.
+        show_legend (bool, optional): _description_. Defaults to True.
+        fmt (str, optional): _description_. Defaults to "%.1f".
+    """
     if show_legend:
         ax.legend(
             loc="upper center",
@@ -216,7 +284,6 @@ def create_chart_per_endpoint(
 
     title = f"{endpoint}"
     y_label = [l for l in LABEL[version].values()]
-    hatches = ["|||", "///", "xxx", "+++", "---", "+++", "---", "+++", "---"]
     ax = new_df.plot(
         kind="bar",
         x="concurrent",
@@ -230,7 +297,10 @@ def create_chart_per_endpoint(
         # fill=False,
     )
     bars = ax.patches
-    hatches = "".join(h * len(new_df) for h in "x/O.")
+    hatches = [h for h in HATCH for j in range(len(new_df))]
+
+    excel_filename = slugify(f"{version}-{title}") + ".xlsx"
+    new_df.to_excel(os.path.join(PLOT_FOLDER, excel_filename))
 
     for bar, hatch in zip(bars, hatches):
         bar.set_hatch(hatch)
@@ -260,7 +330,6 @@ def create_chart_all_endpoint(
     new_df = pd.DataFrame(datas)
     title = f"Komparasi Semua Endpoint"
     y_label = [l for l in LABEL[version].values()]
-    hatches = ["|||", "///", "xxx", "+++", "---", "+++", "---", "+++", "---"]
     ax = new_df.plot(
         kind="bar",
         x="endpoint",
@@ -274,7 +343,43 @@ def create_chart_all_endpoint(
         # fill=False,
     )
     bars = ax.patches
-    hatches = "".join(h * len(new_df) for h in "x/O.")
+    hatches = [h for h in HATCH for j in range(len(new_df))]
+
+    excel_filename = slugify(f"{version}-{title}") + ".xlsx"
+    new_df.to_excel(os.path.join(PLOT_FOLDER, excel_filename))
+
+    for bar, hatch in zip(bars, hatches):
+        bar.set_hatch(hatch)
+
+    modify_ax(ax, title)
+
+    logging.info(f"{version} Saving {title}")
+    filename = slugify(f"{version}-{title}") + ".png"
+    plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
+
+
+def create_chart_combine_all_endpoint(
+    df_version: pd.DataFrame, column_to_compare: str, version: str
+):
+    title = f"Kombinasi semua endpoint"
+    df_server_grouped = df_version.groupby(["server"], dropna=False).mean(
+        numeric_only=True
+    )
+    ax = df_server_grouped.plot(
+        kind="bar",
+        y="transaction_rate",
+        ylabel="Transaksi per detik",
+        xlabel="Endpoint",
+        rot=0,
+        width=0.85,
+        figsize=(10, 5),
+        color=COLOR,
+    )
+    bars = ax.patches
+    hatches = [h for h in HATCH for j in range(len(df_server_grouped))]
+
+    excel_filename = slugify(f"{version}-{title}") + ".xlsx"
+    df_server_grouped.to_excel(os.path.join(PLOT_FOLDER, excel_filename))
 
     for bar, hatch in zip(bars, hatches):
         bar.set_hatch(hatch)
@@ -289,17 +394,20 @@ def create_chart_all_endpoint(
 def create_chart_siege_result(input_file):
     logging.info(f"Creating chart from {input_file}")
     df = pd.read_excel(input_file, sheet_name="All")
-    df = df.loc[~df["endpoint"].isin(ENDPOINT_TO_EXCLUDE)]
+    # df = df.loc[~df["endpoint"].isin(EXCLUDE_ENDPOINT_ALL)]
 
     data_frames = split_dataframe_per_version(df)
     column_to_compare = "transaction_rate"
 
     for version in data_frames:
         df_version = data_frames[version]
+        excluded_endpoint = ENDPOINT_EXCLUDE_VERSION[version]
+        df_version = df_version.loc[~df_version["endpoint"].isin(excluded_endpoint)]
         endpoints = df_version["endpoint"].unique()
         for endpoint in endpoints:
             create_chart_per_endpoint(endpoint, df_version, version, column_to_compare)
         create_chart_all_endpoint(df_version, column_to_compare, version)
+        create_chart_combine_all_endpoint(df_version, column_to_compare, version)
 
 
 def main():
