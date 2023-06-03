@@ -1,15 +1,14 @@
-from typing import Dict, List
-import matplotlib
-import pandas as pd
-
-from scipy.interpolate import interp1d
-import numpy as np
-import sys
-from slugify import slugify
-
-import matplotlib.pyplot as plt
-import os
 import logging
+import os
+import sys
+from typing import Dict, List
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from scipy.interpolate import interp1d
+from slugify import slugify
 
 from get_metric import METRICS_TO_GET, get_metric_from_summary_file
 
@@ -41,8 +40,8 @@ V1_SERVER = [
 ]
 
 V1_SERVER_LABEL: Dict[str, str] = {
-    "hanin": "Falcon (Hanin)",
-    "alvinv1": "Sanic (Alvin)",
+    "hanin": "Falcon (Hanin 2021)",
+    "alvinv1": "Sanic (Ferdiansyah 2023)",
     "dafav1": "Fiber",
     "dafav1_optimized": "Fiber + Go-json",
 }
@@ -55,10 +54,10 @@ V2_SERVER = [
 ]
 
 V2_SERVER_LABEL: Dict[str, str] = {
-    "alvinv1": "Sanic Iterasi 1 (Alvin))",
-    "alvinv2": "Sanic Iterasi 2 (Alvin))",
-    "dafav1_optimized": "Fiber + Go-json Iterasi 1",
-    "dafav2": "Fiber + Go-json Iterasi 2",
+    "alvinv1": "Sanic Iter 1 (Ferdiansyah)",
+    "alvinv2": "Sanic Iter 2 (Ferdiansyah)",
+    "dafav1_optimized": "Fiber + Go-json Iter 1",
+    "dafav2": "Fiber + Go-json Iter 2",
 }
 
 V3_SERVER = [
@@ -147,8 +146,8 @@ def create_time_chart(df: pd.DataFrame, version: str):
 
             filename = slugify(f"{version}-{title}-timechart-{server}") + ".png"
             logging.info(f"Saving {filename}")
+            # new_df = pd.DataFrame(new_df_data)
             plt.savefig(os.path.join(PLOT_FOLDER, filename), bbox_inches="tight")
-        # new_df = pd.DataFrame(new_df_data)
 
 
 def create_bar_chart(df: pd.DataFrame, version: str):
@@ -160,7 +159,11 @@ def create_bar_chart(df: pd.DataFrame, version: str):
     """
     df_grouped_by_server = df.groupby("server").mean(numeric_only=True)
     # Create a dictionary to store the data
-    metrics = METRICS_TO_GET + ["memory_usage_percent", "memory_usage"]
+    metrics = METRICS_TO_GET + [
+        "memory_usage_percent",
+        "memory_usage",
+        "memory_usage_mb",
+    ]
     for metric in metrics:
         plt.clf()
         plt.cla()
@@ -170,9 +173,15 @@ def create_bar_chart(df: pd.DataFrame, version: str):
         if metric == "memory_usage_percent":
             fmt = "%.2f%%"
             ylim = (0, 50)
+            ylabel = "Penggunaan memori (%)"
+        elif metric == "memory_usage_mb":
+            fmt = "%.1f"
+            ylim = (0, 4000)
+            ylabel = "Penggunaan memori (mb)"
         else:
-            fmt = "%.2f"
+            fmt = "%.1f"
             ylim = None
+            ylabel = "Penggunaan memori"
 
         server_labelled = []
         for server in SERVER[version]:
@@ -184,7 +193,7 @@ def create_bar_chart(df: pd.DataFrame, version: str):
             # title=to_title_case(title),
             ylim=ylim,  # type: ignore
             xlabel="Server",
-            ylabel="Penggunaan memori (%)",
+            ylabel=ylabel,
             figsize=(10, 5),
             color=COLOR,
         )
@@ -212,6 +221,7 @@ def create_chart_metric(input_file):
     df = get_metric_from_summary_file(input_file)
     df["memory_usage"] = df["memory_total"] - df["memory_available"]
     df["memory_usage_percent"] = df["memory_usage"] / df["memory_total"] * 100
+    df["memory_usage_mb"] = df["memory_usage"] / 1_000_000
     data_frames = split_dataframe_per_version(df)
     for version in data_frames:
         df_version = data_frames[version]
